@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "examplemod:block/absolute_white_slab"
+    },
+    "type=double": {
+      "model": "examplemod:block/absolute_white_planks"
+    },
+    "type=top": {
+      "model": "examplemod:block/absolute_white_slab_top"
+    }
+  }
+}

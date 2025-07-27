@@ -1,0 +1,34 @@
+{
+  "item.examplemod.blacky": "Blacky",
+  "item.examplemod.whity": "Whity",
+  "item.examplemod.dowsing_rod": "Dowsing Rod",
+  "item.examplemod.void_of_knowledge": "Kekosongan Pengetahuan",
+  "item.examplemod.eternal_flame": "Api Abadi",
+
+  "block.examplemod.absolute_black": "Hitam Absolut",
+  "block.examplemod.absolute_black_ore": "Biji Hitam Absolut",
+  "block.examplemod.absolute_white": "Putih Absolut",
+  "block.examplemod.absolute_white_ore": "Biji Putih Absolut",
+  "block.examplemod.jumpy_block": "Balok Lompatan",
+
+  "block.examplemod.absolute_white_stairs": "Tangga Putih Absolut",
+  "block.examplemod.absolute_white_slab": "Lempeng Putih Absolut",
+  "block.examplemod.absolute_white_fence": "Pagar Putih Absolut",
+  "block.examplemod.absolute_white_fence_gate": "Pintu Pagar Putih Absolut",
+  "block.examplemod.absolute_white_wall": "Dinding Putih Absolut",
+
+  "block.examplemod.absolute_black_stairs": "Tangga Hitam Absolut",
+  "block.examplemod.absolute_black_slab": "Lempeng Hitam Absolut",
+  "block.examplemod.absolute_black_fence": "Pagar Hitam Absolut",
+  "block.examplemod.absolute_black_fence_gate": "Pintu Pagar Hitam Absolut",
+  "block.examplemod.absolute_black_wall": "Dinding Hitam Absolut",
+
+  "itemGroup.black": "Hitam",
+  "itemGroup.white": "Putih",
+  "itemGroup.mod_misc": "Mod Macam-macam",
+  "itemGroup.mod_food": "Mod Makanan",
+
+  "item.examplemod.dowsing_rod.no_valuables": "Tidak Ditemukan Barang Berharga!",
+  "tooltip.examplemod.dowsing_rod.tooltip.shift": "Klik Kanan untuk mencari Barang Berharga!",
+  "tooltip.examplemod.dowsing_rod.tooltip": "Tekan §5SHIFT§r untuk Informasi Selanjutnya!"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "examplemod:absolute_black"
+    }
+  ],
+  "result": {
+    "tag": "forge:gems/blacky",
+    "count": 9
+  }
+}

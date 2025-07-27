@@ -1,0 +1,35 @@
+{
+  "item.examplemod.blacky": "Blacky",
+  "item.examplemod.whity": "Whity",
+  "item.examplemod.dowsing_rod": "Dowsing Rod",
+  "item.examplemod.void_of_knowledge": "Void Of Knowledge",
+  "item.examplemod.eternal_flame": "Eternal Flame",
+
+  "block.examplemod.absolute_black": "Absolute Black",
+  "block.examplemod.absolute_black_ore": "Absolute Black Ore",
+  "block.examplemod.absolute_white": "Absolute White",
+  "block.examplemod.absolute_white_ore": "Absolute White Ore",
+  "block.examplemod.jumpy_block": "Jumpy Block",
+
+  "block.examplemod.absolute_white_stairs": "Absolute White Stairs",
+  "block.examplemod.absolute_white_slab": "Absolute White Slab",
+  "block.examplemod.absolute_white_fence": "Absolute White Fence",
+  "block.examplemod.absolute_white_fence_gate": "Absolute White Fence Gate",
+  "block.examplemod.absolute_white_wall": "Absolute White Wall",
+
+  "block.examplemod.absolute_black_stairs": "Absolute Black Stairs",
+  "block.examplemod.absolute_black_slab": "Absolute Black Slab",
+  "block.examplemod.absolute_black_fence": "Absolute Black Fence",
+  "block.examplemod.absolute_black_fence_gate": "Absolute Black Fence Gate",
+  "block.examplemod.absolute_black_wall": "Absolute Black Wall",
+
+  "itemGroup.black": "Black",
+  "itemGroup.white": "White",
+  "itemGroup.mod_misc": "Mod Misc",
+  "itemGroup.mod_food": "Mod Food",
+
+  "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
+  "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.examplemod.dowsing_rod.tooltip": "Press §5SHIFT§r for more Information!",
+  "tooltip.examplemod.jumpy_block": "Jumpy"
+}

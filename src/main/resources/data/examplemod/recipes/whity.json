@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "examplemod:absolute_white"
+    }
+  ],
+  "result": {
+    "tag": "forge:gems/whity",
+    "count": 9
+  }
+}

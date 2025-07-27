@@ -1,0 +1,34 @@
+{
+  "item.examplemod.blacky": "ブラッキー",
+  "item.examplemod.whity": "ホワイティー",
+  "item.examplemod.dowsing_rod": "ダウジング ロッド",
+  "item.examplemod.void_of_knowledge": "知識の空白",
+  "item.examplemod.eternal_flame": "永遠の炎",
+
+  "block.examplemod.absolute_black": "真っ黒",
+  "block.examplemod.absolute_black_ore": "真っ黒鉱石",
+  "block.examplemod.absolute_white": "真っ白",
+  "block.examplemod.absolute_white_ore": "真っ白鉱石",
+  "block.examplemod.jumpy_block": "跳躍ブロック",
+
+  "block.examplemod.absolute_white_stairs": "真っ白の階段",
+  "block.examplemod.absolute_white_slab": "真っ白のハーフブロック",
+  "block.examplemod.absolute_white_fence": "真っ白のフェンス",
+  "block.examplemod.absolute_white_fence_gate": "真っ白のフェンスゲート",
+  "block.examplemod.absolute_white_wall": "真っ白の塀",
+
+  "block.examplemod.absolute_black_stairs": "真っ黒の階段",
+  "block.examplemod.absolute_black_slab": "真っ黒のハーフブロック",
+  "block.examplemod.absolute_black_fence": "真っ黒のフェンス",
+  "block.examplemod.absolute_black_fence_gate": "真っ黒のフェンスゲート",
+  "block.examplemod.absolute_black_wall": "真っ黒の塀",
+
+  "itemGroup.black": "黒",
+  "itemGroup.white": "白",
+  "itemGroup.mod_misc": "Mod Misc",
+  "itemGroup.mod_food": "Mod Food",
+
+  "item.examplemod.dowsing_rod.no_valuables": "貴重品は見つからない！",
+  "tooltip.examplemod.dowsing_rod.tooltip.shift": "右クリックで貴重品を探す！",
+  "tooltip.examplemod.dowsing_rod.tooltip": "詳細については §5SHIFT§r を押してください",
+}

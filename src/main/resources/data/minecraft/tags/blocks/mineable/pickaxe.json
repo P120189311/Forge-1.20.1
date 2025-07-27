@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "examplemod:absolute_black",
+    "examplemod:absolute_white",
+    "examplemod:absolute_black_ore",
+    "examplemod:absolute_white_ore"
+  ]
+}
