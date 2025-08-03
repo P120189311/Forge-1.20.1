@@ -30,7 +30,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "blacky_recipe"));
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHITY.get())
                 .requires(ModBlocks.ABSOLUTE_WHITE.get())
-                .unlockedBy("has_absolute_white", has(ModBlocks.ABSOLUTE_BLACK.get()))
+                .unlockedBy("has_absolute_white", has(ModBlocks.ABSOLUTE_WHITE.get()))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "whity_recipe"));
 
         //Ore to Block
@@ -38,6 +38,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.ABSOLUTE_BLACK.get());
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.WHITY.get(), RecipeCategory.MISC,
                 ModBlocks.ABSOLUTE_WHITE.get());
+
+        //Stairs
+        stair(consumer, ModBlocks.ABSOLUTE_BLACK_STAIRS.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_stairs");
+        stair(consumer, ModBlocks.ABSOLUTE_WHITE_STAIRS.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_stairs");
+
+        //Slab
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_BLACK_SLAB.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_slab");
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_WHITE_SLAB.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_slab");
 
         //Fence
         customFenceBuilder(ModBlocks.ABSOLUTE_BLACK_FENCE.get(), Ingredient.of(ModBlocks.ABSOLUTE_BLACK.get()), Ingredient.of(ModItems.BLACKY.get()), 6)
@@ -47,15 +55,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         customFenceBuilder(ModBlocks.ABSOLUTE_WHITE_FENCE.get(), Ingredient.of(ModBlocks.ABSOLUTE_WHITE.get()), Ingredient.of(ModItems.WHITY.get()), 6)
                 .unlockedBy("has_whity", has(ModItems.WHITY.get()))
                 .unlockedBy("has_absolute_white", has(ModBlocks.ABSOLUTE_WHITE.get()))
-                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_fence_"));
-
-        //Stairs
-        stair(consumer, ModBlocks.ABSOLUTE_BLACK_STAIRS.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_stairs");
-        stair(consumer, ModBlocks.ABSOLUTE_BLACK_STAIRS.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_stairs");
-
-        //Slab
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_BLACK_SLAB.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_slab");
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_WHITE_SLAB.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_slab");
+                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_fence"));
 
         //Fence Gate
         customFenceGateBuilder(ModBlocks.ABSOLUTE_BLACK_FENCE_GATE.get(), Ingredient.of(ModBlocks.ABSOLUTE_BLACK.get()), Ingredient.of(ModItems.BLACKY.get()), 6)
