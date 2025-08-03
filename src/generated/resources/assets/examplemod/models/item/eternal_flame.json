@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer()": "examplemod:item/eternal_flame"
+  }
+}

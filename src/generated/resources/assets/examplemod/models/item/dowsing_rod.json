@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer()": "examplemod:item/dowsing_rod"
+  }
+}
