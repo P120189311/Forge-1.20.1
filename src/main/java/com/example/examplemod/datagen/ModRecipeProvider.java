@@ -7,11 +7,16 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -87,7 +92,76 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Trapdoor
         trapDoor(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_trapdoor");
         trapDoor(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_trapdoor");
+
+        //Sword
+        SwordBuilder(ModItems.ABSOLUTE_BLACK_SWORD.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_blacky", has(ModItems.BLACKY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+        SwordBuilder(ModItems.ABSOLUTE_WHITE_SWORD.get(), Ingredient.of(ModItems.WHITY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_whity", has(ModItems.WHITY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        //Pickaxe
+        PickaxeBuilder(ModItems.ABSOLUTE_BLACK_PICKAXE.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_blacky", has(ModItems.BLACKY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+        PickaxeBuilder(ModItems.ABSOLUTE_WHITE_PICKAXE.get(), Ingredient.of(ModItems.WHITY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_whity", has(ModItems.WHITY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        //Shovel
+        ShovelBuilder(ModItems.ABSOLUTE_BLACK_SHOVEL.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_blacky", has(ModItems.BLACKY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+        ShovelBuilder(ModItems.ABSOLUTE_WHITE_SHOVEL.get(), Ingredient.of(ModItems.WHITY.get()), Ingredient.of(Items.STICK))
+                .unlockedBy("has_whity", has(ModItems.WHITY.get()))
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(consumer);
+
+        //Axe
+        for (int i = 0; i < 2; i++) {
+            boolean isLeft = i == 0;
+            String side = isLeft ? "left" : "right";
+            AxeBuilder(ModItems.ABSOLUTE_BLACK_AXE.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK), isLeft)
+                    .unlockedBy("has_blacky", has(ModItems.WHITY.get()))
+                    .unlockedBy("has_stick", has(Items.STICK))
+                    .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_black_axe_" + side));
+        }
+        for (int i = 0; i < 2; i++) {
+            boolean isLeft = i == 0;
+            String side = isLeft ? "left" : "right";
+            AxeBuilder(ModItems.ABSOLUTE_WHITE_AXE.get(), Ingredient.of(ModItems.WHITY.get()), Ingredient.of(Items.STICK), isLeft)
+                    .unlockedBy("has_whity", has(ModItems.WHITY.get()))
+                    .unlockedBy("has_stick", has(Items.STICK))
+                    .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_axe_" + side));
+        }
+
+        //Hoe
+        for (int i = 0; i < 2; i++) {
+            boolean isLeft = i == 0;
+            String side = isLeft ? "left" : "right";
+            HoeBuilder(ModItems.ABSOLUTE_BLACK_HOE.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK), isLeft)
+                    .unlockedBy("has_blacky", has(ModItems.WHITY.get()))
+                    .unlockedBy("has_stick", has(Items.STICK))
+                    .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_black_hoe_" + side));
+        }
+        for (int i = 0; i < 2; i++) {
+            boolean isLeft = i == 0;
+            String side = isLeft ? "left" : "right";
+            HoeBuilder(ModItems.ABSOLUTE_WHITE_HOE.get(), Ingredient.of(ModItems.WHITY.get()), Ingredient.of(Items.STICK), isLeft)
+                    .unlockedBy("has_whity", has(ModItems.WHITY.get()))
+                    .unlockedBy("has_stick", has(Items.STICK))
+                    .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_hoe_" + side));
+        }
     }
+
+
+    //Helpers ->
 
     //Stair
     protected static void stair(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike input, String recipeName) {
@@ -180,5 +254,64 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 has(p_251911_)).save(p_250423_, new ResourceLocation(ExampleMod.MOD_ID, p_252237_));
         ShapedRecipeBuilder.shaped(p_248977_, p_251911_).define('#', p_250042_).pattern("###").pattern("###").pattern("###")
                 .group(p_248641_).unlockedBy(getHasName(p_250042_), has(p_250042_)).save(p_250423_, new ResourceLocation(ExampleMod.MOD_ID, p_250475_));
+    }
+
+    protected static RecipeBuilder SwordBuilder(ItemLike result, Ingredient blade, Ingredient handle) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .define('I', blade)
+                .define('S', handle)
+                .pattern("I")
+                .pattern("I")
+                .pattern("S");
+    }
+
+    protected static RecipeBuilder PickaxeBuilder(ItemLike result, Ingredient blade, Ingredient handle) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .define('I', blade)
+                .define('S', handle)
+                .pattern("III")
+                .pattern(" S ")
+                .pattern(" S ");
+    }
+
+    protected static RecipeBuilder ShovelBuilder(ItemLike result, Ingredient blade, Ingredient handle) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .define('I', blade)
+                .define('S', handle)
+                .pattern("I")
+                .pattern("S")
+                .pattern("S");
+    }
+
+    protected static ShapedRecipeBuilder AxeBuilder(ItemLike result, Ingredient blade, Ingredient handle, boolean isLeft) {
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .define('B', blade)
+                .define('S', handle);
+        if (isLeft) {
+            builder.pattern("BB")
+                    .pattern("BS")
+                    .pattern(" S");
+        } else {
+            builder.pattern("BB")
+                    .pattern("SB")
+                    .pattern("S ");
+        }
+        return builder;
+    }
+
+    protected static ShapedRecipeBuilder HoeBuilder(ItemLike result, Ingredient blade, Ingredient handle, boolean isLeft) {
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .define('B', blade)
+                .define('S', handle);
+        if (isLeft) {
+            builder.pattern("BB")
+                    .pattern(" S")
+                    .pattern(" S");
+        } else {
+            builder.pattern("BB")
+                    .pattern("S ")
+                    .pattern("S ");
+        }
+        return builder;
     }
 }

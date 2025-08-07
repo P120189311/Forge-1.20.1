@@ -20,6 +20,8 @@ public class ModCreativeModeTab {
 
     public static CreativeModeTab Mod_Food;
 
+    public static CreativeModeTab Mod_Tools;
+
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         Black = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "black"),
@@ -37,6 +39,10 @@ public class ModCreativeModeTab {
         Mod_Food = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "mod_food"),
                 builder -> builder.icon(() -> new ItemStack(ModItems.VOID_OF_KNOWLEDGE.get()))
                         .title(Component.translatable("itemGroup.mod_food")));
+
+        Mod_Tools = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "mod_tools"),
+                builder -> builder.icon(() -> new ItemStack(ModItems.ABSOLUTE_BLACK_SWORD.get()))
+                        .title(Component.translatable("itemGroup.mod_tools")));
     }
 
 }

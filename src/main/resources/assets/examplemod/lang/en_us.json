@@ -5,6 +5,18 @@
   "item.examplemod.void_of_knowledge": "Void Of Knowledge",
   "item.examplemod.eternal_flame": "Eternal Flame",
 
+  "item.examplemod.absolute_black_sword": "Absolute Black Sword",
+  "item.examplemod.absolute_black_pickaxe": "Absolute Black Pickaxe",
+  "item.examplemod.absolute_black_shovel": "Absolute Black Shovel",
+  "item.examplemod.absolute_black_axe": "Absolute Black Axe",
+  "item.examplemod.absolute_black_hoe": "Absolute Black Hoe",
+
+  "item.examplemod.absolute_white_sword": "Absolute White Sword",
+  "item.examplemod.absolute_white_pickaxe": "Absolute White Pickaxe",
+  "item.examplemod.absolute_white_shovel": "Absolute White Shovel",
+  "item.examplemod.absolute_white_axe": "Absolute White Axe",
+  "item.examplemod.absolute_white_hoe": "Absolute White Hoe",
+
   "block.examplemod.absolute_black": "Absolute Black",
   "block.examplemod.absolute_black_ore": "Absolute Black Ore",
   "block.examplemod.absolute_white": "Absolute White",
@@ -38,6 +50,7 @@
   "itemGroup.white": "White",
   "itemGroup.mod_misc": "Mod Misc",
   "itemGroup.mod_food": "Mod Food",
+  "itemGroup.mod_tools": "Mod Tools",
 
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",

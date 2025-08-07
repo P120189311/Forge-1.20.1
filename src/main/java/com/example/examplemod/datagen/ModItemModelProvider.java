@@ -22,6 +22,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DOWSING_ROD);
         simpleItem(ModItems.VOID_OF_KNOWLEDGE);
         simpleItem(ModItems.ETERNAL_FLAME);
+        handheldItem(ModItems.ABSOLUTE_BLACK_SWORD);
+        handheldItem(ModItems.ABSOLUTE_BLACK_PICKAXE);
+        handheldItem(ModItems.ABSOLUTE_BLACK_SHOVEL);
+        handheldItem(ModItems.ABSOLUTE_BLACK_AXE);
+        handheldItem(ModItems.ABSOLUTE_BLACK_HOE);
+        handheldItem(ModItems.ABSOLUTE_WHITE_SWORD);
+        handheldItem(ModItems.ABSOLUTE_WHITE_PICKAXE);
+        handheldItem(ModItems.ABSOLUTE_WHITE_SHOVEL);
+        handheldItem(ModItems.ABSOLUTE_WHITE_AXE);
+        handheldItem(ModItems.ABSOLUTE_WHITE_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

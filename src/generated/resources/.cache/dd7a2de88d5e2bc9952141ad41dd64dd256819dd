@@ -1,4 +1,14 @@
-// 1.19.3	2025-08-04T03:34:30.7348215	Item Models: examplemod
+// 1.19.3	2025-08-08T03:50:59.4110235	Item Models: examplemod
+1e987442716894279b2a131289cfd52ab324744e assets/examplemod/models/item/absolute_black_axe.json
+cf4d7266d780a202f845dcb57898f7103ff8ac49 assets/examplemod/models/item/absolute_black_hoe.json
+85db0d1d578aa59f9d68d26973e135f82046e7bf assets/examplemod/models/item/absolute_black_pickaxe.json
+77f6ae958f2190517f0a9581e9464f8b4f5f9929 assets/examplemod/models/item/absolute_black_shovel.json
+190083102fa9ef4186a611bfeb43241bc0b808e0 assets/examplemod/models/item/absolute_black_sword.json
+03a0c1f2e481cb652811f11e688479dfb201fa4d assets/examplemod/models/item/absolute_white_axe.json
+48f3cd90d2b664826842fa6193b16b138137e62c assets/examplemod/models/item/absolute_white_hoe.json
+e3eb7ebcfb8258cc38e1aadea8d8a1a177aa8062 assets/examplemod/models/item/absolute_white_pickaxe.json
+58959e3207a542deae3030a15e10fd183797e7f2 assets/examplemod/models/item/absolute_white_shovel.json
+b607c46bb3809f5500401ed264b8a9ecc530c41f assets/examplemod/models/item/absolute_white_sword.json
 bb7f6ad5ae6ad4f9953b7e5f7cd6b5b50c827671 assets/examplemod/models/item/blacky.json
 6990e3319d40f14c73bae6ca09b540ae65f8a65e assets/examplemod/models/item/dowsing_rod.json
 1c910e447f4cfb435ae036ef989613ef0165dfff assets/examplemod/models/item/eternal_flame.json

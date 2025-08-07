@@ -5,8 +5,7 @@ import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.custom.DowsingRodItem;
 import com.example.examplemod.item.custom.EternalFlameItem;
 import com.example.examplemod.item.custom.JumpyBlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +29,38 @@ public class ModItems {
 
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
             () -> new EternalFlameItem(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> ABSOLUTE_BLACK_SWORD = ITEMS.register("absolute_black_sword",
+            () -> new SwordItem(ModTiers.ABSOLUTE_BLACK, 3, -2.4f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_BLACK_PICKAXE = ITEMS.register("absolute_black_pickaxe",
+            () -> new PickaxeItem(ModTiers.ABSOLUTE_BLACK, 1, -2.8f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_BLACK_SHOVEL = ITEMS.register("absolute_black_shovel",
+            () -> new ShovelItem(ModTiers.ABSOLUTE_BLACK, 2, -3f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_BLACK_AXE = ITEMS.register("absolute_black_axe",
+            () -> new AxeItem(ModTiers.ABSOLUTE_BLACK, 6, -3f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_BLACK_HOE = ITEMS.register("absolute_black_hoe",
+            () -> new HoeItem(ModTiers.ABSOLUTE_BLACK, -2, 6f,
+                    new  Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> ABSOLUTE_WHITE_SWORD = ITEMS.register("absolute_white_sword",
+            () -> new SwordItem(ModTiers.ABSOLUTE_WHITE, 3, -2.4f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_WHITE_PICKAXE = ITEMS.register("absolute_white_pickaxe",
+            () -> new PickaxeItem(ModTiers.ABSOLUTE_WHITE, 1, -2.8f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_WHITE_SHOVEL = ITEMS.register("absolute_white_shovel",
+            () -> new ShovelItem(ModTiers.ABSOLUTE_WHITE, 2, -3f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_WHITE_AXE = ITEMS.register("absolute_white_axe",
+            () -> new AxeItem(ModTiers.ABSOLUTE_WHITE, 6, -3f,
+                    new  Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABSOLUTE_WHITE_HOE = ITEMS.register("absolute_white_hoe",
+            () -> new HoeItem(ModTiers.ABSOLUTE_WHITE, -2, 1f,
+                    new  Item.Properties().fireResistant()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

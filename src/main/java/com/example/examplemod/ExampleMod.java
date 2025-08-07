@@ -80,6 +80,19 @@ public class ExampleMod {
         if(event.getTab() == ModCreativeModeTab.Mod_Food){
             event.accept(ModItems.VOID_OF_KNOWLEDGE);
         }
+
+        if(event.getTab() == ModCreativeModeTab.Mod_Tools){
+            event.accept(ModItems.ABSOLUTE_BLACK_SWORD);
+            event.accept(ModItems.ABSOLUTE_BLACK_PICKAXE);
+            event.accept(ModItems.ABSOLUTE_BLACK_SHOVEL);
+            event.accept(ModItems.ABSOLUTE_BLACK_AXE);
+            event.accept(ModItems.ABSOLUTE_BLACK_HOE);
+            event.accept(ModItems.ABSOLUTE_WHITE_SWORD);
+            event.accept(ModItems.ABSOLUTE_WHITE_PICKAXE);
+            event.accept(ModItems.ABSOLUTE_WHITE_SHOVEL);
+            event.accept(ModItems.ABSOLUTE_WHITE_AXE);
+            event.accept(ModItems.ABSOLUTE_WHITE_HOE);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "examplemod:blacky"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BB",
+    "BS",
+    " S"
+  ],
+  "result": {
+    "item": "examplemod:absolute_black_axe"
+  }
+}

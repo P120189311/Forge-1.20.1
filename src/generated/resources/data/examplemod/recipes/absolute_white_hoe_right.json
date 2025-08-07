@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "examplemod:whity"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BB",
+    "S ",
+    "S "
+  ],
+  "result": {
+    "item": "examplemod:absolute_white_hoe"
+  }
+}
