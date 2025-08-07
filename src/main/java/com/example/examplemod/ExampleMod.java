@@ -4,7 +4,8 @@ import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -49,6 +50,10 @@ public class ExampleMod {
             event.accept(ModBlocks.ABSOLUTE_BLACK_FENCE);
             event.accept(ModBlocks.ABSOLUTE_BLACK_FENCE_GATE);
             event.accept(ModBlocks.ABSOLUTE_BLACK_WALL);
+            event.accept(ModBlocks.ABSOLUTE_BLACK_BUTTON);
+            event.accept(ModBlocks.ABSOLUTE_BLACK_PRESSURE_PLATE);
+            event.accept(ModBlocks.ABSOLUTE_BLACK_DOOR);
+            event.accept(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR);
         }
 
         if(event.getTab() == ModCreativeModeTab.White){
@@ -60,6 +65,10 @@ public class ExampleMod {
             event.accept(ModBlocks.ABSOLUTE_WHITE_FENCE);
             event.accept(ModBlocks.ABSOLUTE_WHITE_FENCE_GATE);
             event.accept(ModBlocks.ABSOLUTE_WHITE_WALL);
+            event.accept(ModBlocks.ABSOLUTE_WHITE_BUTTON);
+            event.accept(ModBlocks.ABSOLUTE_WHITE_PRESSURE_PLATE);
+            event.accept(ModBlocks.ABSOLUTE_WHITE_DOOR);
+            event.accept(ModBlocks.ABSOLUTE_WHITE_TRAPDOOR);
         }
 
         if(event.getTab() == ModCreativeModeTab.Mod_Misc){
@@ -78,7 +87,10 @@ public class ExampleMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_BLACK_DOOR.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_WHITE_DOOR.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), RenderType.translucent());
         }
     }
 }

@@ -1,0 +1,4 @@
+{
+  "parent": "examplemod:block/absolute_white_trapdoor",
+  "render_type": "minecraft:cutout"
+}

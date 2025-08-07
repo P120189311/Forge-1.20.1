@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "examplemod:block/absolute_black_pressure_plate"
+    },
+    "powered=true": {
+      "model": "examplemod:block/absolute_black_pressure_plate_down"
+    }
+  }
+}

@@ -1,10 +1,12 @@
 package com.example.examplemod.block;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.block.custom.CustomPressurePlateBlock;
 import com.example.examplemod.block.custom.JumpyBlock;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -25,6 +27,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MOD_ID);
 
+    //Normal Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK = registerBlock("absolute_black",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(8f)
@@ -42,12 +45,38 @@ public class ModBlocks {
                     .strength(6f)
                     .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
 
+    //Misc Blocks
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f)
                     .requiresCorrectToolForDrops()
             ), ModCreativeModeTab.Mod_Misc);
 
+    //Black Other Blocks
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",
+            () -> new StairBlock(() -> ModBlocks.ABSOLUTE_BLACK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.METAL)
+                            .strength(5f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_SLAB = registerBlock("absolute_black_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE = registerBlock("absolute_black_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE_GATE = registerBlock("absolute_black_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()
+                    ,SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_WALL = registerBlock("absolute_black_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
+
+    //White Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_WHITE_STAIRS = registerBlock("absolute_white_stairs",
             () -> new StairBlock(() -> ModBlocks.ABSOLUTE_WHITE.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.METAL)
@@ -71,28 +100,61 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",
-            () -> new StairBlock(() -> ModBlocks.ABSOLUTE_BLACK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> ABSOLUTE_BLACK_SLAB = registerBlock("absolute_black_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE = registerBlock("absolute_black_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE_GATE = registerBlock("absolute_black_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f)
+    //Black Utility Blocks
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_BUTTON = registerBlock("absolute_black_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f)
                     .requiresCorrectToolForDrops()
-                    ,SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final RegistryObject<Block> ABSOLUTE_BLACK_WALL = registerBlock("absolute_black_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f)
-                    .requiresCorrectToolForDrops()));
+                    .noCollission()
+                    ,40,false
+                    ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_PRESSURE_PLATE = registerBlock("absolute_black_pressure_plate",
+            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
+                    ,SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF
+                    , 5));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_DOOR = registerBlock("absolute_black_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    ,SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE));
+    public static final RegistryObject<Block> ABSOLUTE_BLACK_TRAPDOOR = registerBlock("absolute_black_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    ,SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE));
+
+    //White Utility Blocks
+    public static final RegistryObject<Block> ABSOLUTE_WHITE_BUTTON = registerBlock("absolute_white_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
+                    ,10,false
+                    ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
+    public static final RegistryObject<Block> ABSOLUTE_WHITE_PRESSURE_PLATE = registerBlock("absolute_white_pressure_plate",
+            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
+                    ,SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF
+                    , 40));
+    public static final RegistryObject<Block> ABSOLUTE_WHITE_DOOR = registerBlock("absolute_white_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    ,SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE));
+    public static final RegistryObject<Block> ABSOLUTE_WHITE_TRAPDOOR = registerBlock("absolute_white_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    ,SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
