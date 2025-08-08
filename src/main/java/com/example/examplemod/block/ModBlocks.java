@@ -106,7 +106,7 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,40,false
+                    ,10,false
                     ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_PRESSURE_PLATE = registerBlock("absolute_black_pressure_plate",
             () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL)
@@ -134,7 +134,7 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,10,false
+                    ,40,false
                     ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_PRESSURE_PLATE = registerBlock("absolute_white_pressure_plate",
             () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.METAL)
