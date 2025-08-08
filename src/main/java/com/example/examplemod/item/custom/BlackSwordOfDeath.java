@@ -5,7 +5,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
@@ -27,14 +26,22 @@ public class BlackSwordOfDeath extends SwordItem {
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         if (!pTarget.level.isClientSide) {
+
+            if (pAttacker instanceof net.minecraft.world.entity.player.Player player) {
+                if (player.getCooldowns().isOnCooldown(this)) {
+                    return super.hurtEnemy(pStack, pTarget, pAttacker); // Does Normal Damage Only
+                }
+                player.getCooldowns().addCooldown(this, 100);
+            }
+
             if (pTarget.getType() == EntityType.WITHER_SKELETON || pTarget.getType() == EntityType.WITHER) {
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 50));
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 100));
             } else if (pTarget.getMobType() == MobType.UNDEAD) {
-                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1), pAttacker);
+                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1), pAttacker);
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 100));
             } else {
-                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1), pAttacker);
+                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1), pAttacker);
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HARM, pAttacker, 100));
             }
         }

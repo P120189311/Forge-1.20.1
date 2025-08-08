@@ -38,6 +38,7 @@ public class ModFoods {
                 .effect(new MobEffectInstance(MobEffects.WATER_BREATHING,200),1.0F)
                 .effect(new MobEffectInstance(MobEffects.WEAKNESS,200),1.0F)
                 .effect(new MobEffectInstance(MobEffects.WITHER,200),1.0F)
+                .effect(new MobEffectInstance(MobEffects.DARKNESS,200),1.0F)
                 .effect(new MobEffectInstance(MobEffects.HEAL,1,10),1.0F)
                 .alwaysEat().build();
     }

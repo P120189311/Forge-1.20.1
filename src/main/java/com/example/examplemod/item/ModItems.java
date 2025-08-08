@@ -2,10 +2,7 @@ package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
-import com.example.examplemod.item.custom.BlackSwordOfDeath;
-import com.example.examplemod.item.custom.DowsingRodItem;
-import com.example.examplemod.item.custom.EternalFlameItem;
-import com.example.examplemod.item.custom.JumpyBlockItem;
+import com.example.examplemod.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,7 +29,7 @@ public class ModItems {
             () -> new EternalFlameItem(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> ABSOLUTE_BLACK_SWORD = ITEMS.register("absolute_black_sword",
-            () -> new BlackSwordOfDeath(ModTiers.ABSOLUTE_BLACK, 1, -2.4f,
+            () -> new BlackSwordOfDeath(ModTiers.ABSOLUTE_BLACK, 0, -2.4f,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_BLACK_PICKAXE = ITEMS.register("absolute_black_pickaxe",
             () -> new PickaxeItem(ModTiers.ABSOLUTE_BLACK, 1, -2.8f,
@@ -48,7 +45,7 @@ public class ModItems {
                     new  Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> ABSOLUTE_WHITE_SWORD = ITEMS.register("absolute_white_sword",
-            () -> new SwordItem(ModTiers.ABSOLUTE_WHITE, 3, -2.4f,
+            () -> new WhiteSwordOfJudgement(ModTiers.ABSOLUTE_WHITE, 0, -2.4f,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_WHITE_PICKAXE = ITEMS.register("absolute_white_pickaxe",
             () -> new PickaxeItem(ModTiers.ABSOLUTE_WHITE, 1, -2.8f,

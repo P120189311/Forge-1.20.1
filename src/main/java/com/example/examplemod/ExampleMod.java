@@ -4,6 +4,7 @@ import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.BlackSwordOfDeath;
+import com.example.examplemod.item.custom.WhiteSwordOfJudgement;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -36,6 +37,7 @@ public class ExampleMod {
 
         modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.addListener(BlackSwordOfDeath::onServerTick);
+        MinecraftForge.EVENT_BUS.addListener(WhiteSwordOfJudgement::onServerTick);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
