@@ -158,6 +158,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy("has_stick", has(Items.STICK))
                     .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_hoe_" + side));
         }
+
+        helmetRecipe(consumer, ModItems.ABSOLUTE_BLACK_HELMET.get(), ModItems.BLACKY.get());
+        helmetRecipe(consumer, ModItems.ABSOLUTE_WHITE_HELMET.get(), ModItems.WHITY.get());
+
+        chestplateRecipe(consumer, ModItems.ABSOLUTE_BLACK_CHESTPLATE.get(), ModItems.BLACKY.get());
+        chestplateRecipe(consumer, ModItems.ABSOLUTE_WHITE_CHESTPLATE.get(), ModItems.WHITY.get());
+
+        leggingsRecipe(consumer, ModItems.ABSOLUTE_BLACK_LEGGINGS.get(), ModItems.BLACKY.get());
+        leggingsRecipe(consumer, ModItems.ABSOLUTE_WHITE_LEGGINGS.get(), ModItems.WHITY.get());
+
+        bootsRecipe(consumer, ModItems.ABSOLUTE_BLACK_BOOTS.get(), ModItems.BLACKY.get());
+        bootsRecipe(consumer, ModItems.ABSOLUTE_WHITE_BOOTS.get(), ModItems.WHITY.get());
     }
 
 
@@ -313,5 +325,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .pattern("S ");
         }
         return builder;
+    }
+
+    protected static void helmetRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+                .pattern("XXX")
+                .pattern("X X")
+                .define('X', ingredient)
+                .unlockedBy("has_" + getItemName(ingredient), has(ingredient))
+                .save(consumer);
+    }
+
+    protected static void chestplateRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+                .pattern("X X")
+                .pattern("XXX")
+                .pattern("XXX")
+                .define('X', ingredient)
+                .unlockedBy("has_" + getItemName(ingredient), has(ingredient))
+                .save(consumer);
+    }
+
+    protected static void leggingsRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+                .pattern("XXX")
+                .pattern("X X")
+                .pattern("X X")
+                .define('X', ingredient)
+                .unlockedBy("has_" + getItemName(ingredient), has(ingredient))
+                .save(consumer);
+    }
+
+    protected static void bootsRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+                .pattern("X X")
+                .define('X', ingredient)
+                .unlockedBy("has_" + getItemName(ingredient), has(ingredient))
+                .save(consumer);
     }
 }

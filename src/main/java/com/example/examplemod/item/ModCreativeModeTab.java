@@ -22,6 +22,8 @@ public class ModCreativeModeTab {
 
     public static CreativeModeTab Mod_Tools;
 
+    public static CreativeModeTab Mod_Armors;
+
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         Black = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "black"),
@@ -43,6 +45,10 @@ public class ModCreativeModeTab {
         Mod_Tools = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "mod_tools"),
                 builder -> builder.icon(() -> new ItemStack(ModItems.ABSOLUTE_BLACK_SWORD.get()))
                         .title(Component.translatable("itemGroup.mod_tools")));
+
+        Mod_Armors = event.registerCreativeModeTab(new ResourceLocation(ExampleMod.MOD_ID, "mod_armors"),
+                builder -> builder.icon(() -> new ItemStack(ModItems.ABSOLUTE_BLACK_HELMET.get()))
+                        .title(Component.translatable("itemGroup.mod_armors")));
     }
 
 }

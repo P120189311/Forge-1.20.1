@@ -17,11 +17,22 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        //Simple
         simpleItem(ModItems.BLACKY);
         simpleItem(ModItems.WHITY);
         simpleItem(ModItems.DOWSING_ROD);
         simpleItem(ModItems.VOID_OF_KNOWLEDGE);
         simpleItem(ModItems.ETERNAL_FLAME);
+        simpleItem(ModItems.ABSOLUTE_BLACK_HELMET);
+        simpleItem(ModItems.ABSOLUTE_BLACK_CHESTPLATE);
+        simpleItem(ModItems.ABSOLUTE_BLACK_LEGGINGS);
+        simpleItem(ModItems.ABSOLUTE_BLACK_BOOTS);
+        simpleItem(ModItems.ABSOLUTE_WHITE_HELMET);
+        simpleItem(ModItems.ABSOLUTE_WHITE_CHESTPLATE);
+        simpleItem(ModItems.ABSOLUTE_WHITE_LEGGINGS);
+        simpleItem(ModItems.ABSOLUTE_WHITE_BOOTS);
+
+        //Handheld
         handheldItem(ModItems.ABSOLUTE_BLACK_SWORD);
         handheldItem(ModItems.ABSOLUTE_BLACK_PICKAXE);
         handheldItem(ModItems.ABSOLUTE_BLACK_SHOVEL);

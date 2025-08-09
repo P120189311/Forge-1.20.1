@@ -97,6 +97,17 @@ public class ExampleMod {
             event.accept(ModItems.ABSOLUTE_WHITE_AXE);
             event.accept(ModItems.ABSOLUTE_WHITE_HOE);
         }
+
+        if(event.getTab() == ModCreativeModeTab.Mod_Armors){
+            event.accept(ModItems.ABSOLUTE_BLACK_HELMET);
+            event.accept(ModItems.ABSOLUTE_BLACK_CHESTPLATE);
+            event.accept(ModItems.ABSOLUTE_BLACK_LEGGINGS);
+            event.accept(ModItems.ABSOLUTE_BLACK_BOOTS);
+            event.accept(ModItems.ABSOLUTE_WHITE_HELMET);
+            event.accept(ModItems.ABSOLUTE_WHITE_CHESTPLATE);
+            event.accept(ModItems.ABSOLUTE_WHITE_LEGGINGS);
+            event.accept(ModItems.ABSOLUTE_WHITE_BOOTS);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

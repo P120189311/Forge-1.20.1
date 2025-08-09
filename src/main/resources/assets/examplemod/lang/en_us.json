@@ -1,49 +1,58 @@
 {
   "item.examplemod.blacky": "Blacky",
-  "item.examplemod.whity": "Whity",
-  "item.examplemod.dowsing_rod": "Dowsing Rod",
-  "item.examplemod.void_of_knowledge": "Void Of Knowledge",
-  "item.examplemod.eternal_flame": "Eternal Flame",
-
   "item.examplemod.absolute_black_sword": "Absolute Black Sword",
   "item.examplemod.absolute_black_pickaxe": "Absolute Black Pickaxe",
   "item.examplemod.absolute_black_shovel": "Absolute Black Shovel",
   "item.examplemod.absolute_black_axe": "Absolute Black Axe",
   "item.examplemod.absolute_black_hoe": "Absolute Black Hoe",
+  "item.examplemod.absolute_black_helmet": "Absolute Black Helmet",
+  "item.examplemod.absolute_black_chestplate": "Absolute Black Chestplate",
+  "item.examplemod.absolute_black_leggings": "Absolute Black Leggings",
+  "item.examplemod.absolute_black_boots": "Absolute Black Boots",
 
+  "item.examplemod.whity": "Whity",
   "item.examplemod.absolute_white_sword": "Absolute White Sword",
   "item.examplemod.absolute_white_pickaxe": "Absolute White Pickaxe",
   "item.examplemod.absolute_white_shovel": "Absolute White Shovel",
   "item.examplemod.absolute_white_axe": "Absolute White Axe",
   "item.examplemod.absolute_white_hoe": "Absolute White Hoe",
+  "item.examplemod.absolute_white_helmet": "Absolute White Helmet",
+  "item.examplemod.absolute_white_chestplate": "Absolute White Chestplate",
+  "item.examplemod.absolute_white_leggings": "Absolute White Leggings",
+  "item.examplemod.absolute_white_boots": "Absolute White Boots",
+
+  "item.examplemod.dowsing_rod": "Dowsing Rod",
+
+  "item.examplemod.void_of_knowledge": "Void Of Knowledge",
+
+  "item.examplemod.eternal_flame": "Eternal Flame",
+
 
   "block.examplemod.absolute_black": "Absolute Black",
   "block.examplemod.absolute_black_ore": "Absolute Black Ore",
-  "block.examplemod.absolute_white": "Absolute White",
-  "block.examplemod.absolute_white_ore": "Absolute White Ore",
-  "block.examplemod.jumpy_block": "Jumpy Block",
-
   "block.examplemod.absolute_black_stairs": "Absolute Black Stairs",
   "block.examplemod.absolute_black_slab": "Absolute Black Slab",
   "block.examplemod.absolute_black_fence": "Absolute Black Fence",
   "block.examplemod.absolute_black_fence_gate": "Absolute Black Fence Gate",
   "block.examplemod.absolute_black_wall": "Absolute Black Wall",
-
   "block.examplemod.absolute_black_button": "Absolute Black Button",
   "block.examplemod.absolute_black_pressure_plate": "Absolute Black Pressure Plate",
   "block.examplemod.absolute_black_door": "Absolute Black Door",
   "block.examplemod.absolute_black_trapdoor": "Absolute Black Trapdoor",
 
+  "block.examplemod.absolute_white": "Absolute White",
+  "block.examplemod.absolute_white_ore": "Absolute White Ore",
   "block.examplemod.absolute_white_stairs": "Absolute White Stairs",
   "block.examplemod.absolute_white_slab": "Absolute White Slab",
   "block.examplemod.absolute_white_fence": "Absolute White Fence",
   "block.examplemod.absolute_white_fence_gate": "Absolute White Fence Gate",
   "block.examplemod.absolute_white_wall": "Absolute White Wall",
-
   "block.examplemod.absolute_white_button": "Absolute White Button",
   "block.examplemod.absolute_white_pressure_plate": "Absolute White Pressure Plate",
   "block.examplemod.absolute_white_door": "Absolute White Door",
   "block.examplemod.absolute_white_trapdoor": "Absolute White Trapdoor",
+
+  "block.examplemod.jumpy_block": "Jumpy Block",
 
 
   "itemGroup.black": "Black",
@@ -51,9 +60,13 @@
   "itemGroup.mod_misc": "Mod Misc",
   "itemGroup.mod_food": "Mod Food",
   "itemGroup.mod_tools": "Mod Tools",
+  "itemGroup.mod_armors": "Mod Armors",
+
 
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
   "tooltip.examplemod.dowsing_rod.tooltip": "Press §5SHIFT§r for more Information!",
-  "tooltip.examplemod.jumpy_block": "Jumpy"
+  "tooltip.examplemod.jumpy_block": "Jumpy",
+  "tooltip.examplemod.absolute_black_sword": "Hit a target to apply 4 Seconds of DoT Damage + Instant Damage at the end (2 Instances of Heal Damage to Wither Skeletons), Cooldown = 5 Seconds",
+  "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds"
 }
