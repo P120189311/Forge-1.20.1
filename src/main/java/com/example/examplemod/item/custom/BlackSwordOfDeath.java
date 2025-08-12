@@ -41,7 +41,9 @@ public class BlackSwordOfDeath extends SwordItem {
             }
 
             if (pTarget.getType() == EntityType.WITHER_SKELETON || pTarget.getType() == EntityType.WITHER) {
-                pTarget.hurt(DamageSource.OUT_OF_WORLD, 1.0F);
+                for (int i = 1; i <= 4; i++) {
+                    delayedEffects.add(new DelayedEffect(pTarget, MobEffects.MOVEMENT_SLOWDOWN, pAttacker, 20 * i));
+                }
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 100));
             } else if (pTarget.getMobType() == MobType.UNDEAD) {
                 pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1), pAttacker);
@@ -62,9 +64,13 @@ public class BlackSwordOfDeath extends SwordItem {
                 eff.ticks--;
                 if (eff.ticks <= 0) {
                     if (eff.target.isAlive()) {
-                        eff.target.addEffect(new MobEffectInstance(eff.effect, 1), eff.attacker);
+                        if (eff.effect == MobEffects.MOVEMENT_SLOWDOWN) {
+                            eff.target.hurt(DamageSource.OUT_OF_WORLD, 1.0F);
+                        } else if (eff.effect != null) {
+                            eff.target.addEffect(new MobEffectInstance(eff.effect, 1), eff.attacker);
+                        }
+                        iterator.remove();
                     }
-                    iterator.remove();
                 }
             }
         }
