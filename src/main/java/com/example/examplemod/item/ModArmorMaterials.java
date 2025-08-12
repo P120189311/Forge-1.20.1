@@ -11,8 +11,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ABSOLUTE_BLACK("absolute_black", 8, new int[]{3, 5, 7, 4}, 5, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.0F, () -> Ingredient.of(ModItems.BLACKY.get())),
-    ABSOLUTE_WHITE("absolute_white", 8, new int[]{3, 5, 7, 4}, 5, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.0F, () -> Ingredient.of(ModItems.WHITY.get()));
+    ABSOLUTE_BLACK("absolute_black", 35, new int[]{2, 5, 7, 2}, 5, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.0F, () -> Ingredient.of(ModItems.BLACKY.get())),
+    ABSOLUTE_WHITE("absolute_white", 35, new int[]{2, 5, 7, 2}, 5, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.0F, () -> Ingredient.of(ModItems.WHITY.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;

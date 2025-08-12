@@ -27,7 +27,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MOD_ID);
 
-    //Normal Blocks
+    // Normal Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK = registerBlock("absolute_black",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(8f)
@@ -45,14 +45,14 @@ public class ModBlocks {
                     .strength(6f)
                     .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
 
-    //Misc Blocks
+    // Misc Blocks
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f)
                     .requiresCorrectToolForDrops()
             ), ModCreativeModeTab.Mod_Misc);
 
-    //Black Other Blocks
+    // Black Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",
             () -> new StairBlock(() -> ModBlocks.ABSOLUTE_BLACK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.METAL)
@@ -76,7 +76,7 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
-    //White Other Blocks
+    // White Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_WHITE_STAIRS = registerBlock("absolute_white_stairs",
             () -> new StairBlock(() -> ModBlocks.ABSOLUTE_WHITE.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.METAL)
@@ -100,7 +100,7 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
-    //Black Utility Blocks
+    // Black Utility Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_BUTTON = registerBlock("absolute_black_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2f)
@@ -128,7 +128,7 @@ public class ModBlocks {
                     .noOcclusion()
                     ,SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE));
 
-    //White Utility Blocks
+    // White Utility Blocks
     public static final RegistryObject<Block> ABSOLUTE_WHITE_BUTTON = registerBlock("absolute_white_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2f)

@@ -2,6 +2,7 @@ package com.example.examplemod.item.custom;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -40,13 +41,13 @@ public class BlackSwordOfDeath extends SwordItem {
             }
 
             if (pTarget.getType() == EntityType.WITHER_SKELETON || pTarget.getType() == EntityType.WITHER) {
-                delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 50));
+                pTarget.hurt(DamageSource.OUT_OF_WORLD, 1.0F);
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 100));
             } else if (pTarget.getMobType() == MobType.UNDEAD) {
-                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1), pAttacker);
+                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1), pAttacker);
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HEAL, pAttacker, 100));
             } else {
-                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1), pAttacker);
+                pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1), pAttacker);
                 delayedEffects.add(new DelayedEffect(pTarget, MobEffects.HARM, pAttacker, 100));
             }
         }
