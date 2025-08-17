@@ -82,16 +82,16 @@ public class ModItems {
 
     // White Armor
     public static final RegistryObject<Item> ABSOLUTE_WHITE_HELMET = ITEMS.register("absolute_white_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.HELMET,
+            () -> new PurificatingWhiteArmorText(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.HELMET,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_WHITE_CHESTPLATE = ITEMS.register("absolute_white_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.CHESTPLATE,
+            () -> new PurificatingWhiteArmor(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.CHESTPLATE,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_WHITE_LEGGINGS = ITEMS.register("absolute_white_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.LEGGINGS,
+            () -> new PurificatingWhiteArmorText(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.LEGGINGS,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_WHITE_BOOTS = ITEMS.register("absolute_white_boots",
-            () -> new ArmorItem(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.BOOTS,
+            () -> new PurificatingWhiteArmorText(ModArmorMaterials.ABSOLUTE_WHITE, ArmorItem.Type.BOOTS,
                     new  Item.Properties().fireResistant()));
 
     public static void register(IEventBus eventBus) {

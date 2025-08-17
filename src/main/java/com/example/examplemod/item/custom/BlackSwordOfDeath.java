@@ -90,6 +90,10 @@ public class BlackSwordOfDeath extends SwordItem {
         }
     }
 
+    public static boolean hasPendingEffect(LivingEntity entity) {
+        return delayedEffects.stream().anyMatch(e -> e.target == entity);
+    }
+
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("tooltip.examplemod.absolute_black_sword").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.BOLD));

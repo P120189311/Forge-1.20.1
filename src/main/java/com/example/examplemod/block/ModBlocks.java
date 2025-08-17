@@ -3,10 +3,8 @@ package com.example.examplemod.block;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.custom.CustomPressurePlateBlock;
 import com.example.examplemod.block.custom.JumpyBlock;
-import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -38,7 +36,7 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(6f)
-                    .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
+                    .requiresCorrectToolForDrops(),UniformInt.of(4, 6)));
     public static final RegistryObject<Block> ABSOLUTE_WHITE = registerBlock("absolute_white",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
@@ -48,7 +46,7 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(6f)
-                    .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
+                    .requiresCorrectToolForDrops(),UniformInt.of(4, 6)));
 
     // Misc Blocks
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",

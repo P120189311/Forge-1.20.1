@@ -5,11 +5,8 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobType;
@@ -28,10 +25,10 @@ import java.util.Map;
 
 public class BlackHoleArmor extends ArmorItem {
 
-    /*private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.ABSOLUTE_BLACK,
-                            new MobEffectInstance(MobEffects.REGENERATION, 100, 1)).build();*/
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, true,false, true)).build();
 
     public BlackHoleArmor(ArmorMaterial p_40386_, ArmorItem.Type p_40387_, Properties p_40388_) {
         super(p_40386_, p_40387_, p_40388_);
@@ -59,24 +56,70 @@ public class BlackHoleArmor extends ArmorItem {
                         // Closer = faster pull
                         double strength = Math.pow(Math.max(0, (outerRadius - dist) / (outerRadius - damageRadius)), 1.5);
                         double speed = 0.01 + strength * 0.03;
-                    Vec3 dir = player.position().subtract(target.position()).normalize().scale(speed); // pull speed
-                    target.setDeltaMovement(target.getDeltaMovement().add(dir));
-                }
+                        Vec3 dir = player.position().subtract(target.position()).normalize().scale(speed); // pull speed
+                        target.setDeltaMovement(target.getDeltaMovement().add(dir));
+                    }
 
-                // Apply Void Damage if within 3 blocks
-                if (dist <= damageRadius) {
-                    applyVoidDamageWithCooldown(target, world);
+                    // Apply Void Damage if within 3 blocks
+                    if (dist <= damageRadius) {
+                        applyVoidDamageWithCooldown(target, world);
+                    }
                 }
-                }
+            }
+                if (isWearingFullBlackSet(player)) {
+                    evaluateArmorEffects(player);
             }
         }
     }
 
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof BlackHoleArmor &&
-                player.getItemBySlot(EquipmentSlot.CHEST).getItem() instanceof BlackHoleArmor &&
-                player.getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof BlackHoleArmor &&
-                player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof BlackHoleArmor;
+    private void evaluateArmorEffects(Player player) {
+        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+            ArmorMaterial mapArmorMaterial = entry.getKey();
+            MobEffectInstance mapStatusEffect = entry.getValue();
+
+            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+            }
+        }
+    }
+
+    private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
+                                            MobEffectInstance mapStatusEffect) {
+        boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
+
+        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
+            player.addEffect(new MobEffectInstance(mapStatusEffect));
+        }
+    }
+
+    private static boolean isWearingFullBlackSet(Player player) {
+        for (ItemStack armorStack : player.getInventory().armor) {
+            if (!(armorStack.getItem() instanceof ArmorItem)) return false;
+        }
+        ArmorItem boots = (ArmorItem) player.getInventory().getArmor(0).getItem();
+        ArmorItem leggings = (ArmorItem) player.getInventory().getArmor(1).getItem();
+        ArmorItem chestplate = (ArmorItem) player.getInventory().getArmor(2).getItem();
+        ArmorItem helmet = (ArmorItem) player.getInventory().getArmor(3).getItem();
+
+        return boots.getMaterial() == ModArmorMaterials.ABSOLUTE_BLACK
+                && leggings.getMaterial() == ModArmorMaterials.ABSOLUTE_BLACK
+                && chestplate.getMaterial() == ModArmorMaterials.ABSOLUTE_BLACK
+                && helmet.getMaterial() == ModArmorMaterials.ABSOLUTE_BLACK;
+    }
+
+    private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
+        for (ItemStack armorStack : player.getInventory().armor) {
+            if (!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+        }
+        ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
+        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
+        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
+        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
+
+        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
+                leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 
     public static final String LAST_VOID_DAMAGE_TAG = "LastVoidDamageTick";
