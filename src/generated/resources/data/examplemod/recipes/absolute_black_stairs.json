@@ -14,5 +14,6 @@
   "result": {
     "count": 4,
     "item": "examplemod:absolute_black_stairs"
-  }
+  },
+  "show_notification": true
 }

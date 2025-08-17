@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_black_chestplate"
-  }
+  },
+  "show_notification": true
 }

@@ -12,5 +12,6 @@
   "result": {
     "count": 6,
     "item": "examplemod:absolute_black_pressure_plate"
-  }
+  },
+  "show_notification": true
 }

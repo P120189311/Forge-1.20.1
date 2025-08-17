@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_black_axe"
-  }
+  },
+  "show_notification": true
 }

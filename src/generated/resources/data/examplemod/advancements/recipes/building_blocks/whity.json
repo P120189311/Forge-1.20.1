@@ -30,5 +30,6 @@
     "recipes": [
       "examplemod:whity"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

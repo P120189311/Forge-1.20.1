@@ -16,5 +16,6 @@
   "result": {
     "count": 6,
     "item": "examplemod:absolute_white_fence_gate"
-  }
+  },
+  "show_notification": true
 }

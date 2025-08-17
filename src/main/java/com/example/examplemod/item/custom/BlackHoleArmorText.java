@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class BlackHoleArmorText extends ArmorItem {
-    public BlackHoleArmorText(ArmorMaterial p_40386_, EquipmentSlot p_40387_, Properties p_40388_) {
+    public BlackHoleArmorText(ArmorMaterial p_40386_, ArmorItem.Type p_40387_, Properties p_40388_) {
         super(p_40386_, p_40387_, p_40388_);
     }
     @Override

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_black_sword"
-  }
+  },
+  "show_notification": true
 }

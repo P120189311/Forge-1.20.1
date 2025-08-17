@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_white_sword"
-  }
+  },
+  "show_notification": true
 }

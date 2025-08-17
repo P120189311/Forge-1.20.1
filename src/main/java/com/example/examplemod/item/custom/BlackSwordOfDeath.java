@@ -31,7 +31,7 @@ public class BlackSwordOfDeath extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        if (!pTarget.level.isClientSide) {
+        if (!pTarget.getCommandSenderWorld().isClientSide) {
 
             if (pAttacker instanceof net.minecraft.world.entity.player.Player player) {
                 if (player.getCooldowns().isOnCooldown(this)) {
@@ -65,7 +65,7 @@ public class BlackSwordOfDeath extends SwordItem {
                 if (eff.ticks <= 0) {
                     if (eff.target.isAlive()) {
                         if (eff.effect == MobEffects.MOVEMENT_SLOWDOWN) {
-                            eff.target.hurt(DamageSource.OUT_OF_WORLD, 1.0F);
+                            eff.target.hurt(eff.target.damageSources().fellOutOfWorld(), 1.0F);
                         } else if (eff.effect != null) {
                             eff.target.addEffect(new MobEffectInstance(eff.effect, 1), eff.attacker);
                         }

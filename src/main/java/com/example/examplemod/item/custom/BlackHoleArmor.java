@@ -6,6 +6,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
@@ -32,7 +33,7 @@ public class BlackHoleArmor extends ArmorItem {
                     .put(ModArmorMaterials.ABSOLUTE_BLACK,
                             new MobEffectInstance(MobEffects.REGENERATION, 100, 1)).build();*/
 
-    public BlackHoleArmor(ArmorMaterial p_40386_, EquipmentSlot p_40387_, Properties p_40388_) {
+    public BlackHoleArmor(ArmorMaterial p_40386_, ArmorItem.Type p_40387_, Properties p_40388_) {
         super(p_40386_, p_40387_, p_40388_);
     }
 
@@ -87,7 +88,7 @@ public class BlackHoleArmor extends ArmorItem {
         int lastDamageTick = tag.getInt(LAST_VOID_DAMAGE_TAG);
 
         if (currentTick - lastDamageTick >= 20) {
-            target.hurt(DamageSource.OUT_OF_WORLD, 2.0F); // Every 1.0F means 0.5 Hearts of damage
+            target.hurt(target.damageSources().fellOutOfWorld(), 2.0F); // Every 1.0F means 0.5 Hearts of damage
             tag.putInt(LAST_VOID_DAMAGE_TAG, currentTick);
         }
     }

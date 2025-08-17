@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,85 +28,19 @@ public class ExampleMod {
     public ExampleMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTab.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.addListener(BlackSwordOfDeath::onServerTick);
         MinecraftForge.EVENT_BUS.addListener(WhiteSwordOfJudgement::onServerTick);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
-    }
-
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == ModCreativeModeTab.Black){
-            event.accept(ModItems.BLACKY);
-            event.accept(ModBlocks.ABSOLUTE_BLACK);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_ORE);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_STAIRS);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_SLAB);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_FENCE);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_FENCE_GATE);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_WALL);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_BUTTON);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_PRESSURE_PLATE);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_DOOR);
-            event.accept(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR);
-        }
-
-        if(event.getTab() == ModCreativeModeTab.White){
-            event.accept(ModItems.WHITY);
-            event.accept(ModBlocks.ABSOLUTE_WHITE);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_ORE);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_STAIRS);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_SLAB);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_FENCE);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_FENCE_GATE);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_WALL);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_BUTTON);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_PRESSURE_PLATE);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_DOOR);
-            event.accept(ModBlocks.ABSOLUTE_WHITE_TRAPDOOR);
-        }
-
-        if(event.getTab() == ModCreativeModeTab.Mod_Misc){
-            event.accept(ModItems.DOWSING_ROD);
-            event.accept(ModItems.ETERNAL_FLAME);
-            event.accept(ModBlocks.JUMPY_BLOCK);
-        }
-
-        if(event.getTab() == ModCreativeModeTab.Mod_Food){
-            event.accept(ModItems.VOID_OF_KNOWLEDGE);
-        }
-
-        if(event.getTab() == ModCreativeModeTab.Mod_Tools){
-            event.accept(ModItems.ABSOLUTE_BLACK_SWORD);
-            event.accept(ModItems.ABSOLUTE_BLACK_PICKAXE);
-            event.accept(ModItems.ABSOLUTE_BLACK_SHOVEL);
-            event.accept(ModItems.ABSOLUTE_BLACK_AXE);
-            event.accept(ModItems.ABSOLUTE_BLACK_HOE);
-            event.accept(ModItems.ABSOLUTE_WHITE_SWORD);
-            event.accept(ModItems.ABSOLUTE_WHITE_PICKAXE);
-            event.accept(ModItems.ABSOLUTE_WHITE_SHOVEL);
-            event.accept(ModItems.ABSOLUTE_WHITE_AXE);
-            event.accept(ModItems.ABSOLUTE_WHITE_HOE);
-        }
-
-        if(event.getTab() == ModCreativeModeTab.Mod_Armors){
-            event.accept(ModItems.ABSOLUTE_BLACK_HELMET);
-            event.accept(ModItems.ABSOLUTE_BLACK_CHESTPLATE);
-            event.accept(ModItems.ABSOLUTE_BLACK_LEGGINGS);
-            event.accept(ModItems.ABSOLUTE_BLACK_BOOTS);
-            event.accept(ModItems.ABSOLUTE_WHITE_HELMET);
-            event.accept(ModItems.ABSOLUTE_WHITE_CHESTPLATE);
-            event.accept(ModItems.ABSOLUTE_WHITE_LEGGINGS);
-            event.accept(ModItems.ABSOLUTE_WHITE_BOOTS);
-        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

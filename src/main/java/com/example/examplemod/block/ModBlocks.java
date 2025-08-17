@@ -14,7 +14,8 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,132 +30,147 @@ public class ModBlocks {
 
     // Normal Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK = registerBlock("absolute_black",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(8f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_ORE = registerBlock("absolute_black_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
     public static final RegistryObject<Block> ABSOLUTE_WHITE = registerBlock("absolute_white",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(8f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_ORE = registerBlock("absolute_white_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),UniformInt.of(2, 6)));
 
     // Misc Blocks
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
-            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new JumpyBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
-                    .requiresCorrectToolForDrops()
-            ), ModCreativeModeTab.Mod_Misc);
+                    .requiresCorrectToolForDrops()));
 
     // Black Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",
             () -> new StairBlock(() -> ModBlocks.ABSOLUTE_BLACK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.METAL)
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.METAL)
                             .strength(5f)
                             .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_SLAB = registerBlock("absolute_black_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE = registerBlock("absolute_black_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_FENCE_GATE = registerBlock("absolute_black_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()
                     ,SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_WALL = registerBlock("absolute_black_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
     // White Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_WHITE_STAIRS = registerBlock("absolute_white_stairs",
             () -> new StairBlock(() -> ModBlocks.ABSOLUTE_WHITE.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.METAL)
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_SLAB = registerBlock("absolute_white_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_FENCE = registerBlock("absolute_white_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_FENCE_GATE = registerBlock("absolute_white_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()
                     ,SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_WALL = registerBlock("absolute_white_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
     // Black Utility Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_BUTTON = registerBlock("absolute_black_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new ButtonBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,10,false
-                    ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
+                    ,BlockSetType.IRON,10, false));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_PRESSURE_PLATE = registerBlock("absolute_black_pressure_plate",
-            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL)
+            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF
+                    ,BlockSetType.IRON
                     , 5));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_DOOR = registerBlock("absolute_black_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
-                    ,SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE));
+                    ,BlockSetType.IRON));
     public static final RegistryObject<Block> ABSOLUTE_BLACK_TRAPDOOR = registerBlock("absolute_black_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
-                    ,SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE));
+                    ,BlockSetType.IRON));
 
     // White Utility Blocks
     public static final RegistryObject<Block> ABSOLUTE_WHITE_BUTTON = registerBlock("absolute_white_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,40,false
-                    ,SoundEvents.STONE_BUTTON_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF));
+                    ,BlockSetType.IRON,40, false));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_PRESSURE_PLATE = registerBlock("absolute_white_pressure_plate",
-            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.METAL)
+            () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .noCollission()
-                    ,SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF
+                    ,BlockSetType.IRON
                     , 40));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_DOOR = registerBlock("absolute_white_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new DoorBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
-                    ,SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE));
+                    ,BlockSetType.IRON));
     public static final RegistryObject<Block> ABSOLUTE_WHITE_TRAPDOOR = registerBlock("absolute_white_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
-                    ,SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE));
+                    ,BlockSetType.IRON));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

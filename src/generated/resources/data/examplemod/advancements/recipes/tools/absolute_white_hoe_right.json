@@ -43,5 +43,6 @@
     "recipes": [
       "examplemod:absolute_white_hoe_right"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

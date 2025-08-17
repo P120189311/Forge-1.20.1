@@ -26,7 +26,7 @@ public class WhiteSwordOfJudgement extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        Level level = pAttacker.level;
+        Level level = pAttacker.getCommandSenderWorld();
 
         if (level.isClientSide) {
             return super.hurtEnemy(pStack, pTarget, pAttacker);

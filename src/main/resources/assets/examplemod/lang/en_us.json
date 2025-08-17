@@ -55,12 +55,12 @@
   "block.examplemod.jumpy_block": "Jumpy Block",
 
 
-  "itemGroup.black": "Black",
-  "itemGroup.white": "White",
-  "itemGroup.mod_misc": "Mod Misc",
-  "itemGroup.mod_food": "Mod Food",
-  "itemGroup.mod_tools": "Mod Tools",
-  "itemGroup.mod_armors": "Mod Armors",
+  "creativeModeTab.black": "Black",
+  "creativeModeTab.white": "White",
+  "creativeModeTab.mod_misc": "Mod Misc",
+  "creativeModeTab.mod_food": "Mod Food",
+  "creativeModeTab.mod_tools": "Mod Tools",
+  "creativeModeTab.mod_armors": "Mod Armors",
 
 
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",

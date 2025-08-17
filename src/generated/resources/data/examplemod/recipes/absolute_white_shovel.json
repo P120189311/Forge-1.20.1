@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_white_shovel"
-  }
+  },
+  "show_notification": true
 }

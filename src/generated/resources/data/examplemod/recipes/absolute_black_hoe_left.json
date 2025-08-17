@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_black_hoe"
-  }
+  },
+  "show_notification": true
 }

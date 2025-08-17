@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_white_helmet"
-  }
+  },
+  "show_notification": true
 }

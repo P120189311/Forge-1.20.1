@@ -43,5 +43,6 @@
     "recipes": [
       "examplemod:absolute_white_pickaxe"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

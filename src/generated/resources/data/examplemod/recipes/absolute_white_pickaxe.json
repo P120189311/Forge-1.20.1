@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_white_pickaxe"
-  }
+  },
+  "show_notification": true
 }

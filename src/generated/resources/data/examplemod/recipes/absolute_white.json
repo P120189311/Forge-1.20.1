@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_white"
-  }
+  },
+  "show_notification": true
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "examplemod:absolute_black_shovel"
-  }
+  },
+  "show_notification": true
 }
