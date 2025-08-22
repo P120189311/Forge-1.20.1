@@ -37,7 +37,7 @@ public class ModItems {
             () -> new BlackSwordOfDeath(ModTiers.ABSOLUTE_BLACK, 0, -2.4f,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_BLACK_PICKAXE = ITEMS.register("absolute_black_pickaxe",
-            () -> new PickaxeItem(ModTiers.ABSOLUTE_BLACK, 1, -2.8f,
+            () -> new InfectiousBlackPickaxe(ModTiers.ABSOLUTE_BLACK, 1, -2.8f,
                     new  Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ABSOLUTE_BLACK_SHOVEL = ITEMS.register("absolute_black_shovel",
             () -> new ShovelItem(ModTiers.ABSOLUTE_BLACK, 2, -3f,

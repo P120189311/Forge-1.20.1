@@ -136,7 +136,7 @@ public class PurificatingWhiteArmor extends ArmorItem {
                 }
             }
 
-            // Particles every PARTICLE_INTERVAL ticks (client-side only)
+            // Client-side
             if (player.level().isClientSide && player.tickCount % PARTICLE_INTERVAL == 0) {
                 spawnHealingParticles(player, HEAL_RADIUS);
 
