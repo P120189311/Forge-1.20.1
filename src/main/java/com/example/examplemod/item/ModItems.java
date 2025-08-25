@@ -3,8 +3,12 @@ package com.example.examplemod.item;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.custom.*;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,6 +35,9 @@ public class ModItems {
     // Burnables
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
             () -> new EternalFlameItem(new Item.Properties().fireResistant()));
+
+    // Misc Items
+
 
     // Black Tools
     public static final RegistryObject<Item> ABSOLUTE_BLACK_SWORD = ITEMS.register("absolute_black_sword",

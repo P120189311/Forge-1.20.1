@@ -8,6 +8,8 @@ import com.example.examplemod.item.custom.WhiteSwordOfJudgement;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,7 +42,9 @@ public class ExampleMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.DECAYING_HARMONY.getId(), ModBlocks.POTTED_DECAYING_HARMONY);
+        });
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -52,6 +56,9 @@ public class ExampleMod {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_WHITE_DOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECAYING_HARMONY.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_DECAYING_HARMONY.get(), RenderType.cutout());
         }
     }
 }

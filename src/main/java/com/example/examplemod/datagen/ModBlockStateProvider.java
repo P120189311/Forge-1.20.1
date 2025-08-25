@@ -11,6 +11,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -49,6 +50,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Misc Blocks
         blockWithItem(ModBlocks.JUMPY_BLOCK);
+
+        // Flowers
+        simpleBlockWithItem(ModBlocks.DECAYING_HARMONY.get(), models().cross(blockTexture(ModBlocks.DECAYING_HARMONY.get()).getPath(),
+                blockTexture(ModBlocks.DECAYING_HARMONY.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_DECAYING_HARMONY.get(), models().singleTexture("potted_decaying_harmony", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.DECAYING_HARMONY.get())).renderType("cutout"));
 
         models().getBuilder("absolute_black_trapdoor")
                 .parent(new ModelFile.UncheckedModelFile("block/template_trapdoor_bottom"))

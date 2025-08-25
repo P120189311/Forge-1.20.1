@@ -5,6 +5,7 @@ import com.example.examplemod.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -40,6 +41,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Misc Blocks
         dropSelf(ModBlocks.JUMPY_BLOCK.get());
+
+        // Flowers
+        this.dropSelf(ModBlocks.DECAYING_HARMONY.get());
+        this.add(ModBlocks.POTTED_DECAYING_HARMONY.get(), createPotFlowerItemTable(ModBlocks.DECAYING_HARMONY.get()));
 
         add(ModBlocks.ABSOLUTE_BLACK_ORE.get(),
                 (block -> createOreDrop(ModBlocks.ABSOLUTE_BLACK_ORE.get(), ModItems.BLACKY.get())));

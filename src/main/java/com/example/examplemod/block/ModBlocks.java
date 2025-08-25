@@ -2,11 +2,14 @@ package com.example.examplemod.block;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.custom.CustomPressurePlateBlock;
+import com.example.examplemod.block.custom.DecayingHarmony;
 import com.example.examplemod.block.custom.JumpyBlock;
+import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -54,6 +57,13 @@ public class ModBlocks {
                     .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
+
+    // Flowers
+    public static final RegistryObject<Block> DECAYING_HARMONY = registerBlock("decaying_harmony",
+            () -> new DecayingHarmony(BlockBehaviour.Properties.copy(Blocks.WITHER_ROSE).noOcclusion()));
+    public static final RegistryObject<Block> POTTED_DECAYING_HARMONY = BLOCKS.register("potted_decaying_harmony",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,ModBlocks.DECAYING_HARMONY,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_WITHER_ROSE).noOcclusion()));
 
     // Black Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",
@@ -170,6 +180,10 @@ public class ModBlocks {
                     .noOcclusion()
                     ,BlockSetType.IRON));
 
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -179,12 +193,6 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties()));
-    }
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> blockSupplier, CreativeModeTab tab) {
-        RegistryObject<T> block = BLOCKS.register(name, blockSupplier);
-        ModItems.ITEMS.register(name, () -> new JumpyBlockItem(block.get(), new Item.Properties()));
-        return block;
     }
 
     public static void register(IEventBus eventBus) {

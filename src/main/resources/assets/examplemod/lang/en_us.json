@@ -54,6 +54,7 @@
 
   "block.examplemod.jumpy_block": "Jumpy Block",
 
+  "block.examplemod.decaying_harmony": "Decaying Harmony",
 
   "creativeModeTab.black": "Black",
   "creativeModeTab.white": "White",
@@ -70,5 +71,6 @@
   "tooltip.examplemod.absolute_black_sword": "Hit a target to apply 4 Seconds of DoT Damage + Instant Damage at the end, Cooldown = 5 Seconds",
   "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds",
   "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs (Except Wither Skeleton and Bosses) that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
-  "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds"
+  "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
+  "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores"
 }
