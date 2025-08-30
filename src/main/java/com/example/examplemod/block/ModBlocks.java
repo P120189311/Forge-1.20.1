@@ -57,6 +57,12 @@ public class ModBlocks {
                     .mapColor(MapColor.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MYSTERY_STAND = registerBlock("mystery_stand",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .strength(3f)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     // Flowers
     public static final RegistryObject<Block> DECAYING_HARMONY = registerBlock("decaying_harmony",

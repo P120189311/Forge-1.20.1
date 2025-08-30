@@ -63,6 +63,7 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModBlocks.JUMPY_BLOCK.get());
                         pOutput.accept(ModItems.ETERNAL_FLAME.get());
                         pOutput.accept(ModBlocks.DECAYING_HARMONY.get());
+                        pOutput.accept(ModBlocks.MYSTERY_STAND.get());
                     })
                     .build());
 

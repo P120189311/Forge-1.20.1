@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-25T22:53:50.4777282	Item Models: examplemod
+// 1.20.1	2025-08-31T05:57:39.9164291	Item Models: examplemod
 1e987442716894279b2a131289cfd52ab324744e assets/examplemod/models/item/absolute_black_axe.json
 a0ef4ed98b0d28c2c6f0786531bdb8c15644555a assets/examplemod/models/item/absolute_black_boots.json
 0b5d6f5ef29603688aebec9cbd02f8e17f0e0222 assets/examplemod/models/item/absolute_black_chestplate.json
@@ -21,5 +21,6 @@ bb7f6ad5ae6ad4f9953b7e5f7cd6b5b50c827671 assets/examplemod/models/item/blacky.js
 088fa03895ad60be3c315a839fd7138fa4bcd297 assets/examplemod/models/item/decaying_harmony.json
 6990e3319d40f14c73bae6ca09b540ae65f8a65e assets/examplemod/models/item/dowsing_rod.json
 1c910e447f4cfb435ae036ef989613ef0165dfff assets/examplemod/models/item/eternal_flame.json
+0d86dce311ce2894fb9f965d3909d73b4c94456d assets/examplemod/models/item/mystery_stand.json
 cb415b3e08b63429722c3888a0f7e69532f62aff assets/examplemod/models/item/void_of_knowledge.json
 a55c3fd10f969a932e922902798fe5d3f7664594 assets/examplemod/models/item/whity.json

@@ -41,6 +41,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Misc Blocks
         dropSelf(ModBlocks.JUMPY_BLOCK.get());
+        dropSelf(ModBlocks.MYSTERY_STAND.get());
 
         // Flowers
         this.dropSelf(ModBlocks.DECAYING_HARMONY.get());

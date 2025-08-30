@@ -50,6 +50,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Misc Blocks
         blockWithItem(ModBlocks.JUMPY_BLOCK);
+        simpleBlock(ModBlocks.MYSTERY_STAND.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/mystery_stand")));
 
         // Flowers
         simpleBlockWithItem(ModBlocks.DECAYING_HARMONY.get(), models().cross(blockTexture(ModBlocks.DECAYING_HARMONY.get()).getPath(),
