@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-31T05:47:29.2107456	Block States: examplemod
+// 1.20.1	2025-08-31T21:30:05.5465697	Block States: examplemod
 b542e9640a428e7e1d92b4998f7b46d5fc10b182 assets/examplemod/blockstates/absolute_black.json
 e70a1c3eba7b62073b2c50fd6da5d3cf52b0fb47 assets/examplemod/blockstates/absolute_black_button.json
 2623dea6bf72db3aa2302e4d2f39a694d12a70c8 assets/examplemod/blockstates/absolute_black_door.json
@@ -120,4 +120,5 @@ b34ddd05c47d1182fa71a69e1fc5b4ccdf3a6739 assets/examplemod/models/item/absolute_
 f7c1b906241521e9785537c589948a1d062f1583 assets/examplemod/models/item/absolute_white_wall.json
 768c98177b706b57c543d44816ca4e9b167a4ed8 assets/examplemod/models/item/decaying_harmony.json
 d3a8f6c6f9903186cd7e5266e8feeb7ad518fcf4 assets/examplemod/models/item/jumpy_block.json
+0d86dce311ce2894fb9f965d3909d73b4c94456d assets/examplemod/models/item/mystery_stand.json
 9714c74e44f01e9c3e01e850bc6f227cb933d345 assets/examplemod/models/item/potted_decaying_harmony.json

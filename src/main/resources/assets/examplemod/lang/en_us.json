@@ -22,6 +22,7 @@
   "item.examplemod.absolute_white_boots": "Absolute White Boots",
 
   "item.examplemod.dowsing_rod": "Dowsing Rod",
+  "item.examplemod.nocturnal_dwight": "Nocturnal Dwight",
 
   "item.examplemod.void_of_knowledge": "Void Of Knowledge",
 
@@ -73,5 +74,6 @@
   "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds",
   "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs (Except Wither Skeleton and Bosses) that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
   "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
-  "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores"
+  "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores",
+  "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively"
 }

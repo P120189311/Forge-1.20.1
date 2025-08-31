@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:green_concrete",
+    "minecraft:green_wool",
+    "minecraft:green_concrete_powder",
+    "minecraft:green_terracotta",
+    "minecraft:green_glazed_terracotta",
+    "minecraft:green_stained_glass",
+    "minecraft:lime_concrete",
+    "minecraft:lime_wool",
+    "minecraft:lime_concrete_powder",
+    "minecraft:lime_terracotta",
+    "minecraft:lime_glazed_terracotta",
+    "minecraft:lime_stained_glass",
+    "minecraft:emerald_block",
+    "minecraft:slime_block",
+    "minecraft:moss_block"
+  ]
+}

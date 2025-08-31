@@ -36,8 +36,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Blocks
         simpleBlockItem(ModBlocks.DECAYING_HARMONY);
-        withExistingParent(ModBlocks.MYSTERY_STAND.getId().getPath(),
-                modLoc("block/mystery_stand"));
 
         //Handheld
         handheldItem(ModItems.ABSOLUTE_BLACK_SWORD);

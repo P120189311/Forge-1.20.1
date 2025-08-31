@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "GRG",
+    "GGG"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:rabbit_foot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "G": {
+      "tag": "examplemod:green_materials"
+    }
+  },
+  "result": {
+    "item": "examplemod:jumpy_block",
+    "count": 1
+  }
+}

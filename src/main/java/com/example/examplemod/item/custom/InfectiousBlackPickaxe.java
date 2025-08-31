@@ -81,10 +81,10 @@ public class InfectiousBlackPickaxe extends PickaxeItem {
     private Block getOffhandBlock(Player player) {
         ItemStack offhand = player.getOffhandItem();
         if (offhand.is(ModBlocks.ABSOLUTE_BLACK.get().asItem())) {
-            return ModBlocks.ABSOLUTE_BLACK.get();
+            return ModBlocks.ABSOLUTE_BLACK_ORE.get();
         }
         if (offhand.is(ModBlocks.ABSOLUTE_WHITE.get().asItem())) {
-            return ModBlocks.ABSOLUTE_WHITE.get();
+            return ModBlocks.ABSOLUTE_WHITE_ORE.get();
         }
         return null;
     }
