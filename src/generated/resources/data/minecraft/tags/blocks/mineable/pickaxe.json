@@ -1,29 +1,26 @@
 {
-  "replace": false,
   "values": [
     "examplemod:absolute_black",
-    "examplemod:absolute_white",
-    "examplemod:absolute_black_ore",
-    "examplemod:absolute_white_ore",
-
     "examplemod:absolute_black_stairs",
     "examplemod:absolute_black_slab",
     "examplemod:absolute_black_fence",
     "examplemod:absolute_black_fence_gate",
     "examplemod:absolute_black_wall",
-    "examplemod:absolute_black_button",
-    "examplemod:absolute_black_pressure_plate",
     "examplemod:absolute_black_door",
     "examplemod:absolute_black_trapdoor",
-
+    "examplemod:absolute_black_button",
+    "examplemod:absolute_black_pressure_plate",
+    "examplemod:absolute_white",
     "examplemod:absolute_white_stairs",
     "examplemod:absolute_white_slab",
     "examplemod:absolute_white_fence",
     "examplemod:absolute_white_fence_gate",
     "examplemod:absolute_white_wall",
+    "examplemod:absolute_white_door",
+    "examplemod:absolute_white_trapdoor",
     "examplemod:absolute_white_button",
     "examplemod:absolute_white_pressure_plate",
-    "examplemod:absolute_white_door",
-    "examplemod:absolute_white_trapdoor"
+    "examplemod:jumpy_block",
+    "examplemod:mystery_stand"
   ]
 }

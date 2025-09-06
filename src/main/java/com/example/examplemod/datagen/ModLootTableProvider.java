@@ -1,5 +1,6 @@
 package com.example.examplemod.datagen;
 
+import com.example.examplemod.datagen.loot.ModBlockLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;

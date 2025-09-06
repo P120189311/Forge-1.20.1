@@ -10,8 +10,9 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> DOWSING_ROD_VALUABLES
-                = tag("dowsing_rod_valuables");
+        public static final TagKey<Block> DOWSING_ROD_VALUABLES = tag("dowsing_rod_valuables");
+        public static final TagKey<Block> NEEDS_ABSOLUTE_BLACK_TOOL = tag("needs_absolute_black_tool");
+        public static final TagKey<Block> NEEDS_ABSOLUTE_WHITE_TOOL = tag("needs_absolute_white_tool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(ExampleMod.MOD_ID, name));

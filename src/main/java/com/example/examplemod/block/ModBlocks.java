@@ -4,6 +4,7 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.custom.CustomPressurePlateBlock;
 import com.example.examplemod.block.custom.DecayingHarmony;
 import com.example.examplemod.block.custom.JumpyBlock;
+import com.example.examplemod.block.custom.MysteryStand;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
@@ -58,7 +59,7 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MYSTERY_STAND = registerBlock("mystery_stand",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new MysteryStand(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(3f)
                     .noOcclusion()

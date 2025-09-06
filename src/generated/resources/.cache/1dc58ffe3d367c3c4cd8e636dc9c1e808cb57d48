@@ -1,0 +1,8 @@
+// 1.20.1	2025-09-07T00:35:13.7469612	Tags for minecraft:block mod id examplemod
+dc5a404d37b5d51764a9fa325e18042794c90577 data/examplemod/tags/blocks/dowsing_rod_valuables.json
+fe839d832367dabbd8dd34d5f83114346dcbf574 data/minecraft/tags/blocks/fences.json
+b5683bb7d2cf14b7caabee815348c50fc3544bf6 data/minecraft/tags/blocks/fence_gates.json
+37eba81709f2a3f5468c4986a3cdefdaedccea7e data/minecraft/tags/blocks/mineable/pickaxe.json
+ded7ade60379b14678af7ac4744564d5b4774bea data/minecraft/tags/blocks/needs_iron_tool.json
+a82955303d25a91e031f100f3457cf4ced97aae1 data/minecraft/tags/blocks/needs_stone_tool.json
+164ce97ab495e59e10765a67f9d6ff962b9cacd3 data/minecraft/tags/blocks/walls.json

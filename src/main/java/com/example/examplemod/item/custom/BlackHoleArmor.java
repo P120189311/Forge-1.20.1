@@ -9,8 +9,10 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.entity.monster.Witch;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -37,6 +39,7 @@ public class BlackHoleArmor extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if (!world.isClientSide) {
+            if (isWearingFullBlackSet(player)) {
             double outerRadius = 25.0;
             double damageRadius = 3.0;
 
@@ -50,7 +53,7 @@ public class BlackHoleArmor extends ArmorItem {
                 double dist = player.distanceTo(target);
 
                 MobType type = target.getMobType();
-                if (type == MobType.UNDEAD || type == MobType.ARTHROPOD || type == MobType.ILLAGER) {
+                if (type == MobType.UNDEAD || type == MobType.ARTHROPOD || type == MobType.ILLAGER || target instanceof Witch) {
 
                     if (dist <= outerRadius && dist > damageRadius) {
                         // Closer = faster pull
@@ -66,7 +69,6 @@ public class BlackHoleArmor extends ArmorItem {
                     }
                 }
             }
-                if (isWearingFullBlackSet(player)) {
                     evaluateArmorEffects(player);
             }
         }
