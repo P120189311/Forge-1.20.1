@@ -5,7 +5,7 @@
 		"0": "examplemod:block/absolute_black_door_bottom",
 		"1": "examplemod:block/absolute_white_door_bottom",
 		"2": "examplemod:item/laser",
-		"particle": "minecraft:item/nether_star"
+		"particle": "minecraft:block/end_rod"
 	},
 	"elements": [
 		{

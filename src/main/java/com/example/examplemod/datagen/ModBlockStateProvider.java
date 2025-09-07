@@ -2,16 +2,20 @@ package com.example.examplemod.datagen;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.block.custom.BlueHillTomatoCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -78,6 +82,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         generateTrapdoorItemModel(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR);
         generateTrapdoorItemModel(ModBlocks.ABSOLUTE_WHITE_TRAPDOOR);
+
+        makeBlueHillTomatoCrop((CropBlock) ModBlocks.BLUE_HILL_TOMATO_CROP.get(), "blue_hill_tomato_stage", "blue_hill_tomato_stage");
 
         List<RegistryObject<? extends Block>> specialBlocks = List.of(
 
@@ -161,6 +167,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
             return blockPath.substring(0, blockPath.length() - "_button".length());
         }
         return blockPath;
+    }
+
+    public void makeBlueHillTomatoCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> blueHillTomatoStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] blueHillTomatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((BlueHillTomatoCropBlock) block).getAgeProperty()),
+                new ResourceLocation(ExampleMod.MOD_ID, "block/" + textureName + state.getValue(((BlueHillTomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 }
 

@@ -1,10 +1,14 @@
 package com.example.examplemod.datagen.loot;
 
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.block.custom.BlueHillTomatoCropBlock;
 import com.example.examplemod.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -52,6 +56,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block -> createOreDrop(ModBlocks.ABSOLUTE_WHITE_ORE.get(), ModItems.WHITY.get())));
         add(ModBlocks.ABSOLUTE_BLACK_DOOR.get(), createDoorTable(ModBlocks.ABSOLUTE_BLACK_DOOR.get()));
         add(ModBlocks.ABSOLUTE_WHITE_DOOR.get(), createDoorTable(ModBlocks.ABSOLUTE_WHITE_DOOR.get()));
+
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.BLUE_HILL_TOMATO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlueHillTomatoCropBlock.AGE, 4));
+
+        this.add(ModBlocks.BLUE_HILL_TOMATO_CROP.get(), createCropDrops(ModBlocks.BLUE_HILL_TOMATO_CROP.get(), ModItems.BLUE_HILL_TOMATO.get(),
+                ModItems.BLUE_HILL_TOMATO_SEEDS.get(), lootitemcondition$builder));
     }
 
     @Override

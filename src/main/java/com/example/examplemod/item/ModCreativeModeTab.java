@@ -73,6 +73,15 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativeModeTab.mod_food"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.VOID_OF_KNOWLEDGE.get());
+                        pOutput.accept(ModItems.BLUE_HILL_TOMATO.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> MOD_PLANTS = CREATIVE_MODE_TABS.register("mod_plants",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLUE_HILL_TOMATO_SEEDS.get()))
+                    .title(Component.translatable("creativeModeTab.mod_plants"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.BLUE_HILL_TOMATO_SEEDS.get());
                     })
                     .build());
 

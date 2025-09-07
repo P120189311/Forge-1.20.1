@@ -55,6 +55,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ABSOLUTE_WHITE_CHESTPLATE);
         simpleItem(ModItems.ABSOLUTE_WHITE_LEGGINGS);
         simpleItem(ModItems.ABSOLUTE_WHITE_BOOTS);
+        simpleItem(ModItems.BLUE_HILL_TOMATO_SEEDS);
 
         // Blocks
         simpleBlockItem(ModBlocks.DECAYING_HARMONY);

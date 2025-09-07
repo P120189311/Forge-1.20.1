@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "examplemod:item/blue_hill_tomato_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "examplemod:item/blue_hill_tomato_2d"
+    },
+    "ground": {
+      "parent": "examplemod:item/blue_hill_tomato_2d"
+    },
+    "fixed": {
+      "parent": "examplemod:item/blue_hill_tomato_2d"
+    }
+  },
+  "textures": {
+    "layer0": "examplemod:item/blue_hill_tomato_plant"
+  }
+}

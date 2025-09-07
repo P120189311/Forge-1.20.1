@@ -24,7 +24,10 @@
   "item.examplemod.dowsing_rod": "Dowsing Rod",
   "item.examplemod.nocturnal_dwight": "Nocturnal Dwight",
 
+  "item.examplemod.blue_hill_tomato_seeds": "Blue Hill Tomato Seeds",
+
   "item.examplemod.void_of_knowledge": "Void Of Knowledge",
+  "item.examplemod.blue_hill_tomato": "Blue Hill Tomato",
 
   "item.examplemod.eternal_flame": "Eternal Flame",
 
@@ -62,6 +65,7 @@
   "creativeModeTab.white": "White",
   "creativeModeTab.mod_misc": "Mod Misc",
   "creativeModeTab.mod_food": "Mod Food",
+  "creativeModeTab.mod_plants": "Mod Plants",
   "creativeModeTab.mod_tools": "Mod Tools",
   "creativeModeTab.mod_armors": "Mod Armors",
 

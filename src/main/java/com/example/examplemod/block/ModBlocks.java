@@ -1,10 +1,7 @@
 package com.example.examplemod.block;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.block.custom.CustomPressurePlateBlock;
-import com.example.examplemod.block.custom.DecayingHarmony;
-import com.example.examplemod.block.custom.JumpyBlock;
-import com.example.examplemod.block.custom.MysteryStand;
+import com.example.examplemod.block.custom.*;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
@@ -71,6 +68,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_DECAYING_HARMONY = BLOCKS.register("potted_decaying_harmony",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,ModBlocks.DECAYING_HARMONY,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_WITHER_ROSE).noOcclusion()));
+
+    // Crop Block
+    public static final RegistryObject<Block> BLUE_HILL_TOMATO_CROP = BLOCKS.register("blue_hill_tomato_crop",
+            () -> new BlueHillTomatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     // Black Other Blocks
     public static final RegistryObject<Block> ABSOLUTE_BLACK_STAIRS = registerBlock("absolute_black_stairs",

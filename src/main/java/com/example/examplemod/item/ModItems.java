@@ -28,9 +28,15 @@ public class ModItems {
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             () -> new DowsingRodItem(new Item.Properties().durability(32)));
 
+    // Seeds
+    public static final RegistryObject<Item> BLUE_HILL_TOMATO_SEEDS = ITEMS.register("blue_hill_tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.BLUE_HILL_TOMATO_CROP.get(), new Item.Properties()));
+
     // Foods
     public static final RegistryObject<Item> VOID_OF_KNOWLEDGE = ITEMS.register("void_of_knowledge",
             () -> new Item(new Item.Properties().fireResistant().food(ModFoods.VOID_OF_KNOWLEDGE)));
+    public static final RegistryObject<Item> BLUE_HILL_TOMATO = ITEMS.register("blue_hill_tomato",
+            () -> new Item(new Item.Properties().food(ModFoods.BLUE_HILL_TOMATO)));
 
     // Burnables
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
