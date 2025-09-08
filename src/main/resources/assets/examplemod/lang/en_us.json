@@ -61,6 +61,8 @@
 
   "block.examplemod.decaying_harmony": "Decaying Harmony",
 
+  "entity.minecraft.villager.examplemod.overseer": "Overseer",
+
   "creativeModeTab.black": "Black",
   "creativeModeTab.white": "White",
   "creativeModeTab.mod_misc": "Mod Misc",

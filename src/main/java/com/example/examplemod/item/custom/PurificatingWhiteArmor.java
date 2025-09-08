@@ -6,6 +6,7 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -146,21 +147,30 @@ public class PurificatingWhiteArmor extends ArmorItem {
         // Heal all non-hostile living entities around the player
         private static List<LivingEntity> healNearby(Player player, double radius, float amount) {
             AABB area = player.getBoundingBox().inflate(radius);
-            List<LivingEntity> entities = player.level().getEntitiesOfClass(LivingEntity.class, area,
+            List<LivingEntity> entities = player.level().getEntitiesOfClass(
+                    LivingEntity.class,
+                    area,
                     e -> e.isAlive() && !(e instanceof Enemy)
             );
 
             for (LivingEntity entity : entities) {
-
                 if (BlackSwordOfDeath.hasPendingEffect(entity)) continue;
-                // Remove all negative effects
-                entity.getActiveEffects().forEach(effect -> {
-                    if (!effect.getEffect().isBeneficial()) entity.removeEffect(effect.getEffect());
-                });
+
+                // Copy effects before removing to avoid ConcurrentModificationException
+                List<MobEffect> negativeEffects = entity.getActiveEffects().stream()
+                        .map(MobEffectInstance::getEffect)
+                        .filter(effect -> !effect.isBeneficial())
+                        .toList();
+
+                // Remove all negative effects safely
+                for (MobEffect effect : negativeEffects) {
+                    entity.removeEffect(effect);
+                }
 
                 // Heal after removing bad effects
                 entity.heal(amount);
             }
+
             return entities;
         }
 
