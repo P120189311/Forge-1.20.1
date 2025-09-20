@@ -85,6 +85,16 @@ public class ModCreativeModeTab {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> MOD_MUSICS = CREATIVE_MODE_TABS.register("mod_musics",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BAFANGLAICAI_MUSIC_DISC.get()))
+                    .title(Component.translatable("creativeModeTab.mod_musics"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.AMBULANCE_BEAT_MUSIC_DISC.get());
+                        pOutput.accept(ModItems.BAFANGLAICAI_MUSIC_DISC.get());
+                        pOutput.accept(ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC.get());
+                    })
+                    .build());
+
     public static final RegistryObject<CreativeModeTab> MOD_TOOLS = CREATIVE_MODE_TABS.register("mod_tools",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ABSOLUTE_BLACK_SWORD.get()))
                     .title(Component.translatable("creativeModeTab.mod_tools"))

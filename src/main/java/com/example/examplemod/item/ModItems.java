@@ -3,6 +3,7 @@ package com.example.examplemod.item;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.custom.*;
+import com.example.examplemod.sound.ModSounds;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -41,6 +42,14 @@ public class ModItems {
     // Burnables
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
             () -> new EternalFlameItem(new Item.Properties().fireResistant()));
+
+    //Music Discs
+    public static final RegistryObject<Item> AMBULANCE_BEAT_MUSIC_DISC = ITEMS.register("ambulance_beat_music_disc",
+            () -> new RecordItem(7, ModSounds.AMBULANCE_BEAT, new Item.Properties().stacksTo(1), 1780));
+    public static final RegistryObject<Item> BAFANGLAICAI_MUSIC_DISC = ITEMS.register("bafanglaicai_music_disc",
+            () -> new RecordItem(7, ModSounds.BAFANGLAICAI, new Item.Properties().stacksTo(1), 3460));
+    public static final RegistryObject<Item> DROP_IT_LIKE_ITS_HOT_MUSIC_DISC = ITEMS.register("drop_it_like_its_hot_music_disc",
+            () -> new RecordItem(7, ModSounds.DROP_IT_LIKE_ITS_HOT, new Item.Properties().stacksTo(1), 2680));
 
     // Misc Items
     public static final RegistryObject<Item> NOCTURNAL_DWIGHT = ITEMS.register("nocturnal_dwight",

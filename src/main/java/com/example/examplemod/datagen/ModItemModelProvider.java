@@ -56,6 +56,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ABSOLUTE_WHITE_LEGGINGS);
         simpleItem(ModItems.ABSOLUTE_WHITE_BOOTS);
         simpleItem(ModItems.BLUE_HILL_TOMATO_SEEDS);
+        simpleItem(ModItems.AMBULANCE_BEAT_MUSIC_DISC);
+        simpleItem(ModItems.BAFANGLAICAI_MUSIC_DISC);
+        simpleItem(ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC);
 
         // Blocks
         simpleBlockItem(ModBlocks.DECAYING_HARMONY);

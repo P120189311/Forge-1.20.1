@@ -29,5 +29,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ABSOLUTE_WHITE_CHESTPLATE.get(),
                 ModItems.ABSOLUTE_WHITE_LEGGINGS.get(),
                 ModItems.ABSOLUTE_WHITE_BOOTS.get());
+
+        this.tag(ItemTags.MUSIC_DISCS).add(
+                ModItems.AMBULANCE_BEAT_MUSIC_DISC.get(),
+                ModItems.BAFANGLAICAI_MUSIC_DISC.get(),
+                ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC.get());
+
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(
+                ModItems.AMBULANCE_BEAT_MUSIC_DISC.get(),
+                ModItems.BAFANGLAICAI_MUSIC_DISC.get(),
+                ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC.get());
     }
 }

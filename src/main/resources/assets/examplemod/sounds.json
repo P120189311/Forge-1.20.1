@@ -20,5 +20,32 @@
       "examplemod:fire_in_the_hole2x",
       "examplemod:fire_in_the_hole_original"
     ]
+  },
+  "ambulance_beat": {
+    "subtitle": "sounds.examplemod.ambulance_beat",
+    "sounds": [
+      {
+        "name": "examplemod:ambulance_beat",
+        "stream": true
+      }
+    ]
+  },
+  "bafanglaicai": {
+    "subtitle": "sounds.examplemod.bafanglaicai",
+    "sounds": [
+      {
+        "name": "examplemod:bafanglaicai",
+        "stream": true
+      }
+    ]
+  },
+  "drop_it_like_its_hot": {
+    "subtitle": "sounds.examplemod.drop_it_like_its_hot",
+    "sounds": [
+      {
+        "name": "examplemod:drop_it_like_its_hot",
+        "stream": true
+      }
+    ]
   }
 }

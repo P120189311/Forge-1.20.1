@@ -31,6 +31,13 @@
 
   "item.examplemod.eternal_flame": "Eternal Flame",
 
+  "item.examplemod.ambulance_beat_music_disc": "Ambulance Beat Music Disc",
+  "item.examplemod.ambulance_beat_music_disc.desc": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
+  "item.examplemod.bafanglaicai_music_disc": "Ba Fang Lai Cai Music Disc",
+  "item.examplemod.bafanglaicai_music_disc.desc": "揽佬 SKAI ISYOURGOD - 八方来财",
+  "item.examplemod.drop_it_like_its_hot_music_disc": "Drop It Like It's Hot Music Disc",
+  "item.examplemod.drop_it_like_its_hot_music_disc.desc": "HAARPER - DROP IT LIKE IT'S HOT! (Prod. Luga)",
+
 
   "block.examplemod.absolute_black": "Absolute Black",
   "block.examplemod.absolute_black_ore": "Absolute Black Ore",
@@ -68,11 +75,16 @@
   "creativeModeTab.mod_misc": "Mod Misc",
   "creativeModeTab.mod_food": "Mod Food",
   "creativeModeTab.mod_plants": "Mod Plants",
+  "creativeModeTab.mod_musics": "Mod Musics",
   "creativeModeTab.mod_tools": "Mod Tools",
   "creativeModeTab.mod_armors": "Mod Armors",
 
   "sounds.examplemod.blue_hill_tomato_eat_chance": "WATER ON THE HILL!",
   "sounds.examplemod.mystery_stand_use_chance": "FIRE IN THE HOLE!",
+
+  "sounds.examplemod.ambulance_beat": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
+  "sounds.examplemod.bafanglaicai": "揽佬 SKAI ISYOURGOD - 八方来财",
+  "sounds.examplemod.drop_it_like_its_hot": "HAARPER - DROP IT LIKE IT'S HOT! (Prod. Luga)",
 
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
