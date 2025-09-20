@@ -1,0 +1,24 @@
+{
+  "blue_hill_tomato_eat_chance": {
+    "subtitle": "sounds.examplemod.blue_hill_tomato_eat_chance",
+    "sounds": [
+      "examplemod:water_on_the_hill",
+      "examplemod:water_on_the_hill0.5x",
+      "examplemod:water_on_the_hill0.75x",
+      "examplemod:water_on_the_hill1.5x",
+      "examplemod:water_on_the_hill2x",
+      "examplemod:water_on_the_hill_original"
+    ]
+  },
+  "mystery_stand_use_chance": {
+    "subtitle": "sounds.examplemod.mystery_stand_use_chance",
+    "sounds": [
+      "examplemod:fire_in_the_hole",
+      "examplemod:fire_in_the_hole0.5x",
+      "examplemod:fire_in_the_hole0.75x",
+      "examplemod:fire_in_the_hole1.5x",
+      "examplemod:fire_in_the_hole2x",
+      "examplemod:fire_in_the_hole_original"
+    ]
+  }
+}

@@ -71,6 +71,8 @@
   "creativeModeTab.mod_tools": "Mod Tools",
   "creativeModeTab.mod_armors": "Mod Armors",
 
+  "sounds.examplemod.blue_hill_tomato_eat_chance": "WATER ON THE HILL!",
+  "sounds.examplemod.mystery_stand_use_chance": "FIRE IN THE HOLE!",
 
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",

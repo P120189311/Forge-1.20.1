@@ -6,6 +6,7 @@ import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.BlackSwordOfDeath;
 import com.example.examplemod.item.custom.WhiteSwordOfJudgement;
 import com.example.examplemod.loot.ModLootModifiers;
+import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -38,6 +39,8 @@ public class ExampleMod {
 
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

@@ -36,7 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> VOID_OF_KNOWLEDGE = ITEMS.register("void_of_knowledge",
             () -> new Item(new Item.Properties().fireResistant().food(ModFoods.VOID_OF_KNOWLEDGE)));
     public static final RegistryObject<Item> BLUE_HILL_TOMATO = ITEMS.register("blue_hill_tomato",
-            () -> new Item(new Item.Properties().food(ModFoods.BLUE_HILL_TOMATO)));
+            () -> new BlueHillTomato(new Item.Properties().food(ModFoods.BLUE_HILL_TOMATO)));
 
     // Burnables
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
