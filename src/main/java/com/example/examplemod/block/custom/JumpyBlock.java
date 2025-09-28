@@ -27,11 +27,22 @@ public class JumpyBlock extends Block {
         super(properties);
     }
 
+    /*
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos blockPos, Player player,
                                  InteractionHand interactionHand, BlockHitResult blockHitResult) {
         player.sendSystemMessage(Component.literal("dawg"));
         return super.use(state, level, blockPos, player, interactionHand, blockHitResult);
+    }
+    */
+
+    @Override
+    public void appendHoverText(ItemStack p_49816_, @Nullable BlockGetter p_49817_, List<Component> pTooltipComponents, TooltipFlag p_49819_) {
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.translatable("tooltip.examplemod.jumpy_block.tooltip.shift"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.examplemod.jumpy_block.tooltip"));
+        }
     }
 
     @Override

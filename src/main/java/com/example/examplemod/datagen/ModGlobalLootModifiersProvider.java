@@ -26,7 +26,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     protected void start() {
         add("mystery_stand_from_witch", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/witch")).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build()}, ModBlocks.MYSTERY_STAND.get().asItem()));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, ModBlocks.MYSTERY_STAND.get().asItem()));
 
         add("dowsing_rod_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build(),}, ModItems.DOWSING_ROD.get()));

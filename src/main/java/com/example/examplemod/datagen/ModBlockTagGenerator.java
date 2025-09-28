@@ -27,6 +27,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.ABSOLUTE_BLACK.get(),
+                ModBlocks.ABSOLUTE_BLACK_ORE.get(),
                 ModBlocks.ABSOLUTE_BLACK_STAIRS.get(),
                 ModBlocks.ABSOLUTE_BLACK_SLAB.get(),
                 ModBlocks.ABSOLUTE_BLACK_FENCE.get(),
@@ -38,6 +39,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ABSOLUTE_BLACK_PRESSURE_PLATE.get(),
 
                 ModBlocks.ABSOLUTE_WHITE.get(),
+                ModBlocks.ABSOLUTE_WHITE_ORE.get(),
                 ModBlocks.ABSOLUTE_WHITE_STAIRS.get(),
                 ModBlocks.ABSOLUTE_WHITE_SLAB.get(),
                 ModBlocks.ABSOLUTE_WHITE_FENCE.get(),
@@ -54,6 +56,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
                 ModBlocks.ABSOLUTE_BLACK.get(),
+                ModBlocks.ABSOLUTE_BLACK_ORE.get(),
                 ModBlocks.ABSOLUTE_BLACK_STAIRS.get(),
                 ModBlocks.ABSOLUTE_BLACK_SLAB.get(),
                 ModBlocks.ABSOLUTE_BLACK_FENCE.get(),
@@ -65,6 +68,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ABSOLUTE_BLACK_PRESSURE_PLATE.get(),
 
                 ModBlocks.ABSOLUTE_WHITE.get(),
+                ModBlocks.ABSOLUTE_WHITE_ORE.get(),
                 ModBlocks.ABSOLUTE_WHITE_STAIRS.get(),
                 ModBlocks.ABSOLUTE_WHITE_SLAB.get(),
                 ModBlocks.ABSOLUTE_WHITE_FENCE.get(),

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_absolute_white": {
+    "has_blue_hill_tomato": {
       "conditions": {
         "items": [
           {
             "items": [
-              "examplemod:absolute_white"
+              "examplemod:blue_hill_tomato"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "examplemod:absolute_white_button"
+        "recipe": "examplemod:blue_hill_tomato"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_absolute_white",
+      "has_blue_hill_tomato",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "examplemod:absolute_white_button"
+      "examplemod:blue_hill_tomato"
     ]
   },
   "sends_telemetry_event": false

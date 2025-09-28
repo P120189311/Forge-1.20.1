@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "minecraft:potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+    { "id": "minecraft:potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+    { "id": "minecraft:potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" },
+
+    { "id": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+    { "id": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+    { "id": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" },
+
+    { "id": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+    { "id": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+    { "id": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" }
+  ]
+}

@@ -13,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fml.common.Mod;
@@ -29,17 +30,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        //Block to Ore
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACKY.get())
-                .requires(ModBlocks.ABSOLUTE_BLACK.get())
-                .unlockedBy("has_absolute_black", has(ModBlocks.ABSOLUTE_BLACK.get()))
-                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "blacky_recipe"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHITY.get())
-                .requires(ModBlocks.ABSOLUTE_WHITE.get())
-                .unlockedBy("has_absolute_white", has(ModBlocks.ABSOLUTE_WHITE.get()))
-                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "whity_recipe"));
-
-        //Ore to Block
+        //Ore to Block & Block to Ore
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.BLACKY.get(), RecipeCategory.MISC,
                 ModBlocks.ABSOLUTE_BLACK.get());
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.WHITY.get(), RecipeCategory.MISC,
@@ -78,20 +69,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(consumer, RecipeCategory.DECORATIONS, ModBlocks.ABSOLUTE_WHITE_WALL.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_wall");
 
         //Button
+        /*
         button(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_BLACK_BUTTON.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_button");
         button(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_WHITE_BUTTON.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_button");
+        */
 
         //Pressure Plate
         pressurePlate(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_BLACK_PRESSURE_PLATE.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_pressure_plate");
         pressurePlate(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_WHITE_PRESSURE_PLATE.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_pressure_plate");
 
         //Door
-        door(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_BLACK_DOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_door");
-        door(consumer, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSOLUTE_WHITE_DOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_door");
+        door(consumer, ModBlocks.ABSOLUTE_BLACK_DOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_door");
+        door(consumer, ModBlocks.ABSOLUTE_WHITE_DOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_door");
 
         //Trapdoor
-        trapDoor(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_trapdoor");
-        trapDoor(consumer, RecipeCategory.REDSTONE, ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_trapdoor");
+        trapDoor(consumer, ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_trapdoor");
+        trapDoor(consumer, ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_trapdoor");
 
         //Sword
         SwordBuilder(ModItems.ABSOLUTE_BLACK_SWORD.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK))
@@ -170,6 +163,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         bootsRecipe(consumer, ModItems.ABSOLUTE_BLACK_BOOTS.get(), ModItems.BLACKY.get());
         bootsRecipe(consumer, ModItems.ABSOLUTE_WHITE_BOOTS.get(), ModItems.WHITY.get());
+
+        fruitToSeed(consumer, RecipeCategory.FOOD, ModItems.BLUE_HILL_TOMATO_SEEDS.get(), ModItems.BLUE_HILL_TOMATO.get(), 3,"blue_hill_tomato");
     }
 
 
@@ -207,7 +202,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     //Wall
     protected static void wall(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, String recipeName) {
-        slabBuilder(category, result, Ingredient.of(material))
+        wallBuilder(category, result, Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
@@ -216,18 +211,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     //Button
-    protected static void button(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, String recipeName) {
-        slabBuilder(category, result, Ingredient.of(material))
+    /*
+    protected static void button(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material, String recipeName) {
+        buttonBuilder(result, Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
     protected static RecipeBuilder buttonBuilder(ItemLike p_176659_, Ingredient p_176660_) {
         return ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, p_176659_).requires(p_176660_);
     }
+    */
 
     //Pressure Plate
     protected static void pressurePlate(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, String recipeName) {
-        slabBuilder(category, result, Ingredient.of(material))
+        pressurePlateBuilder(category, result, Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
@@ -236,8 +233,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     //Door
-    protected static void door(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, String recipeName) {
-        slabBuilder(category, result, Ingredient.of(material))
+    protected static void door(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material, String recipeName) {
+        doorBuilder(result, Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
@@ -246,8 +243,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     //Trapdoor
-    protected static void trapDoor(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, String recipeName) {
-        slabBuilder(category, result, Ingredient.of(material))
+    protected static void trapDoor(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material, String recipeName) {
+        trapdoorBuilder(result, Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
@@ -362,5 +359,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ingredient)
                 .unlockedBy("has_" + getItemName(ingredient), has(ingredient))
                 .save(consumer);
+    }
+
+    protected static void fruitToSeed(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike result, ItemLike material, int count, String recipeName) {
+        ShapelessRecipeBuilder.shapeless(category, result, count)
+                .requires(material)
+                .unlockedBy(getHasName(material), has(material))
+                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
     }
 }

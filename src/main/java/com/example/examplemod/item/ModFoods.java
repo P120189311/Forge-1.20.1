@@ -43,7 +43,7 @@ public class ModFoods {
             .build();
 
     public static final FoodProperties BLUE_HILL_TOMATO = new FoodProperties.Builder()
-            .nutrition(5)
+            .nutrition(3)
             .saturationMod(0.5f)
             .fast()
             .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 300, 1), 1.0f)

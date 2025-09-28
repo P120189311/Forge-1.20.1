@@ -6,9 +6,19 @@
     "GGG"
   ],
   "key": {
-    "F": {
-      "item": "minecraft:rabbit_foot"
-    },
+    "F": [
+      { "type": "forge:nbt", "item": "minecraft:potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" },
+
+      { "type": "forge:nbt", "item": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:splash_potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" },
+
+      { "type": "forge:nbt", "item": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:strong_leaping\"}" },
+      { "type": "forge:nbt", "item": "minecraft:lingering_potion", "nbt": "{Potion:\"minecraft:long_leaping\"}" }
+    ],
     "R": {
       "item": "minecraft:redstone_block"
     },

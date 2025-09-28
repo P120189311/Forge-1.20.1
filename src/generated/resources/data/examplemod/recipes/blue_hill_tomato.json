@@ -3,10 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "examplemod:absolute_black"
+      "item": "examplemod:blue_hill_tomato"
     }
   ],
   "result": {
-    "item": "examplemod:blacky"
+    "count": 3,
+    "item": "examplemod:blue_hill_tomato_seeds"
   }
 }

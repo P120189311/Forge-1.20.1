@@ -1,6 +1,7 @@
 {
   "values": [
     "examplemod:absolute_black",
+    "examplemod:absolute_black_ore",
     "examplemod:absolute_black_stairs",
     "examplemod:absolute_black_slab",
     "examplemod:absolute_black_fence",
@@ -11,6 +12,7 @@
     "examplemod:absolute_black_button",
     "examplemod:absolute_black_pressure_plate",
     "examplemod:absolute_white",
+    "examplemod:absolute_white_ore",
     "examplemod:absolute_white_stairs",
     "examplemod:absolute_white_slab",
     "examplemod:absolute_white_fence",

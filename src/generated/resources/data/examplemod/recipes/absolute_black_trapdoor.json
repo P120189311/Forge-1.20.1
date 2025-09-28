@@ -7,10 +7,11 @@
     }
   },
   "pattern": [
+    "###",
     "###"
   ],
   "result": {
-    "count": 6,
+    "count": 2,
     "item": "examplemod:absolute_black_trapdoor"
   },
   "show_notification": true

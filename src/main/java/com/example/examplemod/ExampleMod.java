@@ -1,14 +1,19 @@
 package com.example.examplemod;
 
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.block.entity.ModBlockEntities;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.BlackSwordOfDeath;
 import com.example.examplemod.item.custom.WhiteSwordOfJudgement;
 import com.example.examplemod.loot.ModLootModifiers;
+import com.example.examplemod.recipe.ModRecipes;
+import com.example.examplemod.screen.ModMenuTypes;
+import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -42,6 +47,11 @@ public class ExampleMod {
 
         ModSounds.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -67,6 +77,8 @@ public class ExampleMod {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECAYING_HARMONY.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_DECAYING_HARMONY.get(), RenderType.cutout());
+
+            MenuScreens.register(ModMenuTypes.MYSTERY_STAND_MENU.get(), MysteryStandScreen::new);
         }
     }
 }

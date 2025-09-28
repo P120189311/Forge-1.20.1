@@ -89,10 +89,11 @@
   "item.examplemod.dowsing_rod.no_valuables": "No Valuables Found!",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
   "tooltip.examplemod.dowsing_rod.tooltip": "Press §5SHIFT§r for more Information!",
-  "tooltip.examplemod.jumpy_block": "Jumpy",
+  "tooltip.examplemod.jumpy_block.tooltip.shift": "§aJumpy§r",
+  "tooltip.examplemod.jumpy_block.tooltip": "Press §aSHIFT§r for more Information!",
   "tooltip.examplemod.absolute_black_sword": "Hit a target to apply 4 Seconds of DoT Damage + Instant Damage at the end, Cooldown = 5 Seconds",
   "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds",
-  "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs (Except Wither Skeleton and Bosses) that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
+  "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
   "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
   "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores",
   "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively"
