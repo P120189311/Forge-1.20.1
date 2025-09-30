@@ -22,33 +22,78 @@
   "item.examplemod.absolute_white_boots": "真っ白のブーツ",
 
   "item.examplemod.dowsing_rod": "ダウジング ロッド",
+  "item.examplemod.nocturnal_dwight": "ノクターナル ドワイト",
+
+  "item.examplemod.blue_hill_tomato_seeds": "ブルー ヒル トマトの種",
+
   "item.examplemod.void_of_knowledge": "知識の空白",
+  "item.examplemod.blue_hill_tomato": "ブルー ヒル トマト",
+
   "item.examplemod.eternal_flame": "永遠の炎",
+
+  "item.examplemod.ambulance_beat_music_disc": "Ambulance Beat Music Disc",
+  "item.examplemod.ambulance_beat_music_disc.desc": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
+  "item.examplemod.bafanglaicai_music_disc": "Ba Fang Lai Cai Music Disc",
+  "item.examplemod.bafanglaicai_music_disc.desc": "揽佬 SKAI ISYOURGOD - 八方来财",
+  "item.examplemod.drop_it_like_its_hot_music_disc": "Drop It Like It's Hot Music Disc",
+  "item.examplemod.drop_it_like_its_hot_music_disc.desc": "HAARPER - DROP IT LIKE IT'S HOT! (Prod. Luga)",
 
   "block.examplemod.absolute_black": "真っ黒",
   "block.examplemod.absolute_black_ore": "真っ黒鉱石",
-  "block.examplemod.absolute_white": "真っ白",
-  "block.examplemod.absolute_white_ore": "真っ白鉱石",
-  "block.examplemod.jumpy_block": "跳躍ブロック",
-
-  "block.examplemod.absolute_white_stairs": "真っ白の階段",
-  "block.examplemod.absolute_white_slab": "真っ白のハーフブロック",
-  "block.examplemod.absolute_white_fence": "真っ白のフェンス",
-  "block.examplemod.absolute_white_fence_gate": "真っ白のフェンスゲート",
-  "block.examplemod.absolute_white_wall": "真っ白の塀",
-
   "block.examplemod.absolute_black_stairs": "真っ黒の階段",
   "block.examplemod.absolute_black_slab": "真っ黒のハーフブロック",
   "block.examplemod.absolute_black_fence": "真っ黒のフェンス",
   "block.examplemod.absolute_black_fence_gate": "真っ黒のフェンスゲート",
   "block.examplemod.absolute_black_wall": "真っ黒の塀",
+  "block.examplemod.absolute_black_button": "真っ黒のボタン",
+  "block.examplemod.absolute_black_pressure_plate": "真っ黒の感圧板",
+  "block.examplemod.absolute_black_door": "真っ黒のドア",
+  "block.examplemod.absolute_black_trapdoor": "真っ黒のトラップドア",
 
-  "itemGroup.black": "黒",
-  "itemGroup.white": "白",
-  "itemGroup.mod_misc": "Mod Misc",
-  "itemGroup.mod_food": "Mod Food",
+  "block.examplemod.absolute_white": "真っ白",
+  "block.examplemod.absolute_white_ore": "真っ白鉱石",
+  "block.examplemod.absolute_white_stairs": "真っ白の階段",
+  "block.examplemod.absolute_white_slab": "真っ白のハーフブロック",
+  "block.examplemod.absolute_white_fence": "真っ白のフェンス",
+  "block.examplemod.absolute_white_fence_gate": "真っ白のフェンスゲート",
+  "block.examplemod.absolute_white_wall": "真っ白の塀",
+  "block.examplemod.absolute_white_button": "真っ白のボタン",
+  "block.examplemod.absolute_white_pressure_plate": "真っ白の感圧板",
+  "block.examplemod.absolute_white_door": "真っ白のドア",
+  "block.examplemod.absolute_white_trapdoor": "真っ白のトラップドア",
+
+  "block.examplemod.jumpy_block": "ジャンピー ブロック",
+  "block.examplemod.mystery_stand": "ミステリー スタンド",
+
+  "block.examplemod.decaying_harmony": "崩壊調和",
+
+  "entity.minecraft.villager.examplemod.overseer": "監督者",
+
+  "creativeModeTab.black": "黒",
+  "creativeModeTab.white": "白",
+  "creativeModeTab.mod_misc": "Mod 他",
+  "creativeModeTab.mod_food": "Mod 食料",
+  "creativeModeTab.mod_plants": "Mod 植物",
+  "creativeModeTab.mod_musics": "Mod 音楽",
+  "creativeModeTab.mod_tools": "Mod ツール",
+  "creativeModeTab.mod_armors": "Mod 防具",
+
+  "sounds.examplemod.blue_hill_tomato_eat_chance": "ウォーターオンザヒル!",
+  "sounds.examplemod.mystery_stand_use_chance": "ファイアインザホール!",
+
+  "sounds.examplemod.ambulance_beat": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
+  "sounds.examplemod.bafanglaicai": "揽佬 SKAI ISYOURGOD - 八方来财",
+  "sounds.examplemod.drop_it_like_its_hot": "HAARPER - DROP IT LIKE IT'S HOT! (Prod. Luga)",
 
   "item.examplemod.dowsing_rod.no_valuables": "貴重品は見つからない！",
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "右クリックで貴重品を探す！",
   "tooltip.examplemod.dowsing_rod.tooltip": "詳細については §5SHIFT§r を押してください",
+  "tooltip.examplemod.jumpy_block.tooltip.shift": "§aジャンピー§r",
+  "tooltip.examplemod.jumpy_block.tooltip": "Press §aSHIFT§r for more Information!",
+  "tooltip.examplemod.absolute_black_sword": "Hit a target to apply 4 Seconds of DoT Damage + Instant Damage at the end, Cooldown = 5 Seconds",
+  "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds",
+  "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
+  "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
+  "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores",
+  "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively"
 }
