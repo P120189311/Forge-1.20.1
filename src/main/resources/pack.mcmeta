@@ -1,6 +1,14 @@
 {
-    "pack": {
-        "description": "examplemod resources",
-        "pack_format": 8
+  "pack": {
+    "description": "examplemod resources",
+    "pack_format": 15,
+    "supported_formats": [15, 44]
+  },
+  "language": {
+    "en_morse": {
+      "name": "English (Morse)",
+      "region": "International",
+      "bidirectional": false
     }
+  }
 }

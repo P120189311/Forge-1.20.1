@@ -89,11 +89,11 @@
   "tooltip.examplemod.dowsing_rod.tooltip.shift": "右クリックで貴重品を探す！",
   "tooltip.examplemod.dowsing_rod.tooltip": "詳細については §5SHIFT§r を押してください",
   "tooltip.examplemod.jumpy_block.tooltip.shift": "§aジャンピー§r",
-  "tooltip.examplemod.jumpy_block.tooltip": "Press §aSHIFT§r for more Information!",
-  "tooltip.examplemod.absolute_black_sword": "Hit a target to apply 4 Seconds of DoT Damage + Instant Damage at the end, Cooldown = 5 Seconds",
-  "tooltip.examplemod.absolute_white_sword": "Hit a target to shoot 6 Spectral Arrows from all directions, Cooldown = 5 Seconds",
-  "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
-  "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
-  "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the ore to the surrounding Iron Ores",
-  "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively"
+  "tooltip.examplemod.jumpy_block.tooltip": "詳細については §aSHIFT§r を押してください",
+  "tooltip.examplemod.absolute_black_sword": "ターゲットに4秒のDoTダメージを与え + 最後に即時ダメージ, クールダウン = 5 秒",
+  "tooltip.examplemod.absolute_white_sword": "ターゲットに全方向から光の矢6本を発射する, クールダウン = 5 秒",
+  "tooltip.examplemod.black_hole_armor": "フルセット効果: 25ブロック離れた敵モブをプレイヤーの方へ徐々に引き寄せ、3ブロック以内にいる敵モブにダメージを与える",
+  "tooltip.examplemod.purificating_white_armor": "フルセット効果: 5ブロック離れた範囲内のデバフを浄化し、5秒ごとに1ハート回復する",
+  "tooltip.examplemod.infectious_black_pickaxe": "オフハンドに真っ黒鉱石/真っ白鉱石を持ち、ツルハシを右クリックしたとき, 次に破壊されるブロックは、オフハンドの鉱石を周囲の鉄鉱石に拡散させる",
+  "tooltip.examplemod.nocturnal_dwight": "ダイヤモンド鉱石/エメラルド鉱石に使うと, 周囲の3x3のダイヤモンド鉱石/エメラルド鉱石をそれぞれ真っ黒鉱石/真っ白鉱石に変える"
 }
