@@ -47,5 +47,11 @@
         "stream": true
       }
     ]
+  },
+  "abhtcaq": {
+    "subtitle": "sounds.examplemod.abhtcaq",
+    "sounds": [
+      "examplemod:abhtcaq"
+    ]
   }
 }

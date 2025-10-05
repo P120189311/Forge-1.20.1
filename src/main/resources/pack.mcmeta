@@ -1,11 +1,10 @@
 {
   "pack": {
-    "description": "examplemod resources",
     "pack_format": 15,
-    "supported_formats": [15, 44]
+    "description": "Tutorial Resource Pack"
   },
   "language": {
-    "en_morse": {
+    "en_mo": {
       "name": "English (Morse)",
       "region": "International",
       "bidirectional": false

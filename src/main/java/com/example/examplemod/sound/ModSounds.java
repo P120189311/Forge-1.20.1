@@ -19,6 +19,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> DROP_IT_LIKE_ITS_HOT = registerSoundEvents("drop_it_like_its_hot");
     public static final RegistryObject<SoundEvent> BAFANGLAICAI = registerSoundEvents("bafanglaicai");
 
+    public static final RegistryObject<SoundEvent> ABHTCAQ = registerSoundEvents("abhtcaq");
+
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ExampleMod.MOD_ID, name)));
     }
