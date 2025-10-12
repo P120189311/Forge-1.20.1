@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-21T03:41:32.9529236	Item Models: examplemod
+// 1.20.1	2025-10-12T20:45:22.2646876	Item Models: examplemod
 1e987442716894279b2a131289cfd52ab324744e assets/examplemod/models/item/absolute_black_axe.json
 f87f57eb997802334cdeaf164489d4e74a787e3a assets/examplemod/models/item/absolute_black_boots.json
 1201aaa99e1e9b8d78a16d78e6245f9f26d42646 assets/examplemod/models/item/absolute_black_boots_amethyst_trim.json
@@ -97,6 +97,8 @@ b3d2dcdb48f4113128aa8e1243f15cae6796089b assets/examplemod/models/item/absolute_
 e3eb7ebcfb8258cc38e1aadea8d8a1a177aa8062 assets/examplemod/models/item/absolute_white_pickaxe.json
 58959e3207a542deae3030a15e10fd183797e7f2 assets/examplemod/models/item/absolute_white_shovel.json
 b607c46bb3809f5500401ed264b8a9ecc530c41f assets/examplemod/models/item/absolute_white_sword.json
+786aafaa18eef780fb48145ba61fa656a0e0e858 assets/examplemod/models/item/abyss_hanging_sign.json
+d11e5642813b5c4d6ad29e4658a0af6a8be9933e assets/examplemod/models/item/abyss_sign.json
 3eeab1d569a18d4ef9e4d1410917e0d2bc4c6415 assets/examplemod/models/item/ambulance_beat_music_disc.json
 4a2b8f2e7de23a16e42a9928fc6ac994d737220b assets/examplemod/models/item/bafanglaicai_music_disc.json
 bb7f6ad5ae6ad4f9953b7e5f7cd6b5b50c827671 assets/examplemod/models/item/blacky.json

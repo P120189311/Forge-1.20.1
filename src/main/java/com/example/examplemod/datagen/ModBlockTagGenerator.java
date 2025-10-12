@@ -94,5 +94,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS).add(
                 ModBlocks.ABSOLUTE_BLACK_WALL.get(),
                 ModBlocks.ABSOLUTE_WHITE_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ABYSS_LOG.get())
+                .add(ModBlocks.ABYSS_WOOD.get())
+                .add(ModBlocks.STRIPPED_ABYSS_LOG.get())
+                .add(ModBlocks.STRIPPED_ABYSS_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.ABYSS_PLANKS.get());
     }
 }

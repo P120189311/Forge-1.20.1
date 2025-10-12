@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.block.custom.ModFlammableRotatedPillarBlock;
 import com.example.examplemod.block.entity.ModBlockEntities;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
@@ -11,11 +12,13 @@ import com.example.examplemod.recipe.ModRecipes;
 import com.example.examplemod.screen.ModMenuTypes;
 import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
+import com.example.examplemod.util.ModWoodTypes;
 import com.example.examplemod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -62,7 +65,9 @@ public class ExampleMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.DECAYING_HARMONY.getId(), ModBlocks.POTTED_DECAYING_HARMONY);
+            ModFlammableRotatedPillarBlock.registerStrippables();
         });
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -70,6 +75,8 @@ public class ExampleMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.ABYSS);
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_BLACK_DOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ABSOLUTE_WHITE_DOOR.get(), RenderType.translucent());

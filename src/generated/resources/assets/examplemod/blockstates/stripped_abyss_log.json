@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "examplemod:block/stripped_abyss_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "examplemod:block/stripped_abyss_log"
+    },
+    "axis=z": {
+      "model": "examplemod:block/stripped_abyss_log_horizontal",
+      "x": 90
+    }
+  }
+}

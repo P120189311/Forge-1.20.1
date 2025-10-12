@@ -46,6 +46,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.JUMPY_BLOCK.get());
         dropSelf(ModBlocks.MYSTERY_STAND.get());
 
+        //Plants
+        this.dropSelf(ModBlocks.ABYSS_LOG.get());
+        this.dropSelf(ModBlocks.ABYSS_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ABYSS_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ABYSS_WOOD.get());
+        this.dropSelf(ModBlocks.ABYSS_PLANKS.get());
+        this.dropSelf(ModBlocks.ABYSS_PLANKS_CURSED.get());
+
+        this.add(ModBlocks.ABYSS_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ABSOLUTE_BLACK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+
+        this.add(ModBlocks.ABYSS_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ABYSS_SIGN.get()));
+        this.add(ModBlocks.ABYSS_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ABYSS_SIGN.get()));
+        this.add(ModBlocks.ABYSS_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ABYSS_HANGING_SIGN.get()));
+        this.add(ModBlocks.ABYSS_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ABYSS_HANGING_SIGN.get()));
+
         // Flowers
         this.dropSelf(ModBlocks.DECAYING_HARMONY.get());
         this.add(ModBlocks.POTTED_DECAYING_HARMONY.get(), createPotFlowerItemTable(ModBlocks.DECAYING_HARMONY.get()));

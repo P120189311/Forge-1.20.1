@@ -25,6 +25,12 @@ public class ModItems {
     public static final RegistryObject<Item> WHITY = ITEMS.register("whity",
             () -> new Item(new Item.Properties().fireResistant().stacksTo(32)));
 
+    // Wood
+    public static final RegistryObject<Item> ABYSS_SIGN = ITEMS.register("abyss_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ABYSS_SIGN.get(), ModBlocks.ABYSS_WALL_SIGN.get()));
+    public static final RegistryObject<Item> ABYSS_HANGING_SIGN = ITEMS.register("abyss_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.ABYSS_HANGING_SIGN.get(), ModBlocks.ABYSS_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     // Misc Tools
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             () -> new DowsingRodItem(new Item.Properties().durability(32)));
@@ -45,7 +51,7 @@ public class ModItems {
 
     //Music Discs
     public static final RegistryObject<Item> AMBULANCE_BEAT_MUSIC_DISC = ITEMS.register("ambulance_beat_music_disc",
-            () -> new RecordItem(7, ModSounds.AMBULANCE_BEAT, new Item.Properties().stacksTo(1), 1780));
+            () -> new CursedDisc(7, ModSounds.AMBULANCE_BEAT.get(), new Item.Properties().stacksTo(1), 1780));
     public static final RegistryObject<Item> BAFANGLAICAI_MUSIC_DISC = ITEMS.register("bafanglaicai_music_disc",
             () -> new RecordItem(7, ModSounds.BAFANGLAICAI, new Item.Properties().stacksTo(1), 3460));
     public static final RegistryObject<Item> DROP_IT_LIKE_ITS_HOT_MUSIC_DISC = ITEMS.register("drop_it_like_its_hot_music_disc",

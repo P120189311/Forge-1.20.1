@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "examplemod:abyss_logs"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    "###",
+    "#F#",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:smoker"
+  },
+  "show_notification": true
+}

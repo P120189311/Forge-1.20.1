@@ -3,14 +3,14 @@ package com.example.examplemod.datagen;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModItems;
+import com.example.examplemod.util.ModTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.MinecartItem;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -85,6 +86,71 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Trapdoor
         trapDoor(consumer, ModBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), ModBlocks.ABSOLUTE_BLACK.get(), "absolute_black_trapdoor");
         trapDoor(consumer, ModBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), ModBlocks.ABSOLUTE_WHITE.get(), "absolute_white_trapdoor");
+
+        //Log to Planks
+        planksFromLog(consumer, ModBlocks.ABYSS_PLANKS_CURSED.get(), ModTags.Items.ABYSS_LOGS, 4);
+
+        //Log to Wood
+        woodFromLogs(consumer, ModBlocks.ABYSS_WOOD.get(), ModBlocks.ABYSS_LOG.get());
+        woodFromLogs(consumer, ModBlocks.STRIPPED_ABYSS_WOOD.get(), ModBlocks.STRIPPED_ABYSS_LOG.get());
+
+        //Chest
+        chest(consumer, Items.CHEST, ModTags.Items.PLANKS);
+
+        //Bookshelf
+        bookshelf(consumer, Items.BOOKSHELF, ModTags.Items.PLANKS);
+
+        //Bowl
+        bowl(consumer, Items.BOWL, ModTags.Items.PLANKS);
+
+        //Cartography Table
+        cartographyTable(consumer, Items.CARTOGRAPHY_TABLE, ModTags.Items.PLANKS);
+
+        //Crafting Table
+        craftingTable(consumer, Items.CRAFTING_TABLE, ModTags.Items.PLANKS);
+
+        //Fletching Table
+        fletchingTable(consumer, Items.FLETCHING_TABLE, ModTags.Items.PLANKS);
+
+        //Grindstone
+        grindstone(consumer, Items.GRINDSTONE, ModTags.Items.PLANKS);
+
+        //Jukebox
+        jukebox(consumer, Items.JUKEBOX, ModTags.Items.PLANKS);
+
+        //Loom
+        loom(consumer, Items.LOOM, ModTags.Items.PLANKS);
+
+        //Note Block
+        noteBlock(consumer, Items.NOTE_BLOCK, ModTags.Items.PLANKS);
+
+        //Piston
+        piston(consumer, Items.PISTON, ModTags.Items.PLANKS);
+
+        //Smithing Table
+        smithingTable(consumer, Items.SMITHING_TABLE, ModTags.Items.PLANKS);
+
+        //Tripwire Hook
+        tripwireHook(consumer, Items.TRIPWIRE_HOOK, ModTags.Items.PLANKS);
+
+        //Stick
+        sticksFromPlanks(consumer, Items.STICK, ModTags.Items.PLANKS);
+
+        //Sign
+        sign(consumer, ModBlocks.ABYSS_SIGN.get(), ModBlocks.ABYSS_PLANKS.get(), "abyss_sign");
+        hangingSignBuilder(consumer, ModBlocks.ABYSS_HANGING_SIGN.get(), ModBlocks.STRIPPED_ABYSS_LOG.get());
+
+        //Smoker
+        smoker(consumer, Items.SMOKER, Items.FURNACE, ModTags.Items.ABYSS_LOGS);
+
+        //Campfire
+        campfire(consumer, Items.CAMPFIRE, ModTags.Items.ABYSS_LOGS, Items.COAL);
+
+        //Soul Campfire
+        soulCampfire(consumer, Items.SOUL_CAMPFIRE, ModTags.Items.ABYSS_LOGS, Items.SOUL_SOIL);
+
+        //Beehive
+        beehive(consumer, Items.BEEHIVE, ModTags.Items.PLANKS, Items.HONEYCOMB);
 
         //Sword
         SwordBuilder(ModItems.ABSOLUTE_BLACK_SWORD.get(), Ingredient.of(ModItems.BLACKY.get()), Ingredient.of(Items.STICK))
@@ -152,6 +218,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, "absolute_white_hoe_" + side));
         }
 
+        //Shield
+        shield(consumer, Items.SHIELD, ModTags.Items.PLANKS);
+
+        //Armor
         helmetRecipe(consumer, ModItems.ABSOLUTE_BLACK_HELMET.get(), ModItems.BLACKY.get());
         helmetRecipe(consumer, ModItems.ABSOLUTE_WHITE_HELMET.get(), ModItems.WHITY.get());
 
@@ -252,6 +322,260 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, p_176721_, 2).define('#', p_176722_).pattern("###").pattern("###");
     }
 
+    protected static void beehive(Consumer<FinishedRecipe> consumer, ItemLike beehive, TagKey<Item> planksTag, ItemLike honeycomb) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, beehive)
+                .define('W', planksTag)
+                .define('S', honeycomb)
+                .pattern("WWW")
+                .pattern("WSW")
+                .pattern("WWW")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, getItemName(beehive) + "_from_planks_and_honeycomb"));
+    }
+
+    // Log to Wood
+    protected static void woodFromLogs(Consumer<FinishedRecipe> consumer, ItemLike wood, ItemLike log) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, wood, 3)
+                .define('#', log)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(log), has(log))
+                .save(consumer, ExampleMod.MOD_ID + ":" + getItemName(wood) + "_from_" + getItemName(log));
+    }
+
+    //Bed
+    protected static void bedFromPlanksAndWool(Consumer<FinishedRecipe> consumer, ItemLike bed, TagKey<Item> planksTag, TagKey<Item> woolTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, bed)
+                .define('W', woolTag)
+                .define('P', planksTag)
+                .pattern("WWW")
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, getItemName(bed) + "_from_planks_and_wool"));
+    }
+
+    //Chest
+    protected static void chest(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Bookshelf
+    protected static void bookshelf(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+                .define('#', planksTag)
+                .define('B', Items.BOOK)
+                .pattern("###")
+                .pattern("BBB")
+                .pattern("###")
+                .unlockedBy("has_books", has(Items.BOOK))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Bowl
+    protected static void bowl(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, 4)
+                .define('#', planksTag)
+                .pattern("# #")
+                .pattern(" # ")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Cartography Table
+    protected static void cartographyTable(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .define('P', Items.PAPER)
+                .pattern("PP")
+                .pattern("##")
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Crafting Table
+    protected static void craftingTable(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Fletching Table
+    protected static void fletchingTable(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .define('F', Items.FLINT)
+                .pattern("FF")
+                .pattern("##")
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Grind Stone
+    protected static void grindstone(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .define('S', Items.STONE_SLAB)
+                .define('I', Items.STICK)
+                .pattern("I#I")
+                .pattern(" S ")
+                .unlockedBy("has_stone_slab", has(Items.STONE_SLAB))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Jukebox
+    protected static void jukebox(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+                .define('#', planksTag)
+                .define('D', Items.DIAMOND)
+                .pattern("###")
+                .pattern("#D#")
+                .pattern("###")
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Loom
+    protected static void loom(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .define('S', Items.STRING)
+                .pattern("SS")
+                .pattern("##")
+                .unlockedBy("has_string", has(Items.STRING))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Note Block
+    protected static void noteBlock(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+                .define('#', planksTag)
+                .define('R', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#R#")
+                .pattern("###")
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Piston
+    protected static void piston(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+                .define('#', planksTag)
+                .define('S', Items.COBBLESTONE)
+                .define('I', Items.IRON_INGOT)
+                .define('R', Items.REDSTONE)
+                .pattern("###")
+                .pattern("SIS")
+                .pattern("SRS")
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Smithing Table
+    protected static void smithingTable(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .define('#', planksTag)
+                .define('I', Items.IRON_INGOT)
+                .pattern("II")
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    //Tripwire Hook
+    protected static void tripwireHook(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result, 2)
+                .define('#', planksTag)
+                .define('I', Items.IRON_INGOT)
+                .define('S', Items.STICK)
+                .pattern("I")
+                .pattern("S")
+                .pattern("#")
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
+    }
+
+    // Stick
+    protected static void sticksFromPlanks(Consumer<FinishedRecipe> consumer, ItemLike stickOutput, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, stickOutput, 4)
+                .pattern("#")
+                .pattern("#")
+                .define('#', planksTag)
+                .group("sticks")
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer, new ResourceLocation("examplemod", "sticks_from_" + planksTag.location().getPath()));
+    }
+
+    // Sign
+    protected static void sign(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material, String recipeName) {
+        signBuilder(result, Ingredient.of(material))
+                .unlockedBy(getHasName(material), has(material))
+                .save(consumer, new ResourceLocation(ExampleMod.MOD_ID, recipeName));
+    }
+
+    //Smoker
+    protected static void smoker(Consumer<FinishedRecipe> consumer, ItemLike smoker, ItemLike furnace, TagKey<Item> logsTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, smoker)
+                .define('#', logsTag)
+                .define('F', furnace)
+                .pattern("###")
+                .pattern("#F#")
+                .pattern("###")
+                .unlockedBy("has_log", has(logsTag))
+                .save(consumer);
+    }
+
+    //Campfire
+    protected static void campfire(Consumer<FinishedRecipe> consumer, ItemLike campfire, TagKey<Item> logsTag, ItemLike coal) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, campfire)
+                .define('C', coal)
+                .define('#', logsTag)
+                .define('S', Items.STICK)
+                .pattern(" S ")
+                .pattern("SCS")
+                .pattern("###")
+                .unlockedBy("has_log", has(logsTag))
+                .save(consumer);
+    }
+
+    //Soul Campfire
+    protected static void soulCampfire(Consumer<FinishedRecipe> consumer, ItemLike soulCampfire, TagKey<Item> logsTag, ItemLike soulSoil) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, soulCampfire)
+                .define('C', soulSoil)
+                .define('#', logsTag)
+                .define('S', Items.STICK)
+                .pattern(" S ")
+                .pattern("SCS")
+                .pattern("###")
+                .unlockedBy("has_log", has(logsTag))
+                .save(consumer);
+    }
+
+    protected static void hangingSignBuilder(Consumer<FinishedRecipe> p_250663_, ItemLike p_252355_, ItemLike p_250437_) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, p_252355_, 6).group("hanging_sign").define('#', p_250437_).define('X', Items.CHAIN).pattern("X X").pattern("###").pattern("###").unlockedBy("has_stripped_logs", has(p_250437_)).save(p_250663_);
+    }
+
     protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> p_249580_, RecipeCategory p_251203_, ItemLike p_251689_, RecipeCategory p_251376_, ItemLike p_248771_) {
         nineBlockStorageRecipes(p_249580_, p_251203_, p_251689_, p_251376_, p_248771_, getSimpleRecipeName(p_248771_), (String)null, getSimpleRecipeName(p_251689_), (String)null);
     }
@@ -322,6 +646,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .pattern("S ");
         }
         return builder;
+    }
+
+    //Shield
+    protected static void shield(Consumer<FinishedRecipe> consumer, ItemLike result, TagKey<Item> planksTag) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
+                .define('#', planksTag)
+                .define('I', Items.IRON_INGOT)
+                .pattern("#I#")
+                .pattern("###")
+                .pattern(" # ")
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .unlockedBy("has_planks", has(planksTag))
+                .save(consumer);
     }
 
     protected static void helmetRecipe(Consumer<FinishedRecipe> consumer, ItemLike output, Item ingredient) {

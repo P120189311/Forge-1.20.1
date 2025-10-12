@@ -13,6 +13,8 @@ public class ModTags {
         public static final TagKey<Block> DOWSING_ROD_VALUABLES = tag("dowsing_rod_valuables");
         public static final TagKey<Block> NEEDS_ABSOLUTE_BLACK_TOOL = tag("needs_absolute_black_tool");
         public static final TagKey<Block> NEEDS_ABSOLUTE_WHITE_TOOL = tag("needs_absolute_white_tool");
+        public static final TagKey<Block> ABYSS_LOGS = tag("abyss_logs");
+        public static final TagKey<Block> MOD_PLANKS = tag("mod_planks");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(ExampleMod.MOD_ID, name));
@@ -26,6 +28,9 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> BLACKY_GEMS = forgeTag("gems/blacky");
         public static final TagKey<Item> WHITY_GEMS = forgeTag("gems/whity");
+        public static final TagKey<Item> ABYSS_LOGS = tag("abyss_logs");
+        public static final TagKey<Item> MOD_PLANKS = tag("mod_planks");
+        public static final TagKey<Item> PLANKS = tag("planks");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(ExampleMod.MOD_ID, name));

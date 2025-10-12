@@ -11,6 +11,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
@@ -56,6 +57,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.JUMPY_BLOCK);
         simpleBlockWithItem(ModBlocks.MYSTERY_STAND.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/mystery_stand")));
+
+        //Plants
+        logBlock(((RotatedPillarBlock) ModBlocks.ABYSS_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.ABYSS_WOOD.get()), blockTexture(ModBlocks.ABYSS_LOG.get()), blockTexture(ModBlocks.ABYSS_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ABYSS_LOG.get()), blockTexture(ModBlocks.STRIPPED_ABYSS_LOG.get()),
+                new ResourceLocation(ExampleMod.MOD_ID, "block/stripped_abyss_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ABYSS_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ABYSS_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_ABYSS_LOG.get()));
+
+        treeItem(ModBlocks.ABYSS_LOG);
+        treeItem(ModBlocks.ABYSS_WOOD);
+        treeItem(ModBlocks.STRIPPED_ABYSS_LOG);
+        treeItem(ModBlocks.STRIPPED_ABYSS_WOOD);
+
+        blockWithItem(ModBlocks.ABYSS_PLANKS);
+        blockWithItem(ModBlocks.ABYSS_PLANKS_CURSED);
+
+        leavesBlock(ModBlocks.ABYSS_LEAVES);
+
+        signBlock(((StandingSignBlock) ModBlocks.ABYSS_SIGN.get()), ((WallSignBlock) ModBlocks.ABYSS_WALL_SIGN.get()),
+                blockTexture(ModBlocks.ABYSS_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.ABYSS_HANGING_SIGN.get(), ModBlocks.ABYSS_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.ABYSS_PLANKS.get()));
 
         // Flowers
         simpleBlockWithItem(ModBlocks.DECAYING_HARMONY.get(), models().cross(blockTexture(ModBlocks.DECAYING_HARMONY.get()).getPath(),
@@ -134,6 +159,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }   else {
             itemModels().withExistingParent(path, modLoc("block/" + path));
         }
+    }
+
+    private void treeItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(ExampleMod.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
     private void generateFenceInventoryModel(RegistryObject<? extends Block> fenceBlock, String textureName) {

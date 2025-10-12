@@ -48,6 +48,9 @@ public class NocturnalDwight extends Item {
                         } else if (state.is(Blocks.EMERALD_ORE) || state.is(Blocks.DEEPSLATE_EMERALD_ORE)) {
                             level.setBlock(targetPos, ModBlocks.ABSOLUTE_WHITE_ORE.get().defaultBlockState(), 3);
                             blockTransformed = true;
+                        } else if (state.is(ModBlocks.ABYSS_PLANKS_CURSED.get())) {
+                            level.setBlock(targetPos, ModBlocks.ABYSS_PLANKS.get().defaultBlockState(), 3);
+                            blockTransformed = true;
                         }
 
                         // Only spawn particles if THIS block was transformed

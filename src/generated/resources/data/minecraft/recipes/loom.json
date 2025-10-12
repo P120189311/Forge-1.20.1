@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "examplemod:planks"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "SS",
+    "##"
+  ],
+  "result": {
+    "item": "minecraft:loom"
+  },
+  "show_notification": true
+}

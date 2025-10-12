@@ -44,9 +44,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Simple
         simpleItem(ModItems.BLACKY);
         simpleItem(ModItems.WHITY);
+
+        simpleItem(ModItems.ABYSS_SIGN);
+        simpleItem(ModItems.ABYSS_HANGING_SIGN);
+
         simpleItem(ModItems.DOWSING_ROD);
+
         simpleItem(ModItems.VOID_OF_KNOWLEDGE);
+
         simpleItem(ModItems.ETERNAL_FLAME);
+
         simpleItem(ModItems.ABSOLUTE_BLACK_HELMET);
         simpleItem(ModItems.ABSOLUTE_BLACK_CHESTPLATE);
         simpleItem(ModItems.ABSOLUTE_BLACK_LEGGINGS);
@@ -55,13 +62,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ABSOLUTE_WHITE_CHESTPLATE);
         simpleItem(ModItems.ABSOLUTE_WHITE_LEGGINGS);
         simpleItem(ModItems.ABSOLUTE_WHITE_BOOTS);
+
         simpleItem(ModItems.BLUE_HILL_TOMATO_SEEDS);
+
         simpleItem(ModItems.AMBULANCE_BEAT_MUSIC_DISC);
         simpleItem(ModItems.BAFANGLAICAI_MUSIC_DISC);
         simpleItem(ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC);
 
         // Blocks
-        simpleBlockItem(ModBlocks.DECAYING_HARMONY);
+        simpleBlockItemBlockTexture(ModBlocks.DECAYING_HARMONY);
 
         //Handheld
         handheldItem(ModItems.ABSOLUTE_BLACK_SWORD);
@@ -98,6 +107,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ExampleMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));

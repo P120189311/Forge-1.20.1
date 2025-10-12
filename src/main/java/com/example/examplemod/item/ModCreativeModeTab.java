@@ -82,6 +82,15 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativeModeTab.mod_plants"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.BLUE_HILL_TOMATO_SEEDS.get());
+                        pOutput.accept(ModBlocks.ABYSS_LOG.get());
+                        pOutput.accept(ModBlocks.ABYSS_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_ABYSS_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_ABYSS_WOOD.get());
+                        pOutput.accept(ModBlocks.ABYSS_PLANKS.get());
+                        pOutput.accept(ModBlocks.ABYSS_PLANKS_CURSED.get());
+                        pOutput.accept(ModBlocks.ABYSS_LEAVES.get());
+                        pOutput.accept(ModBlocks.ABYSS_SIGN.get());
+                        pOutput.accept(ModBlocks.ABYSS_HANGING_SIGN.get());
                     })
                     .build());
 

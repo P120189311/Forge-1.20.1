@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "examplemod:abyss_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "examplemod:abyss_planks_cursed"
+  }
+}

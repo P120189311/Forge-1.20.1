@@ -5,14 +5,19 @@ import com.example.examplemod.block.custom.*;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.JumpyBlockItem;
+import com.example.examplemod.util.ModWoodTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -61,6 +66,45 @@ public class ModBlocks {
                     .strength(3f)
                     .noOcclusion()
                     .requiresCorrectToolForDrops()));
+
+    // Tree
+    public static final RegistryObject<Block> ABYSS_LOG = registerBlock("abyss_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSS_WOOD = registerBlock("abyss_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STRIPPED_ABYSS_LOG = registerBlock("stripped_abyss_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STRIPPED_ABYSS_WOOD = registerBlock("stripped_abyss_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSS_PLANKS = registerBlock("abyss_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSS_PLANKS_CURSED = registerBlock("abyss_planks_cursed",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSS_LEAVES = registerBlock("abyss_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ABYSS_SIGN = BLOCKS.register("abyss_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ABYSS));
+    public static final RegistryObject<Block> ABYSS_WALL_SIGN = BLOCKS.register("abyss_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.ABYSS));
+
+    public static final RegistryObject<Block> ABYSS_HANGING_SIGN = BLOCKS.register("abyss_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ABYSS));
+    public static final RegistryObject<Block> ABYSS_WALL_HANGING_SIGN = BLOCKS.register("abyss_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ABYSS));
 
     // Flowers
     public static final RegistryObject<Block> DECAYING_HARMONY = registerBlock("decaying_harmony",

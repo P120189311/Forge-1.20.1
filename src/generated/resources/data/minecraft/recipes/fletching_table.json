@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "examplemod:planks"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    "FF",
+    "##"
+  ],
+  "result": {
+    "item": "minecraft:fletching_table"
+  },
+  "show_notification": true
+}

@@ -62,6 +62,16 @@
   "block.examplemod.absolute_white_door": "Absolute White Door",
   "block.examplemod.absolute_white_trapdoor": "Absolute White Trapdoor",
 
+  "block.examplemod.abyss_log": "Abyss Log",
+  "block.examplemod.abyss_planks": "Abyss Planks",
+  "block.examplemod.abyss_planks_cursed": "Abyss Planks",
+  "block.examplemod.abyss_wood": "Abyss Wood",
+  "block.examplemod.stripped_abyss_log": "Stripped Abyss Log",
+  "block.examplemod.stripped_abyss_wood": "Stripped Abyss Wood",
+  "block.examplemod.abyss_leaves": "Abyss Leaves",
+  "block.examplemod.abyss_sign": "Abyss Sign",
+  "block.examplemod.abyss_hanging_sign": "Abyss Hanging Sign",
+
   "block.examplemod.jumpy_block": "Jumpy Block",
   "block.examplemod.mystery_stand": "Mystery Stand",
 
@@ -80,6 +90,7 @@
 
   "sounds.examplemod.blue_hill_tomato_eat_chance": "WATER ON THE HILL!",
   "sounds.examplemod.mystery_stand_use_chance": "FIRE IN THE HOLE!",
+  "sounds.examplemod.abhtcaq": "Please Help Me! I'm Scared",
 
   "sounds.examplemod.ambulance_beat": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
   "sounds.examplemod.bafanglaicai": "揽佬 SKAI ISYOURGOD - 八方来财",
@@ -95,5 +106,5 @@
   "tooltip.examplemod.black_hole_armor": "Full Set Effect: Pulls Hostile Mobs that are 25 blocks away towards the player gradually and damages those within 3 blocks away",
   "tooltip.examplemod.purificating_white_armor": "Full Set Effect: Purifies debuffs to those that are 5 blocks away and heals 1 Heart every 5 Seconds",
   "tooltip.examplemod.infectious_black_pickaxe": "When a Black/White Ore Block is in the offhand and the pickaxe is right clicked, the next block destroyed will spread the offhand ore to the surrounding Iron Ores",
-  "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively"
+  "tooltip.examplemod.nocturnal_dwight": "When used on Diamond Ore/Emerald Ore, turns the surrounding 3x3 Diamond Ore/Emerald Ore into Absolute Black Ore/Absolute White Ore Respectively and also Purifies Abyss Planks"
 }

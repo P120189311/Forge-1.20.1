@@ -1,10 +1,12 @@
 package com.example.examplemod.datagen;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -39,5 +41,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.AMBULANCE_BEAT_MUSIC_DISC.get(),
                 ModItems.BAFANGLAICAI_MUSIC_DISC.get(),
                 ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC.get());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ABYSS_LOG.get().asItem())
+                .add(ModBlocks.ABYSS_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_ABYSS_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_ABYSS_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.ABYSS_PLANKS.get().asItem());
     }
 }

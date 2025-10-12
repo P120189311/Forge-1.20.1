@@ -1,8 +1,10 @@
-// 1.20.1	2025-09-24T00:24:09.963441	Tags for minecraft:block mod id examplemod
+// 1.20.1	2025-10-13T03:59:22.374092	Tags for minecraft:block mod id examplemod
 dc5a404d37b5d51764a9fa325e18042794c90577 data/examplemod/tags/blocks/dowsing_rod_valuables.json
 fe839d832367dabbd8dd34d5f83114346dcbf574 data/minecraft/tags/blocks/fences.json
 b5683bb7d2cf14b7caabee815348c50fc3544bf6 data/minecraft/tags/blocks/fence_gates.json
+ee87624c0cb0891c6a5ce1500f31472c8fa86731 data/minecraft/tags/blocks/logs_that_burn.json
 e1bd91623d827bf8ec3dc4fe996138d16a8d078f data/minecraft/tags/blocks/mineable/pickaxe.json
 8a7d531662c1a1cd360e0946a0be3b80f89110b0 data/minecraft/tags/blocks/needs_iron_tool.json
 a82955303d25a91e031f100f3457cf4ced97aae1 data/minecraft/tags/blocks/needs_stone_tool.json
+0b3c9a86483386f99e7b8aef7788f97f7cd1f7f6 data/minecraft/tags/blocks/planks.json
 164ce97ab495e59e10765a67f9d6ff962b9cacd3 data/minecraft/tags/blocks/walls.json
