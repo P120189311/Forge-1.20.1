@@ -69,6 +69,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BAFANGLAICAI_MUSIC_DISC);
         simpleItem(ModItems.DROP_IT_LIKE_ITS_HOT_MUSIC_DISC);
 
+        simpleItem(ModItems.ABYSS_BOAT);
+        simpleItem(ModItems.ABYSS_CHEST_BOAT);
+
         // Blocks
         simpleBlockItemBlockTexture(ModBlocks.DECAYING_HARMONY);
 

@@ -2,10 +2,12 @@ package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.entity.custom.ModBoatEntity;
 import com.example.examplemod.item.custom.*;
 import com.example.examplemod.sound.ModSounds;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerBlock;
@@ -30,6 +32,10 @@ public class ModItems {
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ABYSS_SIGN.get(), ModBlocks.ABYSS_WALL_SIGN.get()));
     public static final RegistryObject<Item> ABYSS_HANGING_SIGN = ITEMS.register("abyss_hanging_sign",
             () -> new HangingSignItem(ModBlocks.ABYSS_HANGING_SIGN.get(), ModBlocks.ABYSS_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ABYSS_BOAT = ITEMS.register("abyss_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.ABYSS, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ABYSS_CHEST_BOAT = ITEMS.register("abyss_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.ABYSS, new Item.Properties().fireResistant()));
 
     // Misc Tools
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",

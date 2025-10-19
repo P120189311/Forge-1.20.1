@@ -31,6 +31,9 @@
 
   "item.examplemod.eternal_flame": "Eternal Flame",
 
+  "item.examplemod.abyss_boat": "Abyss Boat",
+  "item.examplemod.abyss_chest_boat": "Abyss Chest Boat",
+
   "item.examplemod.ambulance_beat_music_disc": "Ambulance Beat Music Disc",
   "item.examplemod.ambulance_beat_music_disc.desc": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
   "item.examplemod.bafanglaicai_music_disc": "Ba Fang Lai Cai Music Disc",
@@ -78,6 +81,8 @@
   "block.examplemod.decaying_harmony": "Decaying Harmony",
 
   "entity.minecraft.villager.examplemod.overseer": "Overseer",
+
+  "entity.examplemod.mod_chest_boat": "Boat with Chest",
 
   "creativeModeTab.black": "Black",
   "creativeModeTab.white": "White",
