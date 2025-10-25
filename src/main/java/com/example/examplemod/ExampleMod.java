@@ -3,6 +3,7 @@ package com.example.examplemod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.block.custom.ModFlammableRotatedPillarBlock;
 import com.example.examplemod.block.entity.ModBlockEntities;
+import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.entity.client.ModBoatRenderer;
 import com.example.examplemod.item.ModCreativeModeTab;
@@ -53,6 +54,7 @@ public class ExampleMod {
 
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);

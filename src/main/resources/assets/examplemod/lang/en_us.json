@@ -84,6 +84,8 @@
 
   "entity.examplemod.mod_chest_boat": "Boat with Chest",
 
+  "effect.examplemod.dementia": "Dementia",
+
   "creativeModeTab.black": "Black",
   "creativeModeTab.white": "White",
   "creativeModeTab.mod_misc": "Mod Misc",
@@ -96,6 +98,7 @@
   "sounds.examplemod.blue_hill_tomato_eat_chance": "WATER ON THE HILL!",
   "sounds.examplemod.mystery_stand_use_chance": "FIRE IN THE HOLE!",
   "sounds.examplemod.abhtcaq": "Please Help Me! I'm Scared",
+  "sounds.examplemod.dementia": "I know I've been here before",
 
   "sounds.examplemod.ambulance_beat": "slushire - Whimsical (DJ Toenail Ambulance Beat)",
   "sounds.examplemod.bafanglaicai": "揽佬 SKAI ISYOURGOD - 八方来财",

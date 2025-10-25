@@ -18,6 +18,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> AMBULANCE_BEAT = registerSoundEvents("ambulance_beat");
     public static final RegistryObject<SoundEvent> DROP_IT_LIKE_ITS_HOT = registerSoundEvents("drop_it_like_its_hot");
     public static final RegistryObject<SoundEvent> BAFANGLAICAI = registerSoundEvents("bafanglaicai");
+    public static final RegistryObject<SoundEvent> DEMENTIA = registerSoundEvents("dementia");
 
     public static final RegistryObject<SoundEvent> ABHTCAQ = registerSoundEvents("abhtcaq");
 
