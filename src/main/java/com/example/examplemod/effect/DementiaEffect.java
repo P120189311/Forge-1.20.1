@@ -1,26 +1,35 @@
 package com.example.examplemod.effect;
 
+import com.example.examplemod.ExampleMod;
+import com.example.examplemod.network.PlayDementiaMusicPacket;
+import com.example.examplemod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.food.FoodData;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.network.PacketDistributor;
 
 import java.util.*;
 
+import static com.mojang.text2speech.Narrator.LOGGER;
+
 public class DementiaEffect extends MobEffect {
 
+    private static final Set<UUID> playedSound = new HashSet<>();
     private static final Map<UUID, Deque<PlayerSnapshot>> historyMap = new HashMap<>();
     private static final Map<UUID, Integer> tickCounters = new HashMap<>();
 
-    private static final int SNAPSHOT_INTERVAL_TICKS = 5; // store snapshop every 0.25 seconds
-    private static final int HISTORY_TICKS = 60; // 3 seconds of memory
-    private static final double DEMENTIA_CHANCE = 1;
-    private static final int CHECK_INTERVAL_TICKS = 200; // every 10 seconds
+    private static final int SNAPSHOT_INTERVAL_TICKS = 10; // store snapshot every 0.5 seconds
+    private static final int HISTORY_TICKS = 200; // 10 seconds of memory
+    private static final double DEMENTIA_CHANCE = 0.3;
+    private static final int CHECK_INTERVAL_TICKS = 300; // every 1 minute
 
     public DementiaEffect(MobEffectCategory category, int color) {
         super(category, color);
@@ -54,9 +63,9 @@ public class DementiaEffect extends MobEffect {
             tickCounters.put(id, 0);
 
             if (Math.random() < DEMENTIA_CHANCE) {
-                if (history != null && history.size() >= 12) {
+                if (history != null && history.size() >= 20) {
                     PlayerSnapshot[] snapshots = history.toArray(new PlayerSnapshot[0]);
-                    int index = 11;
+                    int index = 19; // HISTORY_TICKS / SNAPSHOT_INTERVAL_TICKS - 1 = index (also add that number without - 1 to the history.size() >= (...))
                     if (index < snapshots.length) {
                         snapshots[index].restore(player);
                         player.displayClientMessage(Component.literal("§5Your mind slips..."), true);
@@ -83,6 +92,37 @@ public class DementiaEffect extends MobEffect {
     public static void clearPlayerData(UUID playerId) {
         historyMap.remove(playerId);
         tickCounters.remove(playerId);
+    }
+
+    // Sound
+    @Override
+    public void addAttributeModifiers(LivingEntity entity, AttributeMap map, int amplifier) {
+        super.addAttributeModifiers(entity, map, amplifier);
+
+        if (!(entity instanceof ServerPlayer player)) return;
+        if (playedSound.contains(player.getUUID())) return; // Already played
+
+        playedSound.add(player.getUUID());
+
+        Random random = new Random();
+        int choice = random.nextInt(3);
+        String soundId = switch (choice) {
+            case 0 -> "examplemod:libets_delay_short";
+            case 1 -> "examplemod:drifting_time_misplaced_short";
+            default -> "examplemod:its_just_a_burning_memory_short";
+        };
+
+        LOGGER.info("Sending PlayDementiaMusicPacket to {} with song {}", player.getName().getString(), soundId);
+        ExampleMod.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
+                new PlayDementiaMusicPacket(soundId));
+    }
+
+    @Override
+    public void removeAttributeModifiers(LivingEntity entity, AttributeMap map, int amplifier) {
+        if (entity instanceof ServerPlayer player) {
+            playedSound.remove(player.getUUID());
+        }
+        super.removeAttributeModifiers(entity, map, amplifier);
     }
 
     private static class PlayerSnapshot {

@@ -11,6 +11,7 @@ import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.BlackSwordOfDeath;
 import com.example.examplemod.item.custom.WhiteSwordOfJudgement;
 import com.example.examplemod.loot.ModLootModifiers;
+import com.example.examplemod.network.PlayDementiaMusicPacket;
 import com.example.examplemod.recipe.ModRecipes;
 import com.example.examplemod.screen.ModMenuTypes;
 import com.example.examplemod.screen.MysteryStandScreen;
@@ -23,6 +24,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,13 +35,23 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ExampleMod.MOD_ID)
 public class ExampleMod {
     public static final String MOD_ID = "examplemod";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+    private static final String PROTOCOL_VERSION = "1";
+    public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
+            new ResourceLocation(MOD_ID, "main"),
+            () -> PROTOCOL_VERSION,
+            PROTOCOL_VERSION::equals,
+            PROTOCOL_VERSION::equals
+    );
 
     // Very Important Comment
     public ExampleMod() {
@@ -66,6 +78,20 @@ public class ExampleMod {
 
         MinecraftForge.EVENT_BUS.addListener(BlackSwordOfDeath::onServerTick);
         MinecraftForge.EVENT_BUS.addListener(WhiteSwordOfJudgement::onServerTick);
+
+        registerPackets();
+    }
+
+    public static void registerPackets() {
+        int id = 0;
+
+        CHANNEL.messageBuilder(PlayDementiaMusicPacket.class, id++)
+                .encoder(PlayDementiaMusicPacket::encode)
+                .decoder(PlayDementiaMusicPacket::decode)
+                .consumerMainThread(PlayDementiaMusicPacket::handle)
+                .add();
+
+        LOGGER.info("[ExampleMod] Registered network packets.");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

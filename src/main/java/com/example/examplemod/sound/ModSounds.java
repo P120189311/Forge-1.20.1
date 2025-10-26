@@ -18,9 +18,14 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> AMBULANCE_BEAT = registerSoundEvents("ambulance_beat");
     public static final RegistryObject<SoundEvent> DROP_IT_LIKE_ITS_HOT = registerSoundEvents("drop_it_like_its_hot");
     public static final RegistryObject<SoundEvent> BAFANGLAICAI = registerSoundEvents("bafanglaicai");
-    public static final RegistryObject<SoundEvent> DEMENTIA = registerSoundEvents("dementia");
+    public static final RegistryObject<SoundEvent> ITS_JUST_A_BURNING_MEMORY = registerSoundEvents("its_just_a_burning_memory");
+    public static final RegistryObject<SoundEvent> LIBETS_DELAY = registerSoundEvents("libets_delay");
+    public static final RegistryObject<SoundEvent> DRIFTING_TIME_MISPLACED = registerSoundEvents("drifting_time_misplaced");
 
     public static final RegistryObject<SoundEvent> ABHTCAQ = registerSoundEvents("abhtcaq");
+    public static final RegistryObject<SoundEvent> ITS_JUST_A_BURNING_MEMORY_SHORT = registerSoundEvents("its_just_a_burning_memory_short");
+    public static final RegistryObject<SoundEvent> LIBETS_DELAY_SHORT = registerSoundEvents("libets_delay_short");
+    public static final RegistryObject<SoundEvent> DRIFTING_TIME_MISPLACED_SHORT = registerSoundEvents("drifting_time_misplaced_short");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ExampleMod.MOD_ID, name)));

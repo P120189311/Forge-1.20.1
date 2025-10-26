@@ -54,24 +54,49 @@
       "examplemod:abhtcaq"
     ]
   },
-  "dementia": {
-    "subtitle": "sounds.examplemod.dementia",
-    "loop": false,
-    "stream": true,
+  "its_just_a_burning_memory": {
+    "subtitle": "sounds.examplemod.its_just_a_burning_memory",
     "sounds": [
-      "examplemod:its_just_a_burning_memory",
-      "examplemod:late_afternoon_drifting",
-      "examplemod:we_dont_have_many_days",
-      "examplemod:childishly_fresh_eyes",
-      "examplemod:surrendering_to_despair",
-      "examplemod:quiet_dusk_coming_early",
-      "examplemod:i_still_feel_as_though_i_am_me",
-      "examplemod:last_moments_of_pure_call",
-      "examplemod:gradations_of_arms_length",
-      "examplemod:drifting_time_misplaced",
-      "examplemod:internal_bewildered_world",
-      "examplemod:burning_despair_does_ache",
-      "examplemod:libets_delay"
+      {
+        "name": "examplemod:its_just_a_burning_memory",
+        "stream": true
+      }
+    ]
+  },
+  "libets_delay": {
+    "subtitle": "sounds.examplemod.libets_delay",
+    "sounds": [
+      {
+        "name": "examplemod:libets_delay",
+        "stream": true
+      }
+    ]
+  },
+  "drifting_time_misplaced": {
+    "subtitle": "sounds.examplemod.drifting_time_misplaced",
+    "sounds": [
+      {
+        "name": "examplemod:drifting_time_misplaced",
+        "stream": true
+      }
+    ]
+  },
+  "its_just_a_burning_memory_short": {
+    "subtitle": "sounds.examplemod.dementia",
+    "sounds": [
+      "examplemod:its_just_a_burning_memory_short"
+    ]
+  },
+  "libets_delay_short": {
+    "subtitle": "sounds.examplemod.dementia",
+    "sounds": [
+      "examplemod:libets_delay_short"
+    ]
+  },
+  "drifting_time_misplaced_short": {
+    "subtitle": "sounds.examplemod.dementia",
+    "sounds": [
+      "examplemod:drifting_time_misplaced_short"
     ]
   }
 }
