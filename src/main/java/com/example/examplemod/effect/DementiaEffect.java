@@ -4,6 +4,8 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.network.PlayDementiaMusicPacket;
 import com.example.examplemod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffect;
@@ -12,6 +14,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.food.FoodData;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.network.PacketDistributor;
@@ -29,7 +32,7 @@ public class DementiaEffect extends MobEffect {
     private static final int SNAPSHOT_INTERVAL_TICKS = 10; // store snapshot every 0.5 seconds
     private static final int HISTORY_TICKS = 200; // 10 seconds of memory
     private static final double DEMENTIA_CHANCE = 0.3;
-    private static final int CHECK_INTERVAL_TICKS = 300; // every 1 minute
+    private static final int CHECK_INTERVAL_TICKS = 1200; // every 1 minute
 
     public DementiaEffect(MobEffectCategory category, int color) {
         super(category, color);
@@ -126,7 +129,9 @@ public class DementiaEffect extends MobEffect {
     }
 
     private static class PlayerSnapshot {
+        private final ResourceKey<Level> dimension;
         private final double x, y, z;
+        private final float yaw, pitch;
         private final float health;
         private final int foodLevel;
         private final int fireTicks;
@@ -134,9 +139,12 @@ public class DementiaEffect extends MobEffect {
         private final List<MobEffectInstance> effects;
 
         PlayerSnapshot(ServerPlayer player) {
+            this.dimension = player.level().dimension();
             this.x = player.getX();
             this.y = player.getY();
             this.z = player.getZ();
+            this.yaw = player.getYRot();
+            this.pitch = player.getXRot();
             this.health = player.getHealth();
 
             FoodData food = player.getFoodData();
@@ -149,7 +157,11 @@ public class DementiaEffect extends MobEffect {
 
         void restore(ServerPlayer player) {
             if (!player.isAlive()) return;
-            player.teleportTo(player.serverLevel(), x, y, z, player.getYRot(), player.getXRot());
+            ServerLevel targetLevel = player.getServer().getLevel(dimension);
+            if (targetLevel != null) {
+                player.teleportTo(targetLevel, x, y, z, yaw, pitch);
+            }
+
             player.setHealth(health);
 
             FoodData food = player.getFoodData();
