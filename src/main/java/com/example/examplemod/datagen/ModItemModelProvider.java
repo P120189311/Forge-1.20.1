@@ -53,6 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.VOID_OF_KNOWLEDGE);
 
         simpleItem(ModItems.ETERNAL_FLAME);
+        simpleItem(ModItems.TRAPPED_GAMMA_RAY);
 
         simpleItem(ModItems.ABSOLUTE_BLACK_HELMET);
         simpleItem(ModItems.ABSOLUTE_BLACK_CHESTPLATE);

@@ -66,6 +66,8 @@ public class ModItems {
     // Misc Items
     public static final RegistryObject<Item> NOCTURNAL_DWIGHT = ITEMS.register("nocturnal_dwight",
             () -> new NocturnalDwight(new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> TRAPPED_GAMMA_RAY = ITEMS.register("trapped_gamma_ray",
+            () -> new TrappedGammaRay(new Item.Properties().fireResistant()));
 
     // Black Tools
     public static final RegistryObject<Item> ABSOLUTE_BLACK_SWORD = ITEMS.register("absolute_black_sword",

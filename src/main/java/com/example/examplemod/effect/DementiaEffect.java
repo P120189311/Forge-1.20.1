@@ -32,7 +32,8 @@ public class DementiaEffect extends MobEffect {
     private static final int SNAPSHOT_INTERVAL_TICKS = 10; // store snapshot every 0.5 seconds
     private static final int HISTORY_TICKS = 200; // 10 seconds of memory
     private static final double DEMENTIA_CHANCE = 0.3;
-    private static final int CHECK_INTERVAL_TICKS = 1200; // every 1 minute
+
+    private static final Map<UUID, Integer> nextCheckInterval = new HashMap<>();
 
     public DementiaEffect(MobEffectCategory category, int color) {
         super(category, color);
@@ -45,10 +46,12 @@ public class DementiaEffect extends MobEffect {
 
         UUID id = player.getUUID();
         tickCounters.putIfAbsent(id, 0);
-        int ticks = tickCounters.getOrDefault(id, 0) + 1;
+        nextCheckInterval.putIfAbsent(id, getRandomInterval());
+
+        int ticks = tickCounters.get(id) + 1;
         tickCounters.put(id, ticks);
 
-        // Effect
+        // Store snapshots periodically
         if (ticks % SNAPSHOT_INTERVAL_TICKS == 0) {
             historyMap.putIfAbsent(id, new ArrayDeque<>());
             Deque<PlayerSnapshot> history = historyMap.get(id);
@@ -59,23 +62,45 @@ public class DementiaEffect extends MobEffect {
             }
         }
 
-        int counter = tickCounters.get(id);
+        int targetInterval = nextCheckInterval.get(id);
         Deque<PlayerSnapshot> history = historyMap.get(id);
 
-        if (counter >= CHECK_INTERVAL_TICKS) {
+        if (ticks >= targetInterval) {
             tickCounters.put(id, 0);
+            nextCheckInterval.put(id, getRandomInterval()); // new interval for next trigger
 
             if (Math.random() < DEMENTIA_CHANCE) {
                 if (history != null && history.size() >= 20) {
                     PlayerSnapshot[] snapshots = history.toArray(new PlayerSnapshot[0]);
-                    int index = 19; // HISTORY_TICKS / SNAPSHOT_INTERVAL_TICKS - 1 = index (also add that number without - 1 to the history.size() >= (...))
+                    int index = 19;
                     if (index < snapshots.length) {
                         snapshots[index].restore(player);
                         player.displayClientMessage(Component.literal("§5Your mind slips..."), true);
+
+                        // Sound
+                        Random random = new Random();
+                        int choice = random.nextInt(3);
+                        String soundId = switch (choice) {
+                            case 0 -> "examplemod:libets_delay_short";
+                            case 1 -> "examplemod:drifting_time_misplaced_short";
+                            default -> "examplemod:its_just_a_burning_memory_short";
+                        };
+
+                        ExampleMod.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
+                                new PlayDementiaMusicPacket(soundId));
                     }
                 }
             }
         }
+    }
+
+    private int getRandomInterval() {
+        return 1200 + (int) (Math.random() * 2400); // 1200–3600 ticks
+    }
+
+    @Override
+    public boolean isBeneficial() {
+        return true;
     }
 
     @Override
@@ -95,29 +120,6 @@ public class DementiaEffect extends MobEffect {
     public static void clearPlayerData(UUID playerId) {
         historyMap.remove(playerId);
         tickCounters.remove(playerId);
-    }
-
-    // Sound
-    @Override
-    public void addAttributeModifiers(LivingEntity entity, AttributeMap map, int amplifier) {
-        super.addAttributeModifiers(entity, map, amplifier);
-
-        if (!(entity instanceof ServerPlayer player)) return;
-        if (playedSound.contains(player.getUUID())) return; // Already played
-
-        playedSound.add(player.getUUID());
-
-        Random random = new Random();
-        int choice = random.nextInt(3);
-        String soundId = switch (choice) {
-            case 0 -> "examplemod:libets_delay_short";
-            case 1 -> "examplemod:drifting_time_misplaced_short";
-            default -> "examplemod:its_just_a_burning_memory_short";
-        };
-
-        LOGGER.info("Sending PlayDementiaMusicPacket to {} with song {}", player.getName().getString(), soundId);
-        ExampleMod.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
-                new PlayDementiaMusicPacket(soundId));
     }
 
     @Override

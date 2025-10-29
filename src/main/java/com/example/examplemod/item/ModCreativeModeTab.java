@@ -60,9 +60,10 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativeModeTab.mod_misc"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.DOWSING_ROD.get());
-                        pOutput.accept(ModBlocks.JUMPY_BLOCK.get());
                         pOutput.accept(ModItems.ETERNAL_FLAME.get());
                         pOutput.accept(ModItems.NOCTURNAL_DWIGHT.get());
+                        pOutput.accept(ModItems.TRAPPED_GAMMA_RAY.get());
+                        pOutput.accept(ModBlocks.JUMPY_BLOCK.get());
                         pOutput.accept(ModBlocks.DECAYING_HARMONY.get());
                         pOutput.accept(ModBlocks.MYSTERY_STAND.get());
                     })

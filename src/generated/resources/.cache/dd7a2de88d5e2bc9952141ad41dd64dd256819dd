@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-19T02:54:57.6768509	Item Models: examplemod
+// 1.20.1	2025-10-29T17:48:57.3948897	Item Models: examplemod
 1e987442716894279b2a131289cfd52ab324744e assets/examplemod/models/item/absolute_black_axe.json
 f87f57eb997802334cdeaf164489d4e74a787e3a assets/examplemod/models/item/absolute_black_boots.json
 1201aaa99e1e9b8d78a16d78e6245f9f26d42646 assets/examplemod/models/item/absolute_black_boots_amethyst_trim.json
@@ -109,5 +109,6 @@ d29a21d0b2ce93904c89871ed6ce8d9cd942340e assets/examplemod/models/item/blue_hill
 6990e3319d40f14c73bae6ca09b540ae65f8a65e assets/examplemod/models/item/dowsing_rod.json
 8121127aa70be899df8c644614f1140303cb1e45 assets/examplemod/models/item/drop_it_like_its_hot_music_disc.json
 1c910e447f4cfb435ae036ef989613ef0165dfff assets/examplemod/models/item/eternal_flame.json
+2f2d32ef1d2cea6e5a744ff20be3900871bee9b5 assets/examplemod/models/item/trapped_gamma_ray.json
 cb415b3e08b63429722c3888a0f7e69532f62aff assets/examplemod/models/item/void_of_knowledge.json
 a55c3fd10f969a932e922902798fe5d3f7664594 assets/examplemod/models/item/whity.json
