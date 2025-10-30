@@ -2,12 +2,10 @@ package com.example.examplemod.effect;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.network.PlayDementiaMusicPacket;
-import com.example.examplemod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,8 +18,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.network.PacketDistributor;
 
 import java.util.*;
-
-import static com.mojang.text2speech.Narrator.LOGGER;
 
 public class DementiaEffect extends MobEffect {
 

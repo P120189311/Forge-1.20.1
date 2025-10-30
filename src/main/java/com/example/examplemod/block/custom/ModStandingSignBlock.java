@@ -1,6 +1,5 @@
 package com.example.examplemod.block.custom;
 
-import com.example.examplemod.block.entity.ModHangingSignBlockEntity;
 import com.example.examplemod.block.entity.ModSignBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.StandingSignBlock;

@@ -37,9 +37,6 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
     private static final Map<Block, Block> STRIPPABLES = new HashMap<>();
 
-    /**
-     * Called from your mod setup to register strippable pairs safely.
-     */
     public static void registerStrippables() {
         STRIPPABLES.put(ModBlocks.ABYSS_LOG.get(), ModBlocks.STRIPPED_ABYSS_LOG.get());
         STRIPPABLES.put(ModBlocks.ABYSS_WOOD.get(), ModBlocks.STRIPPED_ABYSS_WOOD.get());

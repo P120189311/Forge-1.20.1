@@ -1,7 +1,6 @@
 package com.example.examplemod.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -25,7 +24,7 @@ public class DecayingHarmony extends FlowerBlock {
         if (!level.isClientSide && entity instanceof LivingEntity livingEntity) {
             // Apply Blindness for 5 seconds
             livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0));
-            // 100 ticks = 5 seconds, amplifier 0 = level I
+            // 100 ticks = 5 seconds
         }
     }
 }

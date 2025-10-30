@@ -1,6 +1,5 @@
 package com.example.examplemod.network;
 
-import com.example.examplemod.ExampleMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
