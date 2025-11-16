@@ -6,6 +6,7 @@ import com.example.examplemod.block.entity.ModBlockEntities;
 import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.entity.ModEntities;
 import com.example.examplemod.entity.client.ModBoatRenderer;
+import com.example.examplemod.event.ModDispenseBehaviors;
 import com.example.examplemod.item.ModCreativeModeTab;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.item.custom.BlackSwordOfDeath;
@@ -18,6 +19,7 @@ import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.util.ModWoodTypes;
 import com.example.examplemod.villager.ModVillagers;
+import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -73,6 +75,7 @@ public class ExampleMod {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+        ModTrunkPlacerTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -98,7 +101,9 @@ public class ExampleMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.DECAYING_HARMONY.getId(), ModBlocks.POTTED_DECAYING_HARMONY);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ABYSS_SAPLING.getId(), ModBlocks.POTTED_ABYSS_SAPLING);
             ModFlammableRotatedPillarBlock.registerStrippables();
+            event.enqueueWork(ModDispenseBehaviors::register);
         });
 
     }
@@ -121,6 +126,7 @@ public class ExampleMod {
 
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECAYING_HARMONY.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_DECAYING_HARMONY.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_ABYSS_SAPLING.get(), RenderType.cutout());
 
             MenuScreens.register(ModMenuTypes.MYSTERY_STAND_MENU.get(), MysteryStandScreen::new);
         }

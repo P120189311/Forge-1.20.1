@@ -1,7 +1,10 @@
-// 1.20.1	2025-11-06T16:51:20.7882381	Registries
+// 1.20.1	2025-11-17T02:35:15.4993735	Registries
 ced2b8585addfe9ca63fc25b17e4c01ff2dea6d1 data/examplemod/forge/biome_modifier/add_absolute_black_ore.json
 308a991b901746f17e7c2ff6809770563a9db517 data/examplemod/forge/biome_modifier/add_absolute_white_ore.json
+9ec4e90b53963e124a036468ccd4804cb09049e7 data/examplemod/forge/biome_modifier/add_tree_abyss.json
 7cadb5f6acabbd03e6285c025987b3a69e7612ec data/examplemod/worldgen/configured_feature/absolute_black_ore.json
 86cb6ec17ff26abed804783ac180d353a7462dd0 data/examplemod/worldgen/configured_feature/absolute_white_ore.json
+00a48fcfd677a34508ff927810684043aa108723 data/examplemod/worldgen/configured_feature/abyss.json
 55f34ba17f7212af0ceca17238670e7503215622 data/examplemod/worldgen/placed_feature/absolute_black_ore_placed.json
 11b24918063784ac6fce42df689ee2852aa59c59 data/examplemod/worldgen/placed_feature/absolute_white_ore_placed.json
+6f74e925cc3cd25365dfc0a4abc4c5a6a9ad6f22 data/examplemod/worldgen/placed_feature/abyss_placed.json

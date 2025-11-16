@@ -53,9 +53,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_ABYSS_WOOD.get());
         this.dropSelf(ModBlocks.ABYSS_PLANKS.get());
         this.dropSelf(ModBlocks.ABYSS_PLANKS_CURSED.get());
+        this.dropSelf(ModBlocks.ABYSS_SAPLING.get());
 
         this.add(ModBlocks.ABYSS_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.ABSOLUTE_BLACK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+                createLeavesDrops(block, ModBlocks.ABYSS_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.ABYSS_SIGN.get(), block ->
                 createSingleItemTable(ModItems.ABYSS_SIGN.get()));
@@ -69,6 +70,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Flowers
         this.dropSelf(ModBlocks.DECAYING_HARMONY.get());
         this.add(ModBlocks.POTTED_DECAYING_HARMONY.get(), createPotFlowerItemTable(ModBlocks.DECAYING_HARMONY.get()));
+        this.add(ModBlocks.POTTED_ABYSS_SAPLING.get(), createPotFlowerItemTable(ModBlocks.ABYSS_SAPLING.get()));
 
         add(ModBlocks.ABSOLUTE_BLACK_ORE.get(),
                 (block -> createOreDrop(ModBlocks.ABSOLUTE_BLACK_ORE.get(), ModItems.BLACKY.get())));

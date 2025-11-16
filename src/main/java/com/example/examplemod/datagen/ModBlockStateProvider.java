@@ -81,6 +81,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         hangingSignBlock(ModBlocks.ABYSS_HANGING_SIGN.get(), ModBlocks.ABYSS_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.ABYSS_PLANKS.get()));
 
+        saplingBlock(ModBlocks.ABYSS_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_ABYSS_SAPLING.get(), models().singleTexture("potted_abyss_sapling", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.ABYSS_SAPLING.get())).renderType("cutout"));
+
         // Flowers
         simpleBlockWithItem(ModBlocks.DECAYING_HARMONY.get(), models().cross(blockTexture(ModBlocks.DECAYING_HARMONY.get()).getPath(),
                 blockTexture(ModBlocks.DECAYING_HARMONY.get())).renderType("cutout"));
@@ -169,6 +173,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

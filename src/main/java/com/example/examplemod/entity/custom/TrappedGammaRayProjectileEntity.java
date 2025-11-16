@@ -39,6 +39,10 @@ public class TrappedGammaRayProjectileEntity extends ThrowableItemProjectile {
         return ModItems.TRAPPED_GAMMA_RAY.get();
     }
 
+    public TrappedGammaRayProjectileEntity(Level level, double x, double y, double z) {
+        super(ModEntities.TRAPPED_GAMMA_RAY.get(), x, y, z, level);
+    }
+
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);

@@ -73,6 +73,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ABYSS_BOAT);
         simpleItem(ModItems.ABYSS_CHEST_BOAT);
 
+        saplingItem(ModBlocks.ABYSS_SAPLING);
+
         // Blocks
         simpleBlockItemBlockTexture(ModBlocks.DECAYING_HARMONY);
 
@@ -117,6 +119,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));

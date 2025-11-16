@@ -4,6 +4,7 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.custom.*;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.util.ModWoodTypes;
+import com.example.examplemod.worldgen.tree.AbyssTreeGrower;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -69,11 +70,11 @@ public class ModBlocks {
                     .strength(6f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STRIPPED_ABYSS_LOG = registerBlock("stripped_abyss_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_LOG)
                     .strength(6f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STRIPPED_ABYSS_WOOD = registerBlock("stripped_abyss_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)
                     .strength(6f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABYSS_PLANKS = registerBlock("abyss_planks",
@@ -85,8 +86,13 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABYSS_LEAVES = registerBlock("abyss_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES)
                     .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSS_SAPLING = registerBlock("abyss_sapling",
+            () -> new SaplingBlock(new AbyssTreeGrower(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_ABYSS_SAPLING = registerBlock("potted_abyss_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,ModBlocks.ABYSS_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_WITHER_ROSE).noOcclusion()));
 
     public static final RegistryObject<Block> ABYSS_SIGN = BLOCKS.register("abyss_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ABYSS));

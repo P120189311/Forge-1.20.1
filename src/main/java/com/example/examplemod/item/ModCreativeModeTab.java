@@ -92,6 +92,7 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModBlocks.ABYSS_LEAVES.get());
                         pOutput.accept(ModBlocks.ABYSS_SIGN.get());
                         pOutput.accept(ModBlocks.ABYSS_HANGING_SIGN.get());
+                        pOutput.accept(ModBlocks.ABYSS_SAPLING.get());
                         pOutput.accept(ModItems.ABYSS_BOAT.get());
                         pOutput.accept(ModItems.ABYSS_CHEST_BOAT.get());
                     })
