@@ -19,7 +19,7 @@ import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.util.ModWoodTypes;
 import com.example.examplemod.villager.ModVillagers;
-import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
+//import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -75,7 +75,7 @@ public class ExampleMod {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
-        ModTrunkPlacerTypes.register(modEventBus);
+        //ModTrunkPlacerTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

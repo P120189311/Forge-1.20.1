@@ -3,7 +3,7 @@ package com.example.examplemod.worldgen;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.util.ModTags;
-import com.example.examplemod.worldgen.tree.custom.AbyssTrunkPlacer;
+//import com.example.examplemod.worldgen.tree.custom.AbyssTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
