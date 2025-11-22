@@ -3,6 +3,7 @@ package com.example.examplemod.worldgen;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.block.ModBlocks;
 import com.example.examplemod.util.ModTags;
+import com.example.examplemod.worldgen.tree.custom.AbyssFoliagePlacer;
 import com.example.examplemod.worldgen.tree.custom.AbyssTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.AcaciaFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -63,12 +65,15 @@ public class ModConfiguredFeatures {
 
         register(context, ABYSS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ABYSS_LOG.get()),
-                new DarkOakTrunkPlacer(5,3,3),
+                new AbyssTrunkPlacer(10,5,5),
 
                 BlockStateProvider.simple(ModBlocks.ABYSS_LEAVES.get()),
-                new DarkOakFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2)),
+                new AbyssFoliagePlacer(ConstantInt.of(2),
+                        ConstantInt.of(0),
+                        ConstantInt.of(8)
+                ),
 
-                new TwoLayersFeatureSize(1,0,2)).build());
+        new TwoLayersFeatureSize(1,0,2)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

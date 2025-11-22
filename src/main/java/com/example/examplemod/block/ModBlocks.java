@@ -86,8 +86,7 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ABYSS_LEAVES = registerBlock("abyss_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES)
-                    .requiresCorrectToolForDrops()));
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES)));
     public static final RegistryObject<Block> ABYSS_SAPLING = registerBlock("abyss_sapling",
             () -> new SaplingBlock(new AbyssTreeGrower(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_SAPLING)));
     public static final RegistryObject<Block> POTTED_ABYSS_SAPLING = registerBlock("potted_abyss_sapling",

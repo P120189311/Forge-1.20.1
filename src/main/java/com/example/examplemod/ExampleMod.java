@@ -19,6 +19,7 @@ import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.util.ModWoodTypes;
 import com.example.examplemod.villager.ModVillagers;
+import com.example.examplemod.worldgen.tree.ModFoliagePlacers;
 import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -28,10 +29,12 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -76,6 +79,7 @@ public class ExampleMod {
 
         ModRecipes.register(modEventBus);
         ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

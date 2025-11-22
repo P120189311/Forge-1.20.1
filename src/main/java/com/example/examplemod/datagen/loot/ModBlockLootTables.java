@@ -6,9 +6,18 @@ import com.example.examplemod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -56,7 +65,36 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ABYSS_SAPLING.get());
 
         this.add(ModBlocks.ABYSS_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.ABYSS_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                LootTable.lootTable()
+                        // Pool 1: saplings (vanilla chance)
+                        .withPool(
+                                LootPool.lootPool()
+                                        .setRolls(ConstantValue.exactly(1))
+                                        .add(
+                                                LootItem.lootTableItem(ModBlocks.ABYSS_SAPLING.get())
+                                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                        )
+                        )
+                        // Pool 2: sticks (vanilla chance)
+                        .withPool(
+                                LootPool.lootPool()
+                                        .setRolls(ConstantValue.exactly(1))
+                                        .add(
+                                                LootItem.lootTableItem(Items.STICK)
+                                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                        )
+                        )
+                        // Pool 3: rare diamond drop (custom)
+                        .withPool(
+                                LootPool.lootPool()
+                                        .setRolls(ConstantValue.exactly(1))
+                                        .add(
+                                                LootItem.lootTableItem(ModItems.NOCTURNAL_DWIGHT.get())
+                                                        .when(LootItemRandomChanceCondition.randomChance(0.01f))
+                                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))
+                                        )
+                        )
+        );
 
         this.add(ModBlocks.ABYSS_SIGN.get(), block ->
                 createSingleItemTable(ModItems.ABYSS_SIGN.get()));
