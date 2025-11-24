@@ -15,6 +15,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ABSOLUTE_WHITE_TOOL = tag("needs_absolute_white_tool");
         public static final TagKey<Block> ABYSS_LOGS = tag("abyss_logs");
         public static final TagKey<Block> MOD_PLANKS = tag("mod_planks");
+        public static final TagKey<Block> REPLACEABLE_PLANTLIKE = tag("replaceable_plantlike");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(ExampleMod.MOD_ID, name));

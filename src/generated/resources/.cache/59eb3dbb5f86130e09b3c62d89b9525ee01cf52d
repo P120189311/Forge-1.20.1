@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-11T22:18:38.3374445	Loot Tables
+// 1.20.1	2025-11-22T18:25:18.8563838	Loot Tables
 573780aa99d7c4c3b2148b67a1c50d26358144b2 data/examplemod/loot_tables/blocks/absolute_black.json
 29635730b2920e3dcd67008cb93e805374012959 data/examplemod/loot_tables/blocks/absolute_black_button.json
 c908e4480b90364d9f7e92644f30a073ce7868b8 data/examplemod/loot_tables/blocks/absolute_black_door.json
@@ -22,7 +22,7 @@ db6b5150ce1282485fabfaefb539adef48a0bd4b data/examplemod/loot_tables/blocks/abso
 146d39706a6c754708744666ac90b66263f99a69 data/examplemod/loot_tables/blocks/absolute_white_trapdoor.json
 b05e67a74fca1d8f4dd583e55be0931b2434845b data/examplemod/loot_tables/blocks/absolute_white_wall.json
 a7c6c68665a337d076dd459fcd455cc74e879d54 data/examplemod/loot_tables/blocks/abyss_hanging_sign.json
-d2ac8b769bf94eba270dfdc2705b70c1547cf527 data/examplemod/loot_tables/blocks/abyss_leaves.json
+8c5cff94e643c28c23d55eaee3f51b8fd7320081 data/examplemod/loot_tables/blocks/abyss_leaves.json
 77d51cce9c864550688ccc97a7f8ea169163e25c data/examplemod/loot_tables/blocks/abyss_log.json
 94ea77df6f03b1b1349d84e319b941ccd5819a39 data/examplemod/loot_tables/blocks/abyss_planks.json
 8c52863fcb3378dd2913ed54184d51c26b02c37f data/examplemod/loot_tables/blocks/abyss_planks_cursed.json

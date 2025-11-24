@@ -19,7 +19,10 @@ import com.example.examplemod.screen.MysteryStandScreen;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.util.ModWoodTypes;
 import com.example.examplemod.villager.ModVillagers;
-//import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
+import com.example.examplemod.worldgen.biome.ModTerrablender;
+import com.example.examplemod.worldgen.biome.surface.ModSurfaceRules;
+import com.example.examplemod.worldgen.tree.ModFoliagePlacers;
+import com.example.examplemod.worldgen.tree.ModTrunkPlacerTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -28,10 +31,13 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -41,6 +47,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ExampleMod.MOD_ID)
@@ -75,7 +82,10 @@ public class ExampleMod {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
-        //ModTrunkPlacerTypes.register(modEventBus);
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacers.register(modEventBus);
+
+        ModTerrablender.registerBiomes();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -104,6 +114,7 @@ public class ExampleMod {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ABYSS_SAPLING.getId(), ModBlocks.POTTED_ABYSS_SAPLING);
             ModFlammableRotatedPillarBlock.registerStrippables();
             event.enqueueWork(ModDispenseBehaviors::register);
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
 
     }
