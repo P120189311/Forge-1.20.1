@@ -1,12 +1,12 @@
 {
   "values": [
-    "examplemod:absolute_black_helmet",
-    "examplemod:absolute_black_chestplate",
-    "examplemod:absolute_black_leggings",
-    "examplemod:absolute_black_boots",
-    "examplemod:absolute_white_helmet",
-    "examplemod:absolute_white_chestplate",
-    "examplemod:absolute_white_leggings",
-    "examplemod:absolute_white_boots"
+    "theendoflimbo:absolute_black_helmet",
+    "theendoflimbo:absolute_black_chestplate",
+    "theendoflimbo:absolute_black_leggings",
+    "theendoflimbo:absolute_black_boots",
+    "theendoflimbo:absolute_white_helmet",
+    "theendoflimbo:absolute_white_chestplate",
+    "theendoflimbo:absolute_white_leggings",
+    "theendoflimbo:absolute_white_boots"
   ]
 }

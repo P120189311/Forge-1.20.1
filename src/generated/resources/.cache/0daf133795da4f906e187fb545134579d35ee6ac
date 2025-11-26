@@ -1,0 +1,10 @@
+// 1.20.1	2025-11-26T18:53:02.8645221	Tags for minecraft:block mod id theendoflimbo
+887afe544c5845f564da6ff5430f1ce27dfdae50 data/minecraft/tags/blocks/fences.json
+9acd5084121acb40ebf0aa4b02fca8c357ebec35 data/minecraft/tags/blocks/fence_gates.json
+94cd5885fadfc23111e26ef64def89a017c86292 data/minecraft/tags/blocks/logs_that_burn.json
+a04036dfb3ee923075263dc5b07b8eb53164dc6c data/minecraft/tags/blocks/mineable/pickaxe.json
+76caac17091d2a1c7079b2a47a32ca81cb2634c6 data/minecraft/tags/blocks/needs_iron_tool.json
+648acd788ba4b4d274024040634ce8ccc6e34132 data/minecraft/tags/blocks/needs_stone_tool.json
+788bb9a625bd6c8b484b9a414b60a9059f68bec5 data/minecraft/tags/blocks/planks.json
+e5a9412a9b1955a375ccc0d5c809fd6326517c75 data/minecraft/tags/blocks/walls.json
+35877fac7018912f691236a927970723d636e85d data/theendoflimbo/tags/blocks/dowsing_rod_valuables.json

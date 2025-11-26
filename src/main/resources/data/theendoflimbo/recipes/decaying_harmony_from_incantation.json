@@ -1,0 +1,13 @@
+{
+  "type": "theendoflimbo:incantation",
+  "ingredients": [
+    { "item": "minecraft:bone_meal" },
+    { "item": "minecraft:azure_bluet" },
+    { "item": "minecraft:dirt" },
+    { "item": "theendoflimbo:blue_hill_tomato" }
+  ],
+  "output": {
+    "item": "theendoflimbo:decaying_harmony",
+    "count": 1
+  }
+}

@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "#": {
-      "tag": "examplemod:planks"
+      "tag": "theendoflimbo:planks"
     },
     "I": {
       "item": "minecraft:iron_ingot"

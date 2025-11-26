@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "theendoflimbo:absolute_black_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "name": "theendoflimbo:absolute_black_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "theendoflimbo:blocks/absolute_black_door"
+}

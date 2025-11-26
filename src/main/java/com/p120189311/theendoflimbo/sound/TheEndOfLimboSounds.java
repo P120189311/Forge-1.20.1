@@ -1,0 +1,37 @@
+package com.p120189311.theendoflimbo.sound;
+
+import com.p120189311.theendoflimbo.TheEndOfLimboMod;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class TheEndOfLimboSounds {
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, TheEndOfLimboMod.MAIN);
+
+    public static final RegistryObject<SoundEvent> BLUE_HILL_TOMATO_EAT_CHANCE = registerSoundEvents("blue_hill_tomato_eat_chance");
+    public static final RegistryObject<SoundEvent> MYSTERY_STAND_USE_CHANCE = registerSoundEvents("mystery_stand_use_chance");
+
+    public static final RegistryObject<SoundEvent> AMBULANCE_BEAT = registerSoundEvents("ambulance_beat");
+    public static final RegistryObject<SoundEvent> DROP_IT_LIKE_ITS_HOT = registerSoundEvents("drop_it_like_its_hot");
+    public static final RegistryObject<SoundEvent> BAFANGLAICAI = registerSoundEvents("bafanglaicai");
+    public static final RegistryObject<SoundEvent> ITS_JUST_A_BURNING_MEMORY = registerSoundEvents("its_just_a_burning_memory");
+    public static final RegistryObject<SoundEvent> LIBETS_DELAY = registerSoundEvents("libets_delay");
+    public static final RegistryObject<SoundEvent> DRIFTING_TIME_MISPLACED = registerSoundEvents("drifting_time_misplaced");
+
+    public static final RegistryObject<SoundEvent> ABHTCAQ = registerSoundEvents("abhtcaq");
+    public static final RegistryObject<SoundEvent> ITS_JUST_A_BURNING_MEMORY_SHORT = registerSoundEvents("its_just_a_burning_memory_short");
+    public static final RegistryObject<SoundEvent> LIBETS_DELAY_SHORT = registerSoundEvents("libets_delay_short");
+    public static final RegistryObject<SoundEvent> DRIFTING_TIME_MISPLACED_SHORT = registerSoundEvents("drifting_time_misplaced_short");
+
+    private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(TheEndOfLimboMod.MAIN, name)));
+    }
+
+    public static void register(IEventBus eventBus) {
+        SOUND_EVENTS.register(eventBus);
+    }
+}

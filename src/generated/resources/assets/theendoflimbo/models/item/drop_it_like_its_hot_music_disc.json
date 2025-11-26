@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "theendoflimbo:item/drop_it_like_its_hot_music_disc"
+  }
+}

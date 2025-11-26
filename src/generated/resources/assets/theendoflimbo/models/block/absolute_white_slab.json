@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "theendoflimbo:block/absolute_white",
+    "side": "theendoflimbo:block/absolute_white",
+    "top": "theendoflimbo:block/absolute_white"
+  }
+}

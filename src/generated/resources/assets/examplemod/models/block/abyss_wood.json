@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "examplemod:block/abyss_log",
-    "side": "examplemod:block/abyss_log"
-  }
-}

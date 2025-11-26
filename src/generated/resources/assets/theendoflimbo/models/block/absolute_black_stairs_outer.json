@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "theendoflimbo:block/absolute_black",
+    "side": "theendoflimbo:block/absolute_black",
+    "top": "theendoflimbo:block/absolute_black"
+  }
+}

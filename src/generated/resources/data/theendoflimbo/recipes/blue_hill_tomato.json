@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "theendoflimbo:blue_hill_tomato"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "theendoflimbo:blue_hill_tomato_seeds"
+  }
+}

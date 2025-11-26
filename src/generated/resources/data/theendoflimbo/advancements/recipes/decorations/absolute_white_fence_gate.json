@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_absolute_white": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "theendoflimbo:absolute_white"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "theendoflimbo:absolute_white_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_whity": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "theendoflimbo:whity"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_whity",
+      "has_absolute_white",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "theendoflimbo:absolute_white_fence_gate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

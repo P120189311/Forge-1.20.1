@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_hill_tomato": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "theendoflimbo:blue_hill_tomato"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "theendoflimbo:blue_hill_tomato"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_hill_tomato",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "theendoflimbo:blue_hill_tomato"
+    ]
+  },
+  "sends_telemetry_event": false
+}

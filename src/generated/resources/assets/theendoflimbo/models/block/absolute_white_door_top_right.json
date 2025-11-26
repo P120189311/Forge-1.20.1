@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "theendoflimbo:block/absolute_white_door_bottom",
+    "top": "theendoflimbo:block/absolute_white_door_top"
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right_open",
-  "textures": {
-    "bottom": "examplemod:block/absolute_white_door_bottom",
-    "top": "examplemod:block/absolute_white_door_top"
-  }
-}

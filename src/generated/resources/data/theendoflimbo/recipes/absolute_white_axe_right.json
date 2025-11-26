@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "theendoflimbo:whity"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BB",
+    "SB",
+    "S "
+  ],
+  "result": {
+    "item": "theendoflimbo:absolute_white_axe"
+  },
+  "show_notification": true
+}
