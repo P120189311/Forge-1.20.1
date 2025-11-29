@@ -103,6 +103,9 @@ public class TheEndOfLimboBlocks {
     public static final RegistryObject<Block> ABYSS_WALL_HANGING_SIGN = BLOCKS.register("abyss_wall_hanging_sign",
             () -> new AbyssWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), TheEndOfLimboWoodTypes.ABYSS));
 
+    public static final RegistryObject<Block> ABYSS_PORTAL = registerBlock("abyss_portal",
+            () -> new AbyssPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion().noCollission()));
+
     // Flowers
     public static final RegistryObject<Block> DECAYING_HARMONY = registerBlock("decaying_harmony",
             () -> new DecayingHarmony(BlockBehaviour.Properties.copy(Blocks.WITHER_ROSE).noOcclusion()));

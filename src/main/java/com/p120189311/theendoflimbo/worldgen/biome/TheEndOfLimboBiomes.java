@@ -43,7 +43,6 @@ public class TheEndOfLimboBiomes {
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
-        globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addMossyStoneBlock(biomeBuilder);
         BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
         BiomeDefaultFeatures.addFerns(biomeBuilder);
@@ -58,8 +57,8 @@ public class TheEndOfLimboBiomes {
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
-                .downfall(0.8f)
-                .temperature(0.7f)
+                .downfall(0.0f)
+                .temperature(2.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())

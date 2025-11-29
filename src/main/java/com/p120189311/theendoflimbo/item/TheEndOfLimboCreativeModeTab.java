@@ -66,6 +66,7 @@ public class TheEndOfLimboCreativeModeTab {
                         pOutput.accept(TheEndOfLimboBlocks.JUMPY_BLOCK.get());
                         pOutput.accept(TheEndOfLimboBlocks.DECAYING_HARMONY.get());
                         pOutput.accept(TheEndOfLimboBlocks.MYSTERY_STAND.get());
+                        pOutput.accept(TheEndOfLimboBlocks.ABYSS_PORTAL.get());
                     })
                     .build());
 

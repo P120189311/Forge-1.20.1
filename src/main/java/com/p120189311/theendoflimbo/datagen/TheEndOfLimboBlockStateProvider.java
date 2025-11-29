@@ -54,6 +54,7 @@ public class TheEndOfLimboBlockStateProvider extends BlockStateProvider {
 
         //Misc Blocks
         blockWithItem(TheEndOfLimboBlocks.JUMPY_BLOCK);
+        blockWithItem(TheEndOfLimboBlocks.ABYSS_PORTAL);
         simpleBlockWithItem(TheEndOfLimboBlocks.MYSTERY_STAND.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/mystery_stand")));
 

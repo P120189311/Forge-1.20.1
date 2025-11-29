@@ -1,12 +1,6 @@
 {
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
-  "downfall": 0.8,
+  "carvers": {},
+  "downfall": 0.0,
   "effects": {
     "fog_color": 7237230,
     "foliage_color": 9371648,
@@ -29,30 +23,14 @@
   },
   "features": [
     [],
+    [],
     [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface"
-    ],
-    [
-      "minecraft:amethyst_geode",
       "minecraft:forest_rock"
     ],
-    [
-      "minecraft:monster_room",
-      "minecraft:monster_room_deep"
-    ],
+    [],
     [],
     [],
     [
-      "minecraft:ore_dirt",
-      "minecraft:ore_gravel",
-      "minecraft:ore_granite_upper",
-      "minecraft:ore_granite_lower",
-      "minecraft:ore_diorite_upper",
-      "minecraft:ore_diorite_lower",
-      "minecraft:ore_andesite_upper",
-      "minecraft:ore_andesite_lower",
-      "minecraft:ore_tuff",
       "minecraft:ore_coal_upper",
       "minecraft:ore_coal_lower",
       "minecraft:ore_iron_upper",
@@ -72,12 +50,8 @@
       "minecraft:ore_gold_extra"
     ],
     [],
+    [],
     [
-      "minecraft:spring_water",
-      "minecraft:spring_lava"
-    ],
-    [
-      "minecraft:glow_lichen",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
       "minecraft:patch_grass_plain",
@@ -86,9 +60,6 @@
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
       "theendoflimbo:abyss_placed"
-    ],
-    [
-      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -203,5 +174,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.7
+  "temperature": 2.0
 }

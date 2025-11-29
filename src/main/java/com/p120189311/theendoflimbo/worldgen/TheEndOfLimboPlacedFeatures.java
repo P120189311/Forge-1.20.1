@@ -53,7 +53,7 @@ public class TheEndOfLimboPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));*/
 
         register(context, ABYSS_PLACED_KEY, configuredFeatures.getOrThrow(TheEndOfLimboConfiguredFeatures.ABYSS_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f, 2), TheEndOfLimboBlocks.ABYSS_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1), TheEndOfLimboBlocks.ABYSS_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

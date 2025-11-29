@@ -150,7 +150,17 @@ public class DementiaEffect extends MobEffect {
             this.saturation = food.getSaturationLevel();
             this.fireTicks = player.getRemainingFireTicks();
 
-            this.effects = new ArrayList<>(player.getActiveEffects());
+            this.effects = new ArrayList<>();
+            for (MobEffectInstance effect : player.getActiveEffects()) {
+                this.effects.add(new MobEffectInstance(
+                        effect.getEffect(),
+                        effect.getDuration(),
+                        effect.getAmplifier(),
+                        effect.isAmbient(),
+                        effect.isVisible(),
+                        effect.showIcon()
+                ));
+            }
         }
 
         void restore(ServerPlayer player) {

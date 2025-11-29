@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-26T18:53:02.8618261	Block States: theendoflimbo
+// 1.20.1	2025-11-26T22:10:45.4564833	Block States: theendoflimbo
 405709e5cab16592fa2a77be84087404ad2e11d2 assets/theendoflimbo/blockstates/absolute_black.json
 6388e84b8f9366ebd3f4568f56e68336b8ad049e assets/theendoflimbo/blockstates/absolute_black_button.json
 4107ff36d2e153afa90df0f2e00f699bc5e4503e assets/theendoflimbo/blockstates/absolute_black_door.json
@@ -26,6 +26,7 @@ c48a53a5834c789db95a15c2c89ae8ba0713b433 assets/theendoflimbo/blockstates/absolu
 59b18b5436da39ee27c5147c07e6b18ce913fd42 assets/theendoflimbo/blockstates/abyss_log.json
 8a65ed3197a6f7a692a2f06c388199cba0f10ccf assets/theendoflimbo/blockstates/abyss_planks.json
 b627223ae5b5bc1f8ae79c30e4da3305043d60e8 assets/theendoflimbo/blockstates/abyss_planks_cursed.json
+dfd17d76a3202c9808e45394992c12bbbfe3289a assets/theendoflimbo/blockstates/abyss_portal.json
 ca55f1056bc08cb57921b99f1d9c5bef2d211bdc assets/theendoflimbo/blockstates/abyss_sapling.json
 9e83860b80160a6ebae498eada21cbbeb55c3522 assets/theendoflimbo/blockstates/abyss_sign.json
 7f91d0d7cf767b6be3e6948858b62ad6734b1753 assets/theendoflimbo/blockstates/abyss_wall_hanging_sign.json
@@ -113,6 +114,7 @@ f9afee94a81c03a4c947271e2957f7f95924e54b assets/theendoflimbo/models/block/abyss
 f724303e0fca4d054c697dd92a39f83aa7d62105 assets/theendoflimbo/models/block/abyss_log_horizontal.json
 0a595621c039d5cea7f679efd3a8110bf904389f assets/theendoflimbo/models/block/abyss_planks.json
 f9c3504dfd1c8828ecaf05f3709f6fe9a7ad88fe assets/theendoflimbo/models/block/abyss_planks_cursed.json
+0ad83b61b22e9d77c12e9929f8191c0380076bc8 assets/theendoflimbo/models/block/abyss_portal.json
 43bee789fc40ba7176a8c2e4c32d23f4e5d699be assets/theendoflimbo/models/block/abyss_sapling.json
 30b218c47e8b1da2de669c3d11e37e4d3034bda1 assets/theendoflimbo/models/block/abyss_sign.json
 f245786970171c41dd9a4198430bf7b384200f49 assets/theendoflimbo/models/block/abyss_wood.json
@@ -156,6 +158,7 @@ c7a0f99488517716f7526f5a8698fed9a7ca9cf5 assets/theendoflimbo/models/item/absolu
 dcd7fd56b658266e3d84ad77ceb34f573f98f83f assets/theendoflimbo/models/item/abyss_log.json
 75a90f9cbf09cc743b8a3a71bc3a7e026a926963 assets/theendoflimbo/models/item/abyss_planks.json
 08d4612bb9a64d60bf95a8079759579894de8946 assets/theendoflimbo/models/item/abyss_planks_cursed.json
+0cc94eea8e59fff5aee2ea36bc66d7856b327b78 assets/theendoflimbo/models/item/abyss_portal.json
 9657db133fb94b09ccdd47bf7e96dbf4b2780668 assets/theendoflimbo/models/item/abyss_wood.json
 22cb0f0191c3fd1e40ea8b7415665cef695ccb7e assets/theendoflimbo/models/item/decaying_harmony.json
 cdbdd3b127f98870df4aa5fef2133c9ef9e8e0ec assets/theendoflimbo/models/item/jumpy_block.json
