@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_abyss_log": {
+    "has_abyss_boat": {
       "conditions": {
         "items": [
           {
             "items": [
-              "theendoflimbo:abyss_log"
+              "theendoflimbo:abyss_boat"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "theendoflimbo:abyss_wood_from_abyss_log"
+        "recipe": "theendoflimbo:abyss_chest_boat"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_abyss_log",
+      "has_abyss_boat",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "theendoflimbo:abyss_wood_from_abyss_log"
+      "theendoflimbo:abyss_chest_boat"
     ]
   },
   "sends_telemetry_event": false

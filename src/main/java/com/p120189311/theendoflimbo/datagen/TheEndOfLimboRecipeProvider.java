@@ -86,6 +86,12 @@ public class TheEndOfLimboRecipeProvider extends RecipeProvider implements ICond
         woodFromLogs(consumer, TheEndOfLimboBlocks.ABYSS_WOOD.get(), TheEndOfLimboBlocks.ABYSS_LOG.get());
         woodFromLogs(consumer, TheEndOfLimboBlocks.STRIPPED_ABYSS_WOOD.get(), TheEndOfLimboBlocks.STRIPPED_ABYSS_LOG.get());
 
+        //Boat
+        boat(consumer, TheEndOfLimboBlocks.ABYSS_PLANKS.get(), TheEndOfLimboItems.ABYSS_BOAT.get());
+
+        //Boat With Chest
+        boatWithChest(consumer, TheEndOfLimboItems.ABYSS_BOAT.get(), TheEndOfLimboItems.ABYSS_CHEST_BOAT.get());
+
         //Chest
         chest(consumer, Items.CHEST, TheEndOfLimboTags.Items.PLANKS);
 
@@ -314,6 +320,7 @@ public class TheEndOfLimboRecipeProvider extends RecipeProvider implements ICond
         return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, p_176721_, 2).define('#', p_176722_).pattern("###").pattern("###");
     }
 
+    //Bee Hive
     protected static void beehive(Consumer<FinishedRecipe> consumer, ItemLike beehive, TagKey<Item> planksTag, ItemLike honeycomb) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, beehive)
                 .define('W', planksTag)
@@ -332,7 +339,28 @@ public class TheEndOfLimboRecipeProvider extends RecipeProvider implements ICond
                 .pattern("##")
                 .pattern("##")
                 .unlockedBy(getHasName(log), has(log))
-                .save(consumer, TheEndOfLimboMod.MAIN + ":" + getItemName(wood) + "_from_" + getItemName(log));
+                .save(consumer);
+    }
+
+    //Boat
+    protected static void boat(Consumer<FinishedRecipe> consumer, ItemLike planks, ItemLike boatItem){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, boatItem)
+                .define('#', planks)
+                .pattern("# #")
+                .pattern("###")
+                .unlockedBy(getHasName(planks), has(planks))
+                .save(consumer);
+    }
+
+    //Boat With Chest
+    protected static void boatWithChest(Consumer<FinishedRecipe> consumer, ItemLike boat, ItemLike chestBoat){
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, chestBoat)
+                .requires(Items.CHEST)
+                .requires(boat)
+                .unlockedBy(getHasName(boat), has(boat))
+                .save(consumer, new ResourceLocation(
+                        TheEndOfLimboMod.MAIN,
+                        getItemName(chestBoat)));
     }
 
     //Bed

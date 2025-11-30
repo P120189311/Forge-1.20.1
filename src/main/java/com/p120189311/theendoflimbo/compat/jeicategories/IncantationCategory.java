@@ -1,4 +1,4 @@
-package com.p120189311.theendoflimbo.compat;
+package com.p120189311.theendoflimbo.compat.jeicategories;
 
 import com.p120189311.theendoflimbo.TheEndOfLimboMod;
 import com.p120189311.theendoflimbo.block.TheEndOfLimboBlocks;

@@ -1,0 +1,6 @@
+{
+  "type": "theendoflimbo:purification",
+  "input": { "item": "theendoflimbo:abyss_planks_cursed" },
+  "catalyst": { "item": "theendoflimbo:nocturnal_dwight" },
+  "output": { "item": "theendoflimbo:abyss_planks" }
+}

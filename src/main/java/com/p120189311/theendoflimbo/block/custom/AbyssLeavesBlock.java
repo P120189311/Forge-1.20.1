@@ -43,11 +43,11 @@ public class AbyssLeavesBlock extends LeavesBlock {
         if (!level.isClientSide) {
             RandomSource random = level.random;
 
-            if (random.nextFloat() < 0.025f) {
+            if (random.nextFloat() < 0.0083f) {
                 popResource(level, pos, new ItemStack(TheEndOfLimboBlocks.ABYSS_SAPLING.get()));
             }
 
-            if (random.nextFloat() < 0.005f) {
+            if (random.nextFloat() < 0.0017f) {
                 popResource(level, pos, new ItemStack(TheEndOfLimboItems.NOCTURNAL_DWIGHT.get()));
             }
         }

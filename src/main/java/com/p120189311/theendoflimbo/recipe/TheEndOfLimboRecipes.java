@@ -14,6 +14,9 @@ public class TheEndOfLimboRecipes {
     public static final RegistryObject<RecipeSerializer<MysteryStandRecipe>> MYSTERY_STAND_SERIALIZER =
             SERIALIZERS.register("incantation", () -> MysteryStandRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<PurificationRecipe>> PURIFICATION_SERIALIZER =
+            SERIALIZERS.register("purification", () -> PurificationRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus){
         SERIALIZERS.register(eventBus);
     }

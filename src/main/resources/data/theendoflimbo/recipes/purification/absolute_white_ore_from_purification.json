@@ -1,0 +1,6 @@
+{
+  "type": "theendoflimbo:purification",
+  "input": { "item": "minecraft:emerald_ore" },
+  "catalyst": { "item": "theendoflimbo:nocturnal_dwight" },
+  "output": { "item": "theendoflimbo:absolute_white_ore" }
+}
