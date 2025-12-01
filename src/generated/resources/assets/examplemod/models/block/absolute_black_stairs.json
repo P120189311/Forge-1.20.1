@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "examplemod:block/absolute_black",
-    "side": "examplemod:block/absolute_black",
-    "top": "examplemod:block/absolute_black"
-  }
-}

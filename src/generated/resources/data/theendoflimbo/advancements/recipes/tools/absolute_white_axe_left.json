@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "theendoflimbo:absolute_white_axe_left"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_whity": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "theendoflimbo:whity"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_whity",
+      "has_stick",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "theendoflimbo:absolute_white_axe_left"
+    ]
+  },
+  "sends_telemetry_event": false
+}

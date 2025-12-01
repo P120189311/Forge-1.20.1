@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "theendoflimbo:block/absolute_white_slab"
+    },
+    "type=double": {
+      "model": "theendoflimbo:block/absolute_white"
+    },
+    "type=top": {
+      "model": "theendoflimbo:block/absolute_white_slab_top"
+    }
+  }
+}

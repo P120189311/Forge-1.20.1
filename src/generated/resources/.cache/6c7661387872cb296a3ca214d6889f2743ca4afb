@@ -1,0 +1,4 @@
+// 1.20.1	2025-11-26T18:53:02.8603206	Global Loot Modifiers : theendoflimbo
+64587af58cd770744a0f73d813678c670c4c6f39 data/forge/loot_modifiers/global_loot_modifiers.json
+9f831e7757b6434bc6f84c7f4ec9cbac99becc32 data/theendoflimbo/loot_modifiers/dowsing_rod_from_suspicious_sand.json
+14c53c1070269a4bb5edb709934c3a91e6fdbbc5 data/theendoflimbo/loot_modifiers/mystery_stand_from_witch.json

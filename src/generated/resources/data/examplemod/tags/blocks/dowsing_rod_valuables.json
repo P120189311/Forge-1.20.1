@@ -1,8 +1,0 @@
-{
-  "values": [
-    "examplemod:absolute_black_ore",
-    "#forge:ores",
-    "examplemod:absolute_white_ore",
-    "#forge:ores"
-  ]
-}

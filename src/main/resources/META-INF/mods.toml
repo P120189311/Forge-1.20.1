@@ -15,21 +15,21 @@ license="MIT"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="examplemod" #mandatory
+modId="theendoflimbo" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="My First Mod" #mandatory
+displayName="The End Of Limbo" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="the_end_of_limbo.png" #optional
 # A text field displayed in the mod UI
-credits="Mas Amba" #optional
+credits="P120189311" #optional
 # A text field displayed in the mod UI
 authors="P120189311" #optional
 # The description text for the mod (multi line!) (#mandatory)
@@ -37,7 +37,7 @@ description='''
 If one understands chaos, that itself is order. If one understands order, that itself is chaos. Which one do you truly belief then?
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.the_end_of_limbo]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -49,14 +49,14 @@ If one understands chaos, that itself is order. If one understands order, that i
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.the_end_of_limbo]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.20.1,1.20.2)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.the_end_of_limbo]]
     modId="terrablender"
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version

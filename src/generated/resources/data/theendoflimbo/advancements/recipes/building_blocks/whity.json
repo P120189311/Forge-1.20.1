@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_absolute_white": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "theendoflimbo:absolute_white"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "theendoflimbo:whity"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_absolute_white",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "theendoflimbo:whity"
+    ]
+  },
+  "sends_telemetry_event": false
+}

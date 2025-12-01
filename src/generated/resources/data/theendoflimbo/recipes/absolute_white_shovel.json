@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "theendoflimbo:whity"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I",
+    "S",
+    "S"
+  ],
+  "result": {
+    "item": "theendoflimbo:absolute_white_shovel"
+  },
+  "show_notification": true
+}

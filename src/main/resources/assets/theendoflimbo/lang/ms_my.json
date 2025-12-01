@@ -1,0 +1,34 @@
+{
+  "item.theendoflimbo.blacky": "Blacky",
+  "item.theendoflimbo.whity": "Whity",
+  "item.theendoflimbo.dowsing_rod": "Dowsing Rod",
+  "item.theendoflimbo.void_of_knowledge": "Kosong Ilmu",
+  "item.theendoflimbo.eternal_flame": "Api Abadi",
+
+  "block.theendoflimbo.absolute_black": "Hitam Mutlak",
+  "block.theendoflimbo.absolute_black_ore": "Bijih Hitam Mutlak",
+  "block.theendoflimbo.absolute_white": "Putih Mutlak",
+  "block.theendoflimbo.absolute_white_ore": "Bijih Putih Mutlak",
+  "block.theendoflimbo.jumpy_block": "Blok Pelompatan",
+
+  "block.theendoflimbo.absolute_white_stairs": "Tangga Putih Absolut",
+  "block.theendoflimbo.absolute_white_slab": "Papak Putih Absolut",
+  "block.theendoflimbo.absolute_white_fence": "Pagar Putih Absolut",
+  "block.theendoflimbo.absolute_white_fence_gate": "Pintu Pagar Putih Absolut",
+  "block.theendoflimbo.absolute_white_wall": "Tembok Putih Absolut",
+
+  "block.theendoflimbo.absolute_black_stairs": "Tangga Hitam Absolut",
+  "block.theendoflimbo.absolute_black_slab": "Papak Hitam Absolut",
+  "block.theendoflimbo.absolute_black_fence": "Pagar Hitam Absolut",
+  "block.theendoflimbo.absolute_black_fence_gate": "Pintu Pagar Hitam Absolut",
+  "block.theendoflimbo.absolute_black_wall": "Tembok Hitam Absolut",
+
+  "itemGroup.black": "Hitam",
+  "itemGroup.white": "Putih",
+  "itemGroup.mod_misc": "Mod Beraneka",
+  "itemGroup.mod_food": "Mod Makanan",
+
+  "item.theendoflimbo.dowsing_rod.no_valuables": "Tiada Barang Berharga Ditemui!",
+  "tooltip.theendoflimbo.dowsing_rod.tooltip.shift": "Klik Kanan untuk mencari Barang Berharga!",
+  "tooltip.theendoflimbo.dowsing_rod.tooltip": "Tekan §5SHIFT§r untuk Maklumat Lanjut!"
+}

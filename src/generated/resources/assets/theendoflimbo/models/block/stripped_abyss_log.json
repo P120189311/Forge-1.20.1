@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "theendoflimbo:block/stripped_abyss_log_top",
+    "side": "theendoflimbo:block/stripped_abyss_log"
+  }
+}

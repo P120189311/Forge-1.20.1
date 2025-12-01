@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "theendoflimbo:absolute_white"
+  },
+  "result": "theendoflimbo:absolute_white_button",
+  "count": 1
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:honeycomb"
+    },
+    "W": {
+      "tag": "theendoflimbo:planks"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WSW",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecraft:beehive"
+  },
+  "show_notification": true
+}

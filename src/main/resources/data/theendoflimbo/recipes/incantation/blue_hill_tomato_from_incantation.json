@@ -1,0 +1,21 @@
+{
+  "type": "theendoflimbo:incantation",
+  "ingredients": [
+    { "item": "minecraft:pufferfish" },
+    { "item": "minecraft:lapis_lazuli" },
+    { "item": "minecraft:beetroot" },
+    {
+      "type": "forge:nbt",
+
+      "item": "minecraft:potion",
+
+      "count": 1,
+
+      "nbt": "{Potion:\"minecraft:water\"}"
+    }
+  ],
+  "output": {
+    "item": "theendoflimbo:blue_hill_tomato",
+    "count": 1
+  }
+}

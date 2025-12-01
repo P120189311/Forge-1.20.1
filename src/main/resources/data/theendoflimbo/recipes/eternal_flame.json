@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "ASA",
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "item": "theendoflimbo:whity"
+    },
+    "A": {
+      "item": "minecraft:ghast_tear"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "theendoflimbo:eternal_flame"
+  }
+}

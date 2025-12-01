@@ -1,0 +1,102 @@
+{
+  "blue_hill_tomato_eat_chance": {
+    "subtitle": "sounds.theendoflimbo.blue_hill_tomato_eat_chance",
+    "sounds": [
+      "theendoflimbo:water_on_the_hill",
+      "theendoflimbo:water_on_the_hill0.5x",
+      "theendoflimbo:water_on_the_hill0.75x",
+      "theendoflimbo:water_on_the_hill1.5x",
+      "theendoflimbo:water_on_the_hill2x",
+      "theendoflimbo:water_on_the_hill_original"
+    ]
+  },
+  "mystery_stand_use_chance": {
+    "subtitle": "sounds.theendoflimbo.mystery_stand_use_chance",
+    "sounds": [
+      "theendoflimbo:fire_in_the_hole",
+      "theendoflimbo:fire_in_the_hole0.5x",
+      "theendoflimbo:fire_in_the_hole0.75x",
+      "theendoflimbo:fire_in_the_hole1.5x",
+      "theendoflimbo:fire_in_the_hole2x",
+      "theendoflimbo:fire_in_the_hole_original"
+    ]
+  },
+  "ambulance_beat": {
+    "subtitle": "sounds.theendoflimbo.ambulance_beat",
+    "sounds": [
+      {
+        "name": "theendoflimbo:ambulance_beat",
+        "stream": true
+      }
+    ]
+  },
+  "bafanglaicai": {
+    "subtitle": "sounds.theendoflimbo.bafanglaicai",
+    "sounds": [
+      {
+        "name": "theendoflimbo:bafanglaicai",
+        "stream": true
+      }
+    ]
+  },
+  "drop_it_like_its_hot": {
+    "subtitle": "sounds.theendoflimbo.drop_it_like_its_hot",
+    "sounds": [
+      {
+        "name": "theendoflimbo:drop_it_like_its_hot",
+        "stream": true
+      }
+    ]
+  },
+  "abhtcaq": {
+    "subtitle": "sounds.theendoflimbo.abhtcaq",
+    "sounds": [
+      "theendoflimbo:abhtcaq"
+    ]
+  },
+  "its_just_a_burning_memory": {
+    "subtitle": "sounds.theendoflimbo.its_just_a_burning_memory",
+    "sounds": [
+      {
+        "name": "theendoflimbo:its_just_a_burning_memory",
+        "stream": true
+      }
+    ]
+  },
+  "libets_delay": {
+    "subtitle": "sounds.theendoflimbo.libets_delay",
+    "sounds": [
+      {
+        "name": "theendoflimbo:libets_delay",
+        "stream": true
+      }
+    ]
+  },
+  "drifting_time_misplaced": {
+    "subtitle": "sounds.theendoflimbo.drifting_time_misplaced",
+    "sounds": [
+      {
+        "name": "theendoflimbo:drifting_time_misplaced",
+        "stream": true
+      }
+    ]
+  },
+  "its_just_a_burning_memory_short": {
+    "subtitle": "sounds.theendoflimbo.dementia",
+    "sounds": [
+      "theendoflimbo:its_just_a_burning_memory_short"
+    ]
+  },
+  "libets_delay_short": {
+    "subtitle": "sounds.theendoflimbo.dementia",
+    "sounds": [
+      "theendoflimbo:libets_delay_short"
+    ]
+  },
+  "drifting_time_misplaced_short": {
+    "subtitle": "sounds.theendoflimbo.dementia",
+    "sounds": [
+      "theendoflimbo:drifting_time_misplaced_short"
+    ]
+  }
+}

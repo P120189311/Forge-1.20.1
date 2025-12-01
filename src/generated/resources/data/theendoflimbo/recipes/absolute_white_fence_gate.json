@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "theendoflimbo:whity"
+    },
+    "W": {
+      "item": "theendoflimbo:absolute_white"
+    }
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "count": 6,
+    "item": "theendoflimbo:absolute_white_fence_gate"
+  },
+  "show_notification": true
+}

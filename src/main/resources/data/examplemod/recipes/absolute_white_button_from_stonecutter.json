@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "examplemod:absolute_white"
-  },
-  "result": "examplemod:absolute_white_button",
-  "count": 1
-}
