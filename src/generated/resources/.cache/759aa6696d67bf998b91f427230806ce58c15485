@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-26T18:53:02.8640132	Item Models: theendoflimbo
+// 1.20.1	2025-12-06T18:23:29.8846758	Item Models: theendoflimbo
 e6bf106f184e763f5e257a9123373bfea2f8ae6d assets/theendoflimbo/models/item/absolute_black_axe.json
 fa21cb260269ad3f30e02ca30b8d1746f795ddda assets/theendoflimbo/models/item/absolute_black_boots.json
 2c76385a1ebd7378806889b750b40f902818dc5a assets/theendoflimbo/models/item/absolute_black_boots_amethyst_trim.json
@@ -110,6 +110,7 @@ f31cf74055c9746d3a3983ef1d550c7a2b35e118 assets/theendoflimbo/models/item/blue_h
 106b6d31230debf9051199349e35d0094a856b8e assets/theendoflimbo/models/item/dowsing_rod.json
 116026fd6db72017c6097937e40b4fe2a4edf8b6 assets/theendoflimbo/models/item/drop_it_like_its_hot_music_disc.json
 c19790c679a7b6c3dda9828508a4f16da4c2fd10 assets/theendoflimbo/models/item/eternal_flame.json
+185800c08d6a35e81b695b0efe3a4a452948ccfc assets/theendoflimbo/models/item/suffocating_water_bucket.json
 5433229c859a7d308f9c11bfc7463359cfb4bbce assets/theendoflimbo/models/item/trapped_gamma_ray.json
 24f99ad79338c0c0d8f7d759c2b157e9020c6ee6 assets/theendoflimbo/models/item/void_of_knowledge.json
 0384d1ec55e0143243f101ae9bae067eea274d90 assets/theendoflimbo/models/item/whity.json

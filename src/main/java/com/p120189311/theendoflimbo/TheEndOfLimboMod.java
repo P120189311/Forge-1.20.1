@@ -7,6 +7,8 @@ import com.p120189311.theendoflimbo.effect.TheEndOfLimboEffects;
 import com.p120189311.theendoflimbo.entity.TheEndOfLimboEntities;
 import com.p120189311.theendoflimbo.entity.client.TheEndOfLimboBoatRenderer;
 import com.p120189311.theendoflimbo.event.TheEndOfLimboDispenseBehaviors;
+import com.p120189311.theendoflimbo.fluid.TheEndOfLimboFluidTypes;
+import com.p120189311.theendoflimbo.fluid.TheEndOfLimboFluids;
 import com.p120189311.theendoflimbo.item.TheEndOfLimboCreativeModeTab;
 import com.p120189311.theendoflimbo.item.TheEndOfLimboItems;
 import com.p120189311.theendoflimbo.item.custom.BlackSwordOfDeath;
@@ -68,6 +70,8 @@ public class TheEndOfLimboMod {
         TheEndOfLimboCreativeModeTab.register(modEventBus);
         TheEndOfLimboItems.register(modEventBus);
         TheEndOfLimboBlocks.register(modEventBus);
+        TheEndOfLimboFluids.register(modEventBus);
+        TheEndOfLimboFluidTypes.register(modEventBus);
 
         TheEndOfLimboLootModifiers.register(modEventBus);
         TheEndOfLimboVillagers.register(modEventBus);
@@ -132,6 +136,9 @@ public class TheEndOfLimboMod {
             ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboBlocks.ABSOLUTE_BLACK_TRAPDOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboBlocks.ABSOLUTE_WHITE_DOOR.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboBlocks.ABSOLUTE_WHITE_TRAPDOOR.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboFluids.SOURCE_SUFFOCATING_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboFluids.FLOWING_SUFFOCATING_WATER.get(), RenderType.translucent());
 
             ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboBlocks.DECAYING_HARMONY.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(TheEndOfLimboBlocks.POTTED_DECAYING_HARMONY.get(), RenderType.cutout());

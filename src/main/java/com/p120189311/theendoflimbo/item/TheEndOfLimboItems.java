@@ -3,6 +3,7 @@ package com.p120189311.theendoflimbo.item;
 import com.p120189311.theendoflimbo.TheEndOfLimboMod;
 import com.p120189311.theendoflimbo.block.TheEndOfLimboBlocks;
 import com.p120189311.theendoflimbo.entity.custom.AbyssBoatEntity;
+import com.p120189311.theendoflimbo.fluid.TheEndOfLimboFluids;
 import com.p120189311.theendoflimbo.item.custom.*;
 import com.p120189311.theendoflimbo.sound.TheEndOfLimboSounds;
 import net.minecraft.world.item.*;
@@ -31,6 +32,10 @@ public class TheEndOfLimboItems {
     public static final RegistryObject<Item> ABYSS_CHEST_BOAT = ITEMS.register("abyss_chest_boat",
             () -> new TheEndOfLimboBoatItem(true, AbyssBoatEntity.Type.ABYSS, new Item.Properties().fireResistant()));
 
+    // Fluids
+    public static final RegistryObject<Item> SUFFOCATING_WATER_BUCKET = ITEMS.register("suffocating_water_bucket",
+            () -> new BucketItem(TheEndOfLimboFluids.SOURCE_SUFFOCATING_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
     // Misc Tools
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             () -> new DowsingRodItem(new Item.Properties().durability(32)));
@@ -49,7 +54,7 @@ public class TheEndOfLimboItems {
     public static final RegistryObject<Item> ETERNAL_FLAME = ITEMS.register("eternal_flame",
             () -> new EternalFlameItem(new Item.Properties().fireResistant()));
 
-    //Music Discs
+    // Music Discs
     public static final RegistryObject<Item> AMBULANCE_BEAT_MUSIC_DISC = ITEMS.register("ambulance_beat_music_disc",
             () -> new CursedDisc(7, TheEndOfLimboSounds.AMBULANCE_BEAT.get(), new Item.Properties().stacksTo(1), 1780));
     public static final RegistryObject<Item> BAFANGLAICAI_MUSIC_DISC = ITEMS.register("bafanglaicai_music_disc",

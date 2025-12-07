@@ -2,6 +2,7 @@ package com.p120189311.theendoflimbo.block;
 
 import com.p120189311.theendoflimbo.TheEndOfLimboMod;
 import com.p120189311.theendoflimbo.block.custom.*;
+import com.p120189311.theendoflimbo.fluid.TheEndOfLimboFluids;
 import com.p120189311.theendoflimbo.item.TheEndOfLimboItems;
 import com.p120189311.theendoflimbo.util.TheEndOfLimboWoodTypes;
 import com.p120189311.theendoflimbo.worldgen.tree.AbyssTreeGrower;
@@ -105,6 +106,10 @@ public class TheEndOfLimboBlocks {
 
     public static final RegistryObject<Block> ABYSS_PORTAL = registerBlock("abyss_portal",
             () -> new AbyssPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion().noCollission()));
+
+    // Fluids
+    public static final RegistryObject<LiquidBlock> SUFFOCATING_WATER = BLOCKS.register("suffocating_water_block",
+            () -> new LiquidBlock(TheEndOfLimboFluids.SOURCE_SUFFOCATING_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     // Flowers
     public static final RegistryObject<Block> DECAYING_HARMONY = registerBlock("decaying_harmony",
