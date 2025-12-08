@@ -133,6 +133,7 @@ public class DementiaEffect extends MobEffect {
         private final float health;
         private final int foodLevel;
         private final int fireTicks;
+        private final int oxygen;
         private final float saturation;
         private final List<MobEffectInstance> effects;
 
@@ -149,6 +150,7 @@ public class DementiaEffect extends MobEffect {
             this.foodLevel = food.getFoodLevel();
             this.saturation = food.getSaturationLevel();
             this.fireTicks = player.getRemainingFireTicks();
+            this.oxygen = player.getAirSupply();
 
             this.effects = new ArrayList<>();
             for (MobEffectInstance effect : player.getActiveEffects()) {
@@ -176,6 +178,7 @@ public class DementiaEffect extends MobEffect {
             food.setFoodLevel(foodLevel);
             food.setSaturation(saturation);
             player.setRemainingFireTicks(fireTicks);
+            player.setAirSupply(oxygen);
 
             MobEffectInstance currentDementia = player.getEffect(TheEndOfLimboEffects.DEMENTIA.get());
 

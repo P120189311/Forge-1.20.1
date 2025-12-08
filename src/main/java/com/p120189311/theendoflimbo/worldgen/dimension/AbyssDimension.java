@@ -1,9 +1,7 @@
 package com.p120189311.theendoflimbo.worldgen.dimension;
 
-import com.mojang.datafixers.util.Pair;
 import com.p120189311.theendoflimbo.TheEndOfLimboMod;
 import com.p120189311.theendoflimbo.worldgen.biome.TheEndOfLimboBiomes;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -19,7 +17,6 @@ import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
-import java.util.List;
 import java.util.OptionalLong;
 
 public class AbyssDimension {
@@ -59,6 +56,7 @@ public class AbyssDimension {
                 new FixedBiomeSource(biomeRegistry.getOrThrow(TheEndOfLimboBiomes.ABYSS_BIOME)),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.LARGE_BIOMES));
 
+        /*
         Holder<Biome> abyss = biomeRegistry.getOrThrow(TheEndOfLimboBiomes.ABYSS_BIOME);
         Holder<Biome> deepOcean = biomeRegistry.getOrThrow(Biomes.DEEP_OCEAN);
 
@@ -72,6 +70,7 @@ public class AbyssDimension {
 
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.FLOATING_ISLANDS));
+        */
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(AbyssDimension.ABYSS_DIMENSION_TYPE), wrappedChunkGenerator);
 

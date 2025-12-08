@@ -55,6 +55,8 @@ public class TheEndOfLimboItemModelProvider extends ItemModelProvider {
         simpleItem(TheEndOfLimboItems.ETERNAL_FLAME);
         simpleItem(TheEndOfLimboItems.TRAPPED_GAMMA_RAY);
 
+        simpleItem(TheEndOfLimboItems.SUFFOCATING_WATER_BUCKET);
+
         simpleItem(TheEndOfLimboItems.ABSOLUTE_BLACK_HELMET);
         simpleItem(TheEndOfLimboItems.ABSOLUTE_BLACK_CHESTPLATE);
         simpleItem(TheEndOfLimboItems.ABSOLUTE_BLACK_LEGGINGS);

@@ -63,6 +63,7 @@ public class TheEndOfLimboCreativeModeTab {
                         pOutput.accept(TheEndOfLimboItems.ETERNAL_FLAME.get());
                         pOutput.accept(TheEndOfLimboItems.NOCTURNAL_DWIGHT.get());
                         pOutput.accept(TheEndOfLimboItems.TRAPPED_GAMMA_RAY.get());
+                        pOutput.accept(TheEndOfLimboItems.SUFFOCATING_WATER_BUCKET.get());
                         pOutput.accept(TheEndOfLimboBlocks.JUMPY_BLOCK.get());
                         pOutput.accept(TheEndOfLimboBlocks.DECAYING_HARMONY.get());
                         pOutput.accept(TheEndOfLimboBlocks.MYSTERY_STAND.get());
