@@ -15,6 +15,9 @@ public class TheEndOfLimboEffects {
     public static final RegistryObject<MobEffect> DEMENTIA = MOB_EFFECTS.register("dementia",
             () -> new DementiaEffect(MobEffectCategory.NEUTRAL, 0xFFFFFF));
 
+    public static final RegistryObject<MobEffect> SUFFOCATING = MOB_EFFECTS.register("suffocating",
+            () -> new SuffocatingEffect(MobEffectCategory.HARMFUL, 0x000000));
+
     public static void register(IEventBus eventBus){
         MOB_EFFECTS.register(eventBus);
     }

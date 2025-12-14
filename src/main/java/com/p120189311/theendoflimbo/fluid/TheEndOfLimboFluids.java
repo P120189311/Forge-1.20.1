@@ -22,7 +22,8 @@ public class TheEndOfLimboFluids {
 
     public static final ForgeFlowingFluid.Properties SUFFOCATING_WATER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             TheEndOfLimboFluidTypes.SUFFOCATING_WATER_FLUID_TYPE, SOURCE_SUFFOCATING_WATER, FLOWING_SUFFOCATING_WATER)
-            .slopeFindDistance(4).levelDecreasePerBlock(1).block(TheEndOfLimboBlocks.SUFFOCATING_WATER).bucket(TheEndOfLimboItems.SUFFOCATING_WATER_BUCKET);
+            .slopeFindDistance(4).levelDecreasePerBlock(1).block(TheEndOfLimboBlocks.SUFFOCATING_WATER)
+            .bucket(TheEndOfLimboItems.SUFFOCATING_WATER_BUCKET);
 
     public static void register(IEventBus eventBus){
         FLUIDS.register(eventBus);

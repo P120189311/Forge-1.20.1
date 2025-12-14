@@ -40,7 +40,7 @@ public class AbyssDimension {
                 false, // respawnAnchorWorks
                 -64, // minY
                 384, // height
-                384, // logicalHeight
+                256, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 BuiltinDimensionTypes.OVERWORLD_EFFECTS, // effectsLocation
                 1.0f, // ambientLight
