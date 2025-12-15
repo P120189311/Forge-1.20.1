@@ -1,4 +1,4 @@
-package com.p120189311.theendoflimbo;
+package com.p120189311.theendoflimbo.event;
 
 import com.p120189311.theendoflimbo.effect.DementiaEffect;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
