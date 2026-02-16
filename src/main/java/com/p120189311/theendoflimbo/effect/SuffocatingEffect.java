@@ -12,7 +12,7 @@ public class SuffocatingEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if(!livingEntity.level().isClientSide){
-            if(livingEntity.getHealth() > 0.5f) {
+            if(livingEntity.getHealth() > 1.0f) {
                 livingEntity.hurt(livingEntity.level().damageSources().inWall(), 1.0F);
             }
         }
